@@ -6,20 +6,101 @@ import SearchModal from './SearchModal';
 import navigationData from '../../json-data/navigationData.json';
 import './Navbar.css';
 
-const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAddToCart, onSelectCategory }) => {
+const Navbar = ({ 
+  cartItems, 
+  onUpdateQuantity, 
+  onRemoveItem, 
+  products = [], 
+  onAddToCart, 
+  onSelectCategory,
+  onOpenProduct,
+  cartDrawerOpen: controlledCartDrawerOpen,
+  setCartDrawerOpen: setControlledCartDrawerOpen
+}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [cartDrawerOpen, setCartDrawerOpen] = useState(false);
+  const [localCartDrawerOpen, setLocalCartDrawerOpen] = useState(false);
+  
+  const cartDrawerOpen = controlledCartDrawerOpen !== undefined ? controlledCartDrawerOpen : localCartDrawerOpen;
+  const setCartDrawerOpen = setControlledCartDrawerOpen || setLocalCartDrawerOpen;
+
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const dropdownTimeoutRef = useRef(null);
+
+  // History integration for Mobile Menu
+  const handleOpenMobileMenu = () => {
+    try {
+      window.history.pushState({ modal: 'mobileMenu' }, '');
+    } catch (e) {}
+    setMobileMenuOpen(true);
+  };
+
+  const handleCloseMobileMenu = () => {
+    if (window.history.state?.modal === 'mobileMenu') {
+      window.history.back();
+    } else {
+      setMobileMenuOpen(false);
+    }
+  };
+
+  // History integration for Search Modal
+  const handleOpenSearchModal = () => {
+    try {
+      window.history.pushState({ modal: 'search' }, '');
+    } catch (e) {}
+    setSearchModalOpen(true);
+  };
+
+  const handleCloseSearchModal = () => {
+    if (window.history.state?.modal === 'search') {
+      window.history.back();
+    } else {
+      setSearchModalOpen(false);
+    }
+  };
+
+  // Popstate listener for mobile navigation back button
+  useEffect(() => {
+    const handlePopState = () => {
+      if (searchModalOpen) {
+        setSearchModalOpen(false);
+      }
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [mobileMenuOpen, searchModalOpen]);
+
+  const handleDropdownMouseEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setCategoriesOpen(true);
+  };
+
+  const handleDropdownMouseLeave = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setCategoriesOpen(false);
+    }, 200);
+  };
 
   const cartItemCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   const handleCategoryClick = (e, catName) => {
     if (e) e.preventDefault();
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
     setCategoriesOpen(false);
-    setMobileMenuOpen(false);
+    handleCloseMobileMenu();
     if (onSelectCategory) {
       onSelectCategory(catName);
     }
@@ -46,7 +127,12 @@ const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAd
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
   }, []);
 
   // Lock body scroll when drawer or modal is open
@@ -88,7 +174,7 @@ const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAd
           {/* MOBILE MENU BUTTON (Visible on Mobile Left) */}
           <button 
             className="mobile-menu-btn"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={handleOpenMobileMenu}
             aria-label="Open Navigation Menu"
           >
             <Menu size={22} />
@@ -110,8 +196,8 @@ const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAd
                     key={link.id} 
                     className="nav-item-dropdown"
                     ref={dropdownRef}
-                    onMouseEnter={() => setCategoriesOpen(true)}
-                    onMouseLeave={() => setCategoriesOpen(false)}
+                    onMouseEnter={handleDropdownMouseEnter}
+                    onMouseLeave={handleDropdownMouseLeave}
                   >
                     <a 
                       href={link.href} 
@@ -127,7 +213,11 @@ const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAd
 
                     {/* Dropdown Menu for Categories */}
                     {categoriesOpen && link.subCategories && (
-                      <div className="categories-dropdown-menu">
+                      <div 
+                        className="categories-dropdown-menu"
+                        onMouseEnter={handleDropdownMouseEnter}
+                        onMouseLeave={handleDropdownMouseLeave}
+                      >
                         <div className="dropdown-grid">
                           {link.subCategories.map((sub, idx) => (
                             <a 
@@ -167,7 +257,7 @@ const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAd
             {/* Search Icon Button */}
             <button 
               className="simple-action-btn search-trigger-btn"
-              onClick={() => setSearchModalOpen(true)}
+              onClick={handleOpenSearchModal}
               aria-label="Search products"
               title="Search Dry Fruits"
             >
@@ -195,22 +285,23 @@ const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAd
       {/* Interactive Search Modal */}
       <SearchModal
         isOpen={searchModalOpen}
-        onClose={() => setSearchModalOpen(false)}
+        onClose={handleCloseSearchModal}
         products={products}
         onAddToCart={onAddToCart}
+        onOpenProduct={onOpenProduct}
       />
 
       {/* Mobile Drawer Menu */}
       <div 
         className={`mobile-menu-overlay ${mobileMenuOpen ? 'open' : ''}`} 
-        onClick={() => setMobileMenuOpen(false)}
+        onClick={handleCloseMobileMenu}
       >
         <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
           <div className="mobile-menu-top">
             <BrandLogo />
             <button 
               className="mobile-menu-close" 
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={handleCloseMobileMenu}
               aria-label="Close menu"
             >
               <X size={22} />
@@ -221,12 +312,12 @@ const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAd
           <button 
             className="mobile-search-btn-trigger"
             onClick={() => {
-              setMobileMenuOpen(false);
-              setSearchModalOpen(true);
+              handleCloseMobileMenu();
+              handleOpenSearchModal();
             }}
           >
             <Search size={18} className="mobile-search-icon" />
-            <span>Search dry fruits & combos...</span>
+            <span>Search dry fruits...</span>
           </button>
 
           {/* Mobile Main Navigation */}
@@ -237,7 +328,7 @@ const Navbar = ({ cartItems, onUpdateQuantity, onRemoveItem, products = [], onAd
                 key={link.id} 
                 href={link.href} 
                 className="mobile-nav-item"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleCloseMobileMenu}
               >
                 <div className="mobile-nav-item-left">
                   <span>{link.label}</span>

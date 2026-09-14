@@ -8,7 +8,10 @@ import {
   ArrowRight, 
   ChevronLeft, 
   ChevronRight, 
-  Zap 
+  Zap,
+  ZoomIn,
+  ZoomOut,
+  RotateCcw
 } from 'lucide-react';
 import productsData from '../../json-data/productsData.json';
 import './ProductModal.css';
@@ -27,15 +30,32 @@ const ProductModal = ({
   const [quantity, setQuantity] = useState(1);
   const [addedSuccess, setAddedSuccess] = useState(false);
 
-  const relatedContainerRef = useRef(null);
-  const modalScrollContainerRef = useRef(null);
+  // Swipe / Drag state for Image Slider
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchCurrentX, setTouchCurrentX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
 
-  // Reset state when active product changes
+  // Zoom Lightbox state
+  const [zoomImage, setZoomImage] = useState(null);
+  const [zoomScale, setZoomScale] = useState(2.2);
+  const [zoomPan, setZoomPan] = useState({ x: 50, y: 50 });
+
+  const modalOverlayRef = useRef(null);
+  const modalScrollContainerRef = useRef(null);
+  const zoomWrapperRef = useRef(null);
+
+  // Reset state and scroll to top when active product changes
   useEffect(() => {
     if (product) {
       setSelectedImageIndex(0);
       setQuantity(1);
       setAddedSuccess(false);
+      setDragOffset(0);
+      setIsDragging(false);
+      setZoomImage(null);
+      setZoomScale(2.2);
+      setZoomPan({ x: 50, y: 50 });
 
       if (product.variants && product.variants.length > 0) {
         setSelectedWeight(product.variants[0].weight);
@@ -43,18 +63,49 @@ const ProductModal = ({
         setSelectedWeight('500g');
       }
 
-      if (modalScrollContainerRef.current) {
-        modalScrollContainerRef.current.scrollTop = 0;
+      // Smooth scroll to top of modal
+      if (modalOverlayRef.current) {
+        modalOverlayRef.current.scrollTo({ top: 0, behavior: 'smooth' });
       }
+      if (modalScrollContainerRef.current) {
+        modalScrollContainerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Backup instant scroll reset
+      setTimeout(() => {
+        if (modalOverlayRef.current) {
+          modalOverlayRef.current.scrollTop = 0;
+        }
+        if (modalScrollContainerRef.current) {
+          modalScrollContainerRef.current.scrollTop = 0;
+        }
+      }, 30);
     }
   }, [product]);
+
+  // Handle popstate for zoom lightbox
+  useEffect(() => {
+    const handlePopState = () => {
+      if (zoomImage) {
+        setZoomImage(null);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [zoomImage]);
 
   // Handle ESC key and Body scroll lock
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       const handleKeyDown = (e) => {
-        if (e.key === 'Escape') onClose();
+        if (e.key === 'Escape') {
+          if (zoomImage) {
+            handleCloseZoom();
+          } else {
+            onClose();
+          }
+        }
       };
       window.addEventListener('keydown', handleKeyDown);
       return () => {
@@ -64,7 +115,7 @@ const ProductModal = ({
     } else {
       document.body.style.overflow = 'unset';
     }
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, zoomImage]);
 
   if (!isOpen || !product) return null;
 
@@ -141,37 +192,188 @@ const ProductModal = ({
     }
   };
 
-  const scrollRelated = (direction) => {
-    if (relatedContainerRef.current) {
-      const scrollAmount = direction === 'next' ? 280 : -280;
-      relatedContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  const handleNavigateHome = () => {
+    onClose();
+    setTimeout(() => {
+      const homeEl = document.getElementById('home');
+      if (homeEl) {
+        homeEl.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 60);
+  };
+
+  const handleNavigateShop = () => {
+    onClose();
+    setTimeout(() => {
+      const shopEl = document.getElementById('products');
+      if (shopEl) {
+        shopEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 60);
+  };
+
+  // Touch Swipe Handlers (Thumb navigation)
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchCurrentX(e.touches[0].clientX);
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    setTouchCurrentX(currentX);
+    setDragOffset(currentX - touchStartX);
+  };
+
+  const handleOpenZoom = (imgUrl, e) => {
+    try {
+      window.history.pushState({ modal: 'zoom' }, '');
+    } catch (err) {}
+    setZoomImage(imgUrl || galleryImages[selectedImageIndex] || product.image);
+    setZoomScale(2.2);
+    if (e && e.currentTarget) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+      const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+      if (clientX && clientY) {
+        const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+        const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
+        setZoomPan({ x, y });
+        return;
+      }
+    }
+    setZoomPan({ x: 50, y: 50 });
+  };
+
+  const handleCloseZoom = () => {
+    if (window.history.state?.modal === 'zoom') {
+      window.history.back();
+    } else {
+      setZoomImage(null);
     }
   };
 
+  const handleZoomMouseMove = (e) => {
+    if (!zoomWrapperRef.current) return;
+    const rect = zoomWrapperRef.current.getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
+    const y = Math.max(0, Math.min(100, ((e.clientY - rect.top) / rect.height) * 100));
+    setZoomPan({ x, y });
+  };
+
+  const handleZoomTouchMove = (e) => {
+    if (!zoomWrapperRef.current || e.touches.length === 0) return;
+    const touch = e.touches[0];
+    const rect = zoomWrapperRef.current.getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((touch.clientX - rect.left) / rect.width) * 100));
+    const y = Math.max(0, Math.min(100, ((touch.clientY - rect.top) / rect.height) * 100));
+    setZoomPan({ x, y });
+  };
+
+  const handleToggleZoom = (e) => {
+    if (zoomScale > 1.2) {
+      setZoomScale(1);
+    } else {
+      setZoomScale(2.2);
+      if (zoomWrapperRef.current) {
+        const rect = zoomWrapperRef.current.getBoundingClientRect();
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+        const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+        if (clientX && clientY) {
+          const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+          const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
+          setZoomPan({ x, y });
+        }
+      }
+    }
+  };
+
+  const handleTouchEnd = (e) => {
+    if (!isDragging) return;
+    const diff = touchCurrentX - touchStartX;
+    const swipeThreshold = 35;
+
+    if (diff < -swipeThreshold) {
+      // Swiped left -> Next image
+      setSelectedImageIndex((prev) => (prev < galleryImages.length - 1 ? prev + 1 : 0));
+    } else if (diff > swipeThreshold) {
+      // Swiped right -> Prev image
+      setSelectedImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImages.length - 1));
+    } else if (Math.abs(diff) < 6) {
+      // Tap without dragging -> Open Zoom Modal
+      handleOpenZoom(galleryImages[selectedImageIndex] || product.image, e);
+    }
+
+    setIsDragging(false);
+    setDragOffset(0);
+  };
+
+  // Mouse Drag Handlers (Desktop navigation)
+  const handleMouseDown = (e) => {
+    setTouchStartX(e.clientX);
+    setTouchCurrentX(e.clientX);
+    setIsDragging(true);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const currentX = e.clientX;
+    setTouchCurrentX(currentX);
+    setDragOffset(currentX - touchStartX);
+  };
+
+  const handleMouseUp = (e) => {
+    if (!isDragging) return;
+    const diff = touchCurrentX - touchStartX;
+    const swipeThreshold = 35;
+
+    if (diff < -swipeThreshold) {
+      setSelectedImageIndex((prev) => (prev < galleryImages.length - 1 ? prev + 1 : 0));
+    } else if (diff > swipeThreshold) {
+      setSelectedImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImages.length - 1));
+    } else if (Math.abs(diff) < 6) {
+      // Click without dragging -> Open Zoom Modal
+      handleOpenZoom(galleryImages[selectedImageIndex] || product.image, e);
+    }
+
+    setIsDragging(false);
+    setDragOffset(0);
+  };
+
   return (
-    <div className="pdp-modal-overlay" onClick={onClose} role="dialog" aria-modal="true">
+    <div 
+      className="pdp-modal-overlay" 
+      ref={modalOverlayRef}
+      onClick={onClose} 
+      role="dialog" 
+      aria-modal="true"
+    >
       <div 
         className="pdp-modal-container" 
         onClick={(e) => e.stopPropagation()}
         ref={modalScrollContainerRef}
       >
-        {/* Top Sticky Bar with Brand Logo & Controls */}
+        {/* Top Sticky Bar with Back & Close Controls */}
         <div className="pdp-modal-topbar">
-          <button className="pdp-topbar-back-btn" onClick={onClose} aria-label="Go back">
-            <ChevronLeft size={20} />
+          <button 
+            type="button" 
+            className="pdp-topbar-back-btn" 
+            onClick={handleNavigateShop} 
+            aria-label="Back to Shop"
+          >
+            <ChevronLeft size={18} className="pdp-back-icon" />
             <span>Back to Shop</span>
           </button>
-          
-          {/* Brand Logo */}
-          <div className="pdp-topbar-brand">
-            <img 
-              src="/images/logo.jpeg" 
-              alt="NK Dry Fruits" 
-              className="pdp-brand-logo-img" 
-            />
-          </div>
 
-          <button className="pdp-topbar-close-btn" onClick={onClose} aria-label="Close product detail page">
+          <button 
+            type="button" 
+            className="pdp-topbar-close-btn" 
+            onClick={onClose} 
+            aria-label="Close product detail page"
+          >
             <X size={20} />
           </button>
         </div>
@@ -179,9 +381,23 @@ const ProductModal = ({
         {/* Breadcrumb Navigation */}
         <div className="pdp-breadcrumb-row">
           <nav className="pdp-breadcrumbs" aria-label="Breadcrumb">
-            <button type="button" onClick={onClose} className="breadcrumb-link">Home</button>
+            <button 
+              type="button" 
+              onClick={handleNavigateHome} 
+              className="breadcrumb-link"
+              title="Go to Home"
+            >
+              Home
+            </button>
             <span className="breadcrumb-separator">&gt;</span>
-            <button type="button" onClick={onClose} className="breadcrumb-link">Shop</button>
+            <button 
+              type="button" 
+              onClick={handleNavigateShop} 
+              className="breadcrumb-link"
+              title="Go to Shop Products"
+            >
+              Shop
+            </button>
             <span className="breadcrumb-separator">&gt;</span>
             <span className="breadcrumb-current">{product.name}</span>
           </nav>
@@ -189,14 +405,64 @@ const ProductModal = ({
 
         {/* MAIN PDP PRODUCT SECTION */}
         <div className="pdp-main-section">
-          {/* Left Column: Image Gallery */}
+          {/* Left Column: Image Gallery with Interactive Slider & Zoom */}
           <div className="pdp-gallery-col">
-            <div className="pdp-main-image-frame">
-              <img 
-                src={mainImage} 
-                alt={product.alt || product.name} 
-                className="pdp-main-image" 
-              />
+            <div 
+              className="pdp-main-image-frame"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={() => {
+                if (isDragging) {
+                  setIsDragging(false);
+                  setDragOffset(0);
+                }
+              }}
+              title="Swipe left/right to change photo • Click to zoom"
+            >
+              {/* Zoom Trigger Button */}
+              <button
+                type="button"
+                className="pdp-zoom-trigger-badge"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setZoomImage(galleryImages[selectedImageIndex] || product.image);
+                  setZoomScale(1.5);
+                }}
+                aria-label="Zoom image"
+                title="Click to zoom image"
+              >
+                <ZoomIn size={15} />
+                <span>Zoom</span>
+              </button>
+
+              {/* Slider Track with Smooth Transitions */}
+              <div 
+                className="pdp-slider-track"
+                style={{
+                  transform: isDragging 
+                    ? `translateX(calc(-${selectedImageIndex * 100}% + ${dragOffset}px))`
+                    : `translateX(-${selectedImageIndex * 100}%)`,
+                  transition: isDragging ? 'none' : 'transform 0.35s cubic-bezier(0.25, 1, 0.5, 1)'
+                }}
+              >
+                {galleryImages.map((imgUrl, idx) => (
+                  <div key={idx} className="pdp-slider-slide">
+                    <img 
+                      src={imgUrl} 
+                      alt={`${product.name} view ${idx + 1}`} 
+                      className="pdp-main-image"
+                      draggable={false}
+                      onError={(e) => {
+                        e.target.src = "/images/products/almonds.jpeg";
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Gallery Thumbnail Row */}
@@ -348,27 +614,9 @@ const ProductModal = ({
         <section className="pdp-related-section" aria-label="Related Products">
           <div className="pdp-related-header">
             <h2 className="pdp-related-title">You might also like</h2>
-            <div className="pdp-related-arrows">
-              <button 
-                type="button" 
-                className="pdp-arrow-btn" 
-                onClick={() => scrollRelated('prev')}
-                aria-label="Previous related products"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <button 
-                type="button" 
-                className="pdp-arrow-btn" 
-                onClick={() => scrollRelated('next')}
-                aria-label="Next related products"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
           </div>
 
-          <div className="pdp-related-grid" ref={relatedContainerRef}>
+          <div className="pdp-related-grid">
             {relatedProducts.map((item) => {
               const itemPrice = item.variants?.[0]?.price || item.price;
               const itemOrigPrice = item.variants?.[0]?.originalPrice || item.originalPrice;
@@ -396,13 +644,122 @@ const ProductModal = ({
           </div>
 
           <div className="pdp-more-products-center">
-            <button type="button" className="pdp-more-products-btn" onClick={onClose}>
+            <button type="button" className="pdp-more-products-btn" onClick={handleNavigateShop}>
               <span>More products</span>
               <ArrowRight size={16} />
             </button>
           </div>
         </section>
       </div>
+
+      {/* Interactive Zoom / Lightbox Fullscreen Modal */}
+      {zoomImage && (
+        <div 
+          className="pdp-zoom-overlay" 
+          onClick={() => setZoomImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Zoomed Product Photo"
+        >
+          <div className="pdp-zoom-container" onClick={(e) => e.stopPropagation()}>
+            <div className="pdp-zoom-header">
+              <div className="pdp-zoom-title-box">
+                <span className="pdp-zoom-name">{product.name}</span>
+                <span className="pdp-zoom-hint">
+                  {zoomScale > 1 
+                    ? "Hover / drag cursor to pan across image • Click to zoom out" 
+                    : "Click or tap image to zoom in"
+                  }
+                </span>
+              </div>
+              
+              <div className="pdp-zoom-controls">
+                <span className="pdp-zoom-level-tag">{Math.round(zoomScale * 100)}%</span>
+                
+                <button
+                  type="button"
+                  className="pdp-zoom-ctrl-btn"
+                  onClick={() => setZoomScale((s) => Math.min(s + 0.5, 3.5))}
+                  aria-label="Zoom In"
+                  title="Zoom In"
+                >
+                  <ZoomIn size={18} />
+                </button>
+                <button
+                  type="button"
+                  className="pdp-zoom-ctrl-btn"
+                  onClick={() => setZoomScale((s) => Math.max(s - 0.5, 1))}
+                  aria-label="Zoom Out"
+                  title="Zoom Out"
+                >
+                  <ZoomOut size={18} />
+                </button>
+                <button
+                  type="button"
+                  className="pdp-zoom-ctrl-btn"
+                  onClick={() => {
+                    setZoomScale(1);
+                    setZoomPan({ x: 50, y: 50 });
+                  }}
+                  aria-label="Reset Zoom (1x)"
+                  title="Reset (1x)"
+                >
+                  <RotateCcw size={16} />
+                </button>
+                <button
+                  type="button"
+                  className="pdp-zoom-close-btn"
+                  onClick={handleCloseZoom}
+                  aria-label="Close Zoom"
+                  title="Close (Esc)"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+            </div>
+
+            {/* Interactive Pan Canvas */}
+            <div 
+              className={`pdp-zoom-image-wrapper ${zoomScale > 1 ? 'is-zoomed' : ''}`}
+              ref={zoomWrapperRef}
+              onMouseMove={zoomScale > 1 ? handleZoomMouseMove : undefined}
+              onTouchMove={zoomScale > 1 ? handleZoomTouchMove : undefined}
+              onClick={handleToggleZoom}
+              title={zoomScale > 1 ? "Move around to inspect details • Click to zoom out" : "Click to zoom in"}
+            >
+              <img
+                src={zoomImage}
+                alt={`${product.name} zoomed view`}
+                className="pdp-zoomed-img"
+                style={{ 
+                  transform: `scale(${zoomScale})`,
+                  transformOrigin: `${zoomPan.x}% ${zoomPan.y}%`
+                }}
+                draggable={false}
+              />
+            </div>
+
+            {/* Zoom Gallery Thumbnails Switcher */}
+            <div className="pdp-zoom-thumbnails">
+              {galleryImages.map((imgUrl, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  className={`pdp-zoom-thumb-btn ${zoomImage === imgUrl ? 'active' : ''}`}
+                  onClick={() => {
+                    setZoomImage(imgUrl);
+                    setSelectedImageIndex(idx);
+                    setZoomPan({ x: 50, y: 50 });
+                  }}
+                  aria-label={`View photo ${idx + 1}`}
+                >
+                  <img src={imgUrl} alt={`Thumb ${idx + 1}`} />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

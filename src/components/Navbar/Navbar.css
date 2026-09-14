@@ -118,17 +118,11 @@
 
 .brand-logo-wrapper {
   display: flex;
-  align-items: center;
-  background: #ffffff;
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(232, 227, 216, 0.6);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  transition: all var(--transition-fast);
+  align-items: center;  
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 63px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -199,8 +193,9 @@
 /* Dropdown */
 .nav-item-dropdown {
   position: relative;
-  padding-bottom: 6px;
-  margin-bottom: -6px;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 4px;
 }
 
 .dropdown-chevron {
@@ -216,23 +211,34 @@
 
 .categories-dropdown-menu {
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 2px);
   left: 50%;
   transform: translateX(-50%);
   width: 320px;
   background: #ffffff;
   border: 1.5px solid var(--color-border-medium);
   border-radius: var(--radius-md);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(29, 68, 43, 0.06);
   padding: 0.6rem;
   z-index: 120;
   animation: smoothDropdownFade 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Invisible bridge that connects the navigation item directly with the dropdown menu */
+.categories-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: transparent;
+}
+
 @keyframes smoothDropdownFade {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(6px);
+    transform: translateX(-50%) translateY(4px);
   }
   to {
     opacity: 1;
@@ -592,12 +598,13 @@
     height: 34px;
   }
 
-  .brand-logo-wrapper {
-    padding: 0.25rem 0.75rem;
-  }
-
   /* Hide Desktop Center Nav */
   .header-nav-menu {
+    display: none;
+  }
+
+  /* Hide Search Icon in Mobile Header */
+  .search-trigger-btn {
     display: none;
   }
 
@@ -621,11 +628,7 @@
   }
 
   .brand-logo-img {
-    height: 28px;
-  }
-
-  .brand-logo-wrapper {
-    padding: 0.2rem 0.6rem;
+    height: 58px;
   }
 
   .simple-action-btn, 

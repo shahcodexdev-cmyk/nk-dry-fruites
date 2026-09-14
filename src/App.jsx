@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import HeroSlider from './components/HeroSlider/HeroSlider';
 import QuickFeatures from './components/QuickFeatures/QuickFeatures';
@@ -13,15 +13,70 @@ import './App.css';
 function App() {
   const [cartItems, setCartItems] = useState(navigationData.cart.items);
   const [toastMessage, setToastMessage] = useState(null);
+  const [cartDrawerOpen, setCartDrawerOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(productsData.categories[0] || "All");
   const [searchFilter, setSearchFilter] = useState("");
   const [activeProductModal, setActiveProductModal] = useState(null);
+
+  // Open / Close PDP Modal with mobile/browser back history integration
+  const handleOpenProduct = (product) => {
+    try {
+      window.history.pushState({ modal: 'pdp', productId: product.id }, '');
+    } catch (e) {}
+    setActiveProductModal(product);
+  };
+
+  const handleCloseProduct = () => {
+    if (window.history.state?.modal === 'pdp') {
+      window.history.back();
+    } else {
+      setActiveProductModal(null);
+    }
+  };
+
+  // Open / Close Cart Drawer with mobile/browser back history integration
+  const handleSetCartDrawerOpen = (openVal) => {
+    const nextState = typeof openVal === 'function' ? openVal(cartDrawerOpen) : openVal;
+    if (nextState) {
+      if (!cartDrawerOpen) {
+        try {
+          window.history.pushState({ modal: 'cart' }, '');
+        } catch (e) {}
+      }
+      setCartDrawerOpen(true);
+    } else {
+      if (window.history.state?.modal === 'cart') {
+        window.history.back();
+      } else {
+        setCartDrawerOpen(false);
+      }
+    }
+  };
+
+  // Listen to popstate event (mobile device native back button / swipe back gesture)
+  useEffect(() => {
+    const handlePopState = () => {
+      // If Cart Drawer is open, close it
+      if (cartDrawerOpen) {
+        setCartDrawerOpen(false);
+        return;
+      }
+      // If PDP Modal is open, close it
+      if (activeProductModal) {
+        setActiveProductModal(null);
+        return;
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [cartDrawerOpen, activeProductModal]);
 
   const showToast = (msg) => {
     setToastMessage(msg);
     setTimeout(() => {
       setToastMessage(null);
-    }, 2800);
+    }, 3200);
   };
 
   const handleUpdateQuantity = (id, delta) => {
@@ -95,11 +150,19 @@ function App() {
 
   return (
     <div className="app-root" id="home">
-      {/* Toast Notification */}
+      {/* Toast Notification - Entire notification is clickable to open cart */}
       {toastMessage && (
-        <div className="toast-notification" role="status">
+        <div 
+          className="toast-notification" 
+          role="status"
+          onClick={() => {
+            handleSetCartDrawerOpen(true);
+            setToastMessage(null);
+          }}
+          title="Click to open cart"
+        >
           <Sparkles size={16} className="toast-icon" />
-          <span>{toastMessage}</span>
+          <span className="toast-text">{toastMessage}</span>
         </div>
       )}
 
@@ -110,6 +173,9 @@ function App() {
         onRemoveItem={handleRemoveItem}
         products={allProducts}
         onAddToCart={handleAddToCart}
+        onOpenProduct={(prod) => handleOpenProduct(prod)}
+        cartDrawerOpen={cartDrawerOpen}
+        setCartDrawerOpen={handleSetCartDrawerOpen}
         onSelectCategory={(cat) => {
           setSelectedCategory(cat);
           setSearchFilter("");
@@ -177,7 +243,7 @@ function App() {
                   <div
                     key={prod.id}
                     className="bestseller-card"
-                    onClick={() => setActiveProductModal(prod)}
+                    onClick={() => handleOpenProduct(prod)}
                   >
                     <div className="card-image-wrap">
                       {discountPercent > 0 && (
@@ -319,11 +385,11 @@ function App() {
       <ProductModal
         product={activeProductModal}
         isOpen={!!activeProductModal}
-        onClose={() => setActiveProductModal(null)}
+        onClose={handleCloseProduct}
         onAddToCart={handleAddToCart}
         onBuyNow={handleBuyNow}
         allProducts={allProducts}
-        onSelectProduct={(prod) => setActiveProductModal(prod)}
+        onSelectProduct={(prod) => handleOpenProduct(prod)}
       />
 
       {/* Footer */}
