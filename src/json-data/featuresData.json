@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "icon": "Truck",
+    "title": "Free Express Shipping",
+    "description": "On all orders above ₹499"
+  },
+  {
+    "id": 2,
+    "icon": "ShieldCheck",
+    "title": "100% Certified Organic",
+    "description": "Direct from verified orchards"
+  },
+  {
+    "id": 3,
+    "icon": "Award",
+    "title": "Grade A Handpicked",
+    "description": "Zero broken kernels or dust"
+  },
+  {
+    "id": 4,
+    "icon": "RotateCcw",
+    "title": "Freshness Guaranteed",
+    "description": "Aroma-locked foil packaging"
+  },
+  {
+    "id": 5,
+    "icon": "Leaf",
+    "title": "100% Natural Purity",
+    "description": "Zero preservatives or additives"
+  },
+  {
+    "id": 6,
+    "icon": "HeartHandshake",
+    "title": "Direct Farm Sourced",
+    "description": "Fair trade with local growers"
+  }
+]

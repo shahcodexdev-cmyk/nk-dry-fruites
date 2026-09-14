@@ -1,0 +1,50 @@
+[
+  {
+    "id": "slide-1",
+    "badge": "100% Farm Fresh",
+    "title": "Raw & Roasted Premium Almonds",
+    "subtitle": "Harvested fresh from California orchards, rich in Vitamin E, crunch, and pure organic nutrition.",
+    "desktopImage": "/images/cashews-slide.png",
+    "mobileImage": "/images/cashews-responsive.png",
+    "alt": "Fresh organic cashews banner",
+    "ctaText": "Shop Cashews",
+    "ctaLink": "#products",
+    "tag": "California Gold Reserve"
+  },
+  {
+    "id": "slide-2",
+    "badge": "Brain Booster Superfood",
+    "title": "Extra Light Kashmiri Walnuts",
+    "subtitle": "Naturally rich in Omega-3 fatty acids, hand-cracked in the Himalayan foothills for supreme aroma.",
+    "desktopImage": "/images/honey-slide.png",
+    "mobileImage": "/images/honey-responsive.png",
+    "alt": "Kashmiri walnuts on natural table",
+    "ctaText": "Shop Walnuts",
+    "ctaLink": "#products",
+    "tag": "100% Whole Halves"
+  },
+  {
+    "id": "slide-3",
+    "badge": "Gourmet Healthy Snacking",
+    "title": "Slow-Roasted Salted Pistachios",
+    "subtitle": "Naturally sun-cracked jumbo pistachios, gently dry roasted with pink rock salt for guilt-free crunch.",
+    "desktopImage": "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=1920&q=85",
+    "mobileImage": "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=800&h=1000&q=85",
+    "alt": "Roasted salted pistachios",
+    "ctaText": "Shop Pistachios",
+    "ctaLink": "#products",
+    "tag": "Pink Himalayan Salt"
+  },
+  {
+    "id": "slide-4",
+    "badge": "Artisanal Blend",
+    "title": "Exotic Forest Berry & Nut Fusion",
+    "subtitle": "A signature gourmet mix of king cashews, wild cranberries, blueberries, and power pumpkin seeds.",
+    "desktopImage": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=1920&q=85",
+    "mobileImage": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=800&h=1000&q=85",
+    "alt": "Exotic berry and nut trail mix",
+    "ctaText": "Explore Fusion",
+    "ctaLink": "#products",
+    "tag": "Antioxidant Powerhouse"
+  }
+]

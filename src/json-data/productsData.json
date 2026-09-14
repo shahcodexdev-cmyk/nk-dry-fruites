@@ -1,0 +1,285 @@
+{
+  "sectionTitle": "Our Products",
+  "searchPlaceholder": "Search dry fruits...",
+  "categories": [
+    "All",
+    "Almonds",
+    "Cashews",
+    "Pistachios",
+    "Walnuts",
+    "Peanuts",
+    "Exotic Nuts"
+  ],
+  "products": [
+    {
+      "id": "prod-almonds",
+      "name": "Premium Almonds",
+      "subtitle": "California Whole Raw Almonds",
+      "unitPrice": "Unit price: ₹890 / kg",
+      "price": 289,
+      "originalPrice": 369,
+      "category": "Almonds",
+      "image": "/images/products/almonds.jpeg",
+      "gallery": [
+        "/images/products/almonds.jpeg",
+        "/images/products/Cashews.jpeg",
+        "/images/products/pistachios.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Premium California raw almonds",
+      "description": "Enjoy the rich, naturally nutty flavour and satisfying crunch of carefully selected premium almonds. Perfect for everyday snacking, breakfast, desserts, and traditional recipes.",
+      "highlights": [
+        "Premium-quality almonds",
+        "Naturally crunchy & delicious",
+        "Perfect for everyday snacking",
+        "Ideal for cooking and desserts",
+        "Great for gifting and festive occasions"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 289, "originalPrice": 369 },
+        { "weight": "500g", "price": 499, "originalPrice": 649 },
+        { "weight": "1kg", "price": 899, "originalPrice": 1199 }
+      ]
+    },
+    {
+      "id": "prod-cashews",
+      "name": "Premium Cashews",
+      "subtitle": "King Jumbo W240 Whole Cashews",
+      "unitPrice": "Unit price: ₹990 / kg",
+      "price": 319,
+      "originalPrice": 399,
+      "category": "Cashews",
+      "image": "/images/products/Cashews.jpeg",
+      "gallery": [
+        "/images/products/Cashews.jpeg",
+        "/images/products/almonds.jpeg",
+        "/images/products/pistachios.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Premium jumbo whole cashews",
+      "description": "Enjoy the naturally creamy taste and satisfying crunch of premium-quality cashews. Carefully selected for their quality, they are perfect for everyday snacking, cooking, desserts, and festive treats.",
+      "highlights": [
+        "Premium-quality cashews",
+        "Naturally creamy & crunchy",
+        "Rich, delicious nutty flavour",
+        "Perfect for snacking & cooking",
+        "Ideal for sweets, desserts & gifting"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 319, "originalPrice": 399 },
+        { "weight": "500g", "price": 549, "originalPrice": 699 },
+        { "weight": "1kg", "price": 999, "originalPrice": 1299 }
+      ]
+    },
+    {
+      "id": "prod-pistachios",
+      "name": "Premium Pistachios",
+      "subtitle": "Roasted & Lightly Salted Emerald Pistachios",
+      "unitPrice": "Unit price: ₹1150 / kg",
+      "price": 349,
+      "originalPrice": 449,
+      "category": "Pistachios",
+      "image": "/images/products/pistachios.jpeg",
+      "gallery": [
+        "/images/products/pistachios.jpeg",
+        "/images/products/almonds.jpeg",
+        "/images/products/Cashews.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Premium roasted salted pistachios",
+      "description": "Enjoy the naturally rich, mildly sweet flavour and satisfying crunch of premium pistachios. Carefully selected for quality, they are perfect for everyday snacking, desserts, sweets, and festive treats.",
+      "highlights": [
+        "Premium-quality pistachios",
+        "Naturally crunchy & delicious",
+        "Rich, mildly sweet flavour",
+        "Perfect for everyday snacking",
+        "Ideal for sweets, desserts & gifting"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 349, "originalPrice": 449 },
+        { "weight": "500g", "price": 599, "originalPrice": 749 },
+        { "weight": "1kg", "price": 1099, "originalPrice": 1399 }
+      ]
+    },
+    {
+      "id": "prod-walnuts",
+      "name": "Premium Walnuts",
+      "subtitle": "Kashmiri Extra Light Halves",
+      "unitPrice": "Unit price: ₹950 / kg",
+      "price": 289,
+      "originalPrice": 369,
+      "category": "Walnuts",
+      "image": "/images/products/walnuts.jpeg",
+      "gallery": [
+        "/images/products/walnuts.jpeg",
+        "/images/products/almonds.jpeg",
+        "/images/products/Cashews.jpeg",
+        "/images/products/pecans.jpeg"
+      ],
+      "alt": "Premium Kashmiri walnut halves",
+      "description": "Enjoy the rich, earthy flavour and naturally satisfying crunch of premium-quality walnuts. Carefully selected for freshness and quality, they are perfect for everyday snacking, breakfast, desserts, and cooking.",
+      "highlights": [
+        "Premium-quality walnuts",
+        "Rich, earthy flavour",
+        "Naturally crunchy & satisfying",
+        "Perfect for everyday snacking",
+        "Ideal for breakfast, desserts & cooking"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 289, "originalPrice": 369 },
+        { "weight": "500g", "price": 499, "originalPrice": 649 },
+        { "weight": "1kg", "price": 899, "originalPrice": 1199 }
+      ]
+    },
+    {
+      "id": "prod-hazelnuts",
+      "name": "Premium Hazelnuts",
+      "subtitle": "Whole Roasted Gourmet Hazelnuts",
+      "unitPrice": "Unit price: ₹1250 / kg",
+      "price": 369,
+      "originalPrice": 469,
+      "category": "Exotic Nuts",
+      "image": "/images/products/hazelnuts.jpeg",
+      "gallery": [
+        "/images/products/hazelnuts.jpeg",
+        "/images/products/pecans.jpeg",
+        "/images/products/brazil-nuts.jpeg",
+        "/images/products/pine-nuts.jpeg"
+      ],
+      "alt": "Premium roasted hazelnuts",
+      "description": "Enjoy the naturally sweet, buttery flavour and satisfying crunch of premium-quality hazelnuts. Carefully selected for freshness and quality, they are perfect for snacking, baking, desserts, and homemade treats.",
+      "highlights": [
+        "Premium-quality hazelnuts",
+        "Naturally sweet & crunchy",
+        "Rich, buttery nutty flavour",
+        "Perfect for snacking & baking",
+        "Ideal for desserts & homemade treats"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 369, "originalPrice": 469 },
+        { "weight": "500g", "price": 649, "originalPrice": 799 },
+        { "weight": "1kg", "price": 1199, "originalPrice": 1499 }
+      ]
+    },
+    {
+      "id": "prod-pecans",
+      "name": "Premium Pecans",
+      "subtitle": "Sweet Butter Mammoth Pecan Halves",
+      "unitPrice": "Unit price: ₹1350 / kg",
+      "price": 399,
+      "originalPrice": 499,
+      "category": "Exotic Nuts",
+      "image": "/images/products/pecans.jpeg",
+      "gallery": [
+        "/images/products/pecans.jpeg",
+        "/images/products/hazelnuts.jpeg",
+        "/images/products/brazil-nuts.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Premium raw pecan halves",
+      "description": "Enjoy the naturally sweet, buttery flavour and delicate crunch of premium-quality pecans. Carefully selected for their rich taste, they are perfect for everyday snacking, baking, desserts, and homemade treats.",
+      "highlights": [
+        "Premium-quality pecans",
+        "Naturally sweet & crunchy",
+        "Rich, buttery nutty flavour",
+        "Perfect for snacking & baking",
+        "Ideal for desserts & homemade treats"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 399, "originalPrice": 499 },
+        { "weight": "500g", "price": 699, "originalPrice": 899 },
+        { "weight": "1kg", "price": 1299, "originalPrice": 1699 }
+      ]
+    },
+    {
+      "id": "prod-brazil-nuts",
+      "name": "Premium Brazil Nuts",
+      "subtitle": "Amazon Rainforest Raw Whole Brazil Nuts",
+      "unitPrice": "Unit price: ₹1499 / kg",
+      "price": 449,
+      "originalPrice": 549,
+      "category": "Exotic Nuts",
+      "image": "/images/products/brazil-nuts.jpeg",
+      "gallery": [
+        "/images/products/brazil-nuts.jpeg",
+        "/images/products/pine-nuts.jpeg",
+        "/images/products/hazelnuts.jpeg",
+        "/images/products/pecans.jpeg"
+      ],
+      "alt": "Premium Amazon Brazil nuts",
+      "description": "Enjoy the rich, creamy texture and naturally nutty flavour of premium Brazil nuts. Carefully selected for quality and freshness, they are perfect for everyday snacking, breakfast, baking, and adding to your favourite recipes.",
+      "highlights": [
+        "Premium-quality Brazil nuts",
+        "Rich, creamy & crunchy texture",
+        "Naturally nutty flavour",
+        "Perfect for everyday snacking",
+        "Great for baking, breakfast & recipes"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 449, "originalPrice": 549 },
+        { "weight": "500g", "price": 799, "originalPrice": 999 },
+        { "weight": "1kg", "price": 1499, "originalPrice": 1899 }
+      ]
+    },
+    {
+      "id": "prod-pine-nuts",
+      "name": "Premium Pine Nuts (Chilgoza)",
+      "subtitle": "Himalayan Hand-Harvested Chilgoza Kernels",
+      "unitPrice": "Unit price: ₹2499 / kg",
+      "price": 699,
+      "originalPrice": 849,
+      "category": "Exotic Nuts",
+      "image": "/images/products/pine-nuts.jpeg",
+      "gallery": [
+        "/images/products/pine-nuts.jpeg",
+        "/images/products/brazil-nuts.jpeg",
+        "/images/products/pistachios.jpeg",
+        "/images/products/hazelnuts.jpeg"
+      ],
+      "alt": "Premium Himalayan Chilgoza pine nuts",
+      "description": "Enjoy the delicate, buttery flavour and naturally crunchy texture of premium pine nuts (Chilgoza). Carefully selected for quality and freshness, they are perfect for snacking, desserts, traditional sweets, and adding a rich touch to your favourite recipes.",
+      "highlights": [
+        "Premium-quality Pine Nuts (Chilgoza)",
+        "Delicate, buttery & nutty flavour",
+        "Naturally crunchy texture",
+        "Perfect for snacking & desserts",
+        "Ideal for sweets and traditional recipes"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 699, "originalPrice": 849 },
+        { "weight": "500g", "price": 1299, "originalPrice": 1599 },
+        { "weight": "1kg", "price": 2499, "originalPrice": 2999 }
+      ]
+    },
+    {
+      "id": "prod-peanuts",
+      "name": "Premium Peanuts",
+      "subtitle": "Slow Roasted Golden Crunchy Peanuts",
+      "unitPrice": "Unit price: ₹450 / kg",
+      "price": 149,
+      "originalPrice": 199,
+      "category": "Peanuts",
+      "image": "/images/products/peanut.jpeg",
+      "gallery": [
+        "/images/products/peanut.jpeg",
+        "/images/products/almonds.jpeg",
+        "/images/products/Cashews.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Premium golden roasted peanuts",
+      "description": "Enjoy the classic roasted nutty flavour and satisfying crunch of quality peanuts. A versatile everyday snack, perfect for munching, cooking, homemade snacks, and adding to your favourite recipes.",
+      "highlights": [
+        "Quality peanuts",
+        "Naturally crunchy & delicious",
+        "Rich, nutty flavour",
+        "Perfect for everyday snacking",
+        "Great for cooking & homemade snacks"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 149, "originalPrice": 199 },
+        { "weight": "500g", "price": 249, "originalPrice": 349 },
+        { "weight": "1kg", "price": 449, "originalPrice": 599 }
+      ]
+    }
+  ]
+}

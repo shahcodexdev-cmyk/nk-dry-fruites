@@ -1,0 +1,75 @@
+{
+  "brand": {
+    "name": "NK Dry Fruits",
+    "logoPath": "/images/logo.jpeg",
+    "tagline": "Premium Dry Fruits"
+  },
+  "announcements": [
+    "✨ Welcome to NK Dry Fruits • Premium Organic Harvest & Royal Dry Fruits",
+    "🚚 Free Express Delivery Across India on Orders Above ₹499",
+    "🌿 100% Direct-From-Orchard California Almonds, Kashmiri Walnuts & Jumbo Cashews",
+    "⚡ Freshly Packed in Nitrogen Aroma-Lock Pouches for Supreme Crunch & Nutrition",
+    "💬 24x7 WhatsApp Customer Care Helpline: +91 98765 43210"
+  ],
+  "navLinks": [
+    { "id": "nav-home", "label": "Home", "href": "#home" },
+    { "id": "nav-shop", "label": "Shop", "href": "#products" },
+    { 
+      "id": "nav-categories", 
+      "label": "Categories", 
+      "href": "#products",
+      "hasDropdown": true,
+      "subCategories": [
+        { "name": "Almonds", "category": "Almonds", "desc": "California Whole Raw Almonds", "href": "#products" },
+        { "name": "Cashews", "category": "Cashews", "desc": "King Jumbo W240 Whole Cashews", "href": "#products" },
+        { "name": "Pistachios", "category": "Pistachios", "desc": "Roasted & Lightly Salted Pistachios", "href": "#products" },
+        { "name": "Walnuts", "category": "Walnuts", "desc": "Kashmiri Extra Light Halves", "href": "#products" },
+        { "name": "Peanuts", "category": "Peanuts", "desc": "Slow Roasted Golden Crunchy Peanuts", "href": "#products" },
+        { "name": "Exotic Nuts", "category": "Exotic Nuts", "desc": "Hazelnuts, Pecans, Brazil & Pine Nuts", "href": "#products" }
+      ]
+    },
+    { "id": "nav-about", "label": "About Us", "href": "#about" },
+    { "id": "nav-contact", "label": "Contact", "href": "#contact" }
+  ],
+  "categories": [
+    { "title": "All", "category": "All", "href": "#products" },
+    { "title": "Almonds", "category": "Almonds", "href": "#products" },
+    { "title": "Cashews", "category": "Cashews", "href": "#products" },
+    { "title": "Pistachios", "category": "Pistachios", "href": "#products" },
+    { "title": "Walnuts", "category": "Walnuts", "href": "#products" },
+    { "title": "Peanuts", "category": "Peanuts", "href": "#products" },
+    { "title": "Exotic Nuts", "category": "Exotic Nuts", "href": "#products" }
+  ],
+  "cart": {
+    "initialCount": 3,
+    "items": [
+      {
+        "id": "item-1",
+        "name": "NK Dry Fruits California Raw Almonds (500g)",
+        "price": 499,
+        "quantity": 1,
+        "image": "/images/products/almonds.jpeg"
+      },
+      {
+        "id": "item-2",
+        "name": "NK Dry Fruits Kashmiri Extra Light Walnuts (500g)",
+        "price": 499,
+        "quantity": 1,
+        "image": "/images/products/walnuts.jpeg"
+      },
+      {
+        "id": "item-3",
+        "name": "NK Dry Fruits Roasted Salted Pistachios (500g)",
+        "price": 599,
+        "quantity": 1,
+        "image": "/images/products/pistachios.jpeg"
+      }
+    ]
+  },
+  "contactInfo": {
+    "phone": "+91 800 327 6539",
+    "whatsapp": "+91 98765 43210",
+    "whatsappLink": "https://wa.me/919876543210",
+    "location": "Bangalore & Delhi, India"
+  }
+}

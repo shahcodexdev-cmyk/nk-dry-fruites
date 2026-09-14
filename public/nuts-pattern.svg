@@ -1,0 +1,30 @@
+<svg width="400" height="90" viewBox="0 0 400 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Nut 1: Walnut half doodle -->
+  <path d="M30 45 C20 30, 20 15, 38 18 C50 20, 52 35, 48 45 C55 58, 45 75, 32 72 C20 70, 22 55, 30 45 Z" stroke="rgba(255,245,230,0.18)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 25 C32 35, 38 45, 34 60 C38 52, 44 40, 40 30" stroke="rgba(255,245,230,0.15)" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M26 34 C30 38, 32 48, 28 58" stroke="rgba(255,245,230,0.12)" stroke-width="1.1"/>
+
+  <!-- Nut 2: Almond seed doodle -->
+  <path d="M90 20 C110 25, 125 50, 115 70 C105 78, 88 72, 80 55 C74 42, 80 25, 90 20 Z" stroke="rgba(255,245,230,0.16)" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M92 28 C102 38, 108 52, 100 64" stroke="rgba(255,245,230,0.12)" stroke-width="1"/>
+  <path d="M85 42 C92 48, 96 58, 90 65" stroke="rgba(255,245,230,0.12)" stroke-width="1"/>
+
+  <!-- Nut 3: Peanut outline doodle -->
+  <path d="M160 22 C172 20, 180 30, 175 42 C172 48, 176 52, 178 58 C182 68, 170 78, 158 75 C148 72, 150 58, 154 50 C156 46, 152 38, 150 30 C148 24, 154 22, 160 22 Z" stroke="rgba(255,245,230,0.17)" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M162 28 C168 34, 168 40, 160 44" stroke="rgba(255,245,230,0.12)" stroke-width="1"/>
+  <path d="M164 54 C170 60, 168 68, 162 70" stroke="rgba(255,245,230,0.12)" stroke-width="1"/>
+
+  <!-- Nut 4: Cashew crescent doodle -->
+  <path d="M225 24 C240 22, 252 34, 248 50 C244 65, 228 72, 218 64 C224 55, 230 44, 222 35 C216 28, 220 25, 225 24 Z" stroke="rgba(255,245,230,0.18)" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M232 30 C238 40, 235 52, 225 58" stroke="rgba(255,245,230,0.12)" stroke-width="1"/>
+
+  <!-- Nut 5: Pistachio shell doodle -->
+  <path d="M295 22 C312 20, 322 36, 318 55 C314 70, 298 75, 285 64 C280 50, 282 30, 295 22 Z" stroke="rgba(255,245,230,0.16)" stroke-width="1.3"/>
+  <path d="M302 28 C308 42, 305 60, 298 68" stroke="rgba(255,245,230,0.14)" stroke-width="1.2"/>
+  <path d="M303 34 C314 42, 312 55, 305 60" stroke="rgba(255,245,230,0.14)" stroke-width="1.2"/>
+
+  <!-- Nut 6: Hazelnut / Acorn doodle -->
+  <path d="M360 25 C372 23, 382 32, 385 45 C388 60, 375 72, 360 72 C345 72, 340 58, 345 42 C350 30, 354 26, 360 25 Z" stroke="rgba(255,245,230,0.17)" stroke-width="1.3"/>
+  <path d="M346 38 C358 36, 375 36, 384 40" stroke="rgba(255,245,230,0.14)" stroke-width="1.1"/>
+  <path d="M362 18 L360 25" stroke="rgba(255,245,230,0.16)" stroke-width="1.3"/>
+</svg>
