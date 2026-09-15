@@ -9,6 +9,7 @@ import {
   Sparkles,
   Store
 } from 'lucide-react';
+import navigationData from '../../json-data/navigationData.json';
 import './ContactSection.css';
 
 // Clean SVG Brand Icons (Instagram & Facebook Only)
@@ -105,7 +106,7 @@ const ContactSection = ({ onShowToast }) => {
               </a>
 
               <a 
-                href="https://wa.me/919876543210" 
+                href={navigationData.contactInfo.whatsappLink || `https://wa.me/${navigationData.contactInfo.whatsapp.replace(/[^0-9]/g, '')}`} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="compact-contact-row"
@@ -115,7 +116,7 @@ const ContactSection = ({ onShowToast }) => {
                 </div>
                 <div className="compact-contact-text">
                   <span className="compact-label">WhatsApp Chat</span>
-                  <span className="compact-value">+91 98765 43210</span>
+                  <span className="compact-value">{navigationData.contactInfo.whatsapp}</span>
                 </div>
               </a>
             </div>

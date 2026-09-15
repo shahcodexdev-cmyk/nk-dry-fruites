@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   X, 
   ShoppingBag, 
@@ -229,6 +230,9 @@ const ProductModal = ({
   };
 
   const handleOpenZoom = (imgUrl, e) => {
+    if (e && e.stopPropagation) {
+      e.stopPropagation();
+    }
     try {
       window.history.pushState({ modal: 'zoom' }, '');
     } catch (err) {}
@@ -236,8 +240,8 @@ const ProductModal = ({
     setZoomScale(2.2);
     if (e && e.currentTarget) {
       const rect = e.currentTarget.getBoundingClientRect();
-      const clientX = e.clientX || (e.touches && e.touches[0].clientX);
-      const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+      const clientX = e.clientX || (e.touches && e.touches[0]?.clientX);
+      const clientY = e.clientY || (e.touches && e.touches[0]?.clientY);
       if (clientX && clientY) {
         const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
         const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
@@ -248,11 +252,13 @@ const ProductModal = ({
     setZoomPan({ x: 50, y: 50 });
   };
 
-  const handleCloseZoom = () => {
+  const handleCloseZoom = (e) => {
+    if (e && e.stopPropagation) {
+      e.stopPropagation();
+    }
+    setZoomImage(null);
     if (window.history.state?.modal === 'zoom') {
       window.history.back();
-    } else {
-      setZoomImage(null);
     }
   };
 
@@ -347,7 +353,11 @@ const ProductModal = ({
     <div 
       className="pdp-modal-overlay" 
       ref={modalOverlayRef}
-      onClick={onClose} 
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          onClose();
+        }
+      }} 
       role="dialog" 
       aria-modal="true"
     >
@@ -429,8 +439,7 @@ const ProductModal = ({
                 className="pdp-zoom-trigger-badge"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setZoomImage(galleryImages[selectedImageIndex] || product.image);
-                  setZoomScale(1.5);
+                  handleOpenZoom(galleryImages[selectedImageIndex] || product.image, e);
                 }}
                 aria-label="Zoom image"
                 title="Click to zoom image"
@@ -653,10 +662,10 @@ const ProductModal = ({
       </div>
 
       {/* Interactive Zoom / Lightbox Fullscreen Modal */}
-      {zoomImage && (
+      {zoomImage && typeof document !== 'undefined' && createPortal(
         <div 
           className="pdp-zoom-overlay" 
-          onClick={() => setZoomImage(null)}
+          onClick={handleCloseZoom}
           role="dialog"
           aria-modal="true"
           aria-label="Zoomed Product Photo"
@@ -679,7 +688,10 @@ const ProductModal = ({
                 <button
                   type="button"
                   className="pdp-zoom-ctrl-btn"
-                  onClick={() => setZoomScale((s) => Math.min(s + 0.5, 3.5))}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setZoomScale((s) => Math.min(s + 0.5, 3.5));
+                  }}
                   aria-label="Zoom In"
                   title="Zoom In"
                 >
@@ -688,7 +700,10 @@ const ProductModal = ({
                 <button
                   type="button"
                   className="pdp-zoom-ctrl-btn"
-                  onClick={() => setZoomScale((s) => Math.max(s - 0.5, 1))}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setZoomScale((s) => Math.max(s - 0.5, 1));
+                  }}
                   aria-label="Zoom Out"
                   title="Zoom Out"
                 >
@@ -697,7 +712,8 @@ const ProductModal = ({
                 <button
                   type="button"
                   className="pdp-zoom-ctrl-btn"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     setZoomScale(1);
                     setZoomPan({ x: 50, y: 50 });
                   }}
@@ -709,7 +725,10 @@ const ProductModal = ({
                 <button
                   type="button"
                   className="pdp-zoom-close-btn"
-                  onClick={handleCloseZoom}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleCloseZoom(e);
+                  }}
                   aria-label="Close Zoom"
                   title="Close (Esc)"
                 >
@@ -758,7 +777,8 @@ const ProductModal = ({
               ))}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

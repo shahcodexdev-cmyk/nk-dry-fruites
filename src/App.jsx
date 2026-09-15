@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import HeroSlider from './components/HeroSlider/HeroSlider';
 import QuickFeatures from './components/QuickFeatures/QuickFeatures';
 import ProductModal from './components/Product/ProductModal';
+import CheckoutModal from './components/Checkout/CheckoutModal';
 import ContactSection from './components/Contact/ContactSection';
 import sliderData from './json-data/sliderData.json';
 import navigationData from './json-data/navigationData.json';
@@ -14,6 +15,7 @@ function App() {
   const [cartItems, setCartItems] = useState(navigationData.cart.items);
   const [toastMessage, setToastMessage] = useState(null);
   const [cartDrawerOpen, setCartDrawerOpen] = useState(false);
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(productsData.categories[0] || "All");
   const [searchFilter, setSearchFilter] = useState("");
   const [activeProductModal, setActiveProductModal] = useState(null);
@@ -53,16 +55,50 @@ function App() {
     }
   };
 
+  // Open / Close Checkout Modal with mobile/browser back history integration
+  const handleOpenCheckout = () => {
+    try {
+      window.history.pushState({ modal: 'checkout' }, '');
+    } catch (e) {}
+    setCheckoutOpen(true);
+  };
+
+  const handleCloseCheckout = () => {
+    if (window.history.state?.modal === 'checkout') {
+      window.history.back();
+    } else {
+      setCheckoutOpen(false);
+    }
+  };
+
+  const handleClearCart = () => {
+    setCartItems([]);
+  };
+
   // Listen to popstate event (mobile device native back button / swipe back gesture)
   useEffect(() => {
-    const handlePopState = () => {
-      // If Cart Drawer is open, close it
+    const handlePopState = (e) => {
+      // If Checkout Modal is open, close it unless state is still checkout
+      if (checkoutOpen) {
+        if (e.state && e.state.modal === 'checkout') {
+          return;
+        }
+        setCheckoutOpen(false);
+        return;
+      }
+      // If Cart Drawer is open, close it unless state is still cart
       if (cartDrawerOpen) {
+        if (e.state && e.state.modal === 'cart') {
+          return;
+        }
         setCartDrawerOpen(false);
         return;
       }
-      // If PDP Modal is open, close it
+      // If PDP Modal is open, close it unless state is still pdp (e.g. popped back from zoom)
       if (activeProductModal) {
+        if (e.state && e.state.modal === 'pdp') {
+          return;
+        }
         setActiveProductModal(null);
         return;
       }
@@ -70,7 +106,7 @@ function App() {
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [cartDrawerOpen, activeProductModal]);
+  }, [checkoutOpen, cartDrawerOpen, activeProductModal]);
 
   const showToast = (msg) => {
     setToastMessage(msg);
@@ -124,7 +160,9 @@ function App() {
   const handleBuyNow = (product) => {
     handleAddToCart(product);
     setActiveProductModal(null);
-    showToast(`Proceeding to checkout with "${product.name}"! 🚀`);
+    setTimeout(() => {
+      handleOpenCheckout();
+    }, 120);
   };
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -176,6 +214,7 @@ function App() {
         onOpenProduct={(prod) => handleOpenProduct(prod)}
         cartDrawerOpen={cartDrawerOpen}
         setCartDrawerOpen={handleSetCartDrawerOpen}
+        onProceedToCheckout={handleOpenCheckout}
         onSelectCategory={(cat) => {
           setSelectedCategory(cat);
           setSearchFilter("");
@@ -390,6 +429,15 @@ function App() {
         onBuyNow={handleBuyNow}
         allProducts={allProducts}
         onSelectProduct={(prod) => handleOpenProduct(prod)}
+      />
+
+      {/* Shopify-Style WhatsApp Checkout Modal */}
+      <CheckoutModal
+        isOpen={checkoutOpen}
+        onClose={handleCloseCheckout}
+        cartItems={cartItems}
+        onClearCart={handleClearCart}
+        onShowToast={showToast}
       />
 
       {/* Footer */}

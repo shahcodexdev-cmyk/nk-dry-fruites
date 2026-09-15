@@ -15,7 +15,8 @@ const Navbar = ({
   onSelectCategory,
   onOpenProduct,
   cartDrawerOpen: controlledCartDrawerOpen,
-  setCartDrawerOpen: setControlledCartDrawerOpen
+  setCartDrawerOpen: setControlledCartDrawerOpen,
+  onProceedToCheckout
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -382,6 +383,7 @@ const Navbar = ({
         cartItems={cartItems}
         onUpdateQuantity={onUpdateQuantity}
         onRemoveItem={onRemoveItem}
+        onProceedToCheckout={onProceedToCheckout}
       />
     </>
   );

@@ -792,14 +792,14 @@
 .pdp-zoom-overlay {
   position: fixed;
   inset: 0;
-  z-index: 100000;
-  background: rgba(15, 23, 42, 0.92);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  z-index: 1000000;
+  background: rgba(12, 22, 17, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.25rem;
+  padding: 1.5rem;
   overflow: hidden;
   box-sizing: border-box;
   animation: pdpFadeIn 0.22s ease-out;
@@ -807,17 +807,18 @@
 
 .pdp-zoom-container {
   width: 100%;
-  max-width: 960px;
-  height: 90vh;
+  max-width: 980px;
+  height: 86vh;
+  max-height: 820px;
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 30px 80px -15px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.25);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   box-sizing: border-box;
   animation: pdpSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
 }
 
 .pdp-zoom-header {

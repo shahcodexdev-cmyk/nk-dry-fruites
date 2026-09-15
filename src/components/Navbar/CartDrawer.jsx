@@ -2,7 +2,14 @@ import React from 'react';
 import { X, Trash2, ShoppingBag, ArrowRight, Plus, Minus } from 'lucide-react';
 import './CartDrawer.css';
 
-const CartDrawer = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem }) => {
+const CartDrawer = ({ 
+  isOpen, 
+  onClose, 
+  cartItems, 
+  onUpdateQuantity, 
+  onRemoveItem,
+  onProceedToCheckout 
+}) => {
   if (!isOpen) return null;
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -26,16 +33,16 @@ const CartDrawer = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem
         {/* Free Shipping Progress */}
         <div className="cart-free-shipping">
           <p className="free-shipping-text">
-            {subtotal >= 999 ? (
+            {subtotal >= 499 ? (
               <span className="shipping-unlocked">🎉 You unlocked <strong>FREE Express Delivery</strong>!</span>
             ) : (
-              <span>Add <strong>₹{999 - subtotal}</strong> more for <strong>FREE Delivery</strong></span>
+              <span>Add <strong>₹{499 - subtotal}</strong> more for <strong>FREE Delivery</strong></span>
             )}
           </p>
           <div className="shipping-bar-track">
             <div 
               className="shipping-bar-fill" 
-              style={{ width: `${Math.min(100, (subtotal / 999) * 100)}%` }} 
+              style={{ width: `${Math.min(100, (subtotal / 499) * 100)}%` }} 
             />
           </div>
         </div>
@@ -105,7 +112,15 @@ const CartDrawer = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem
               <span className="total-label">Total Amount</span>
               <span className="total-value">₹{subtotal}</span>
             </div>
-            <button className="cart-checkout-btn">
+            <button 
+              className="cart-checkout-btn"
+              onClick={() => {
+                onClose();
+                if (onProceedToCheckout) {
+                  onProceedToCheckout();
+                }
+              }}
+            >
               <span>Proceed to Checkout</span>
               <ArrowRight size={18} />
             </button>

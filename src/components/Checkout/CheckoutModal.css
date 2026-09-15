@@ -1,0 +1,1052 @@
+/* ==========================================================================
+   FULL-SCREEN SHOPIFY-STYLE WHATSAPP CHECKOUT
+   ========================================================================== */
+.shopify-checkout-fullscreen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: checkoutFadeIn 0.22s ease-out;
+}
+
+@keyframes checkoutFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.shopify-checkout-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   TOPBAR HEADER (Pixel-Perfect across Desktop & Mobile)
+   ========================================================================== */
+.shopify-checkout-header {
+  height: 64px;
+  background: #ffffff;
+  border-bottom: 1px solid #eae5db;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.checkout-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #1d442b;
+  background: #f4f8f4;
+  border: 1px solid #d4e3d6;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkout-back-btn:hover {
+  background: #1d442b;
+  color: #ffffff;
+  border-color: #1d442b;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  user-select: none;
+}
+
+.header-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #dcd6c8;
+}
+
+.header-brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #143520;
+  letter-spacing: -0.02em;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.header-secure-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #195f36;
+  background: #eaf5ed;
+  border: 1px solid #c7e5cf;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+}
+
+.checkout-close-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ded7ca;
+  background: #ffffff;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkout-close-circle:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+/* ==========================================================================
+   MOBILE ACCORDION SUMMARY BAR (Shopify Mobile Pattern)
+   ========================================================================== */
+.mobile-summary-bar {
+  display: none;
+  background: #fbf9f6;
+  border-bottom: 1px solid #eae5db;
+  flex-shrink: 0;
+}
+
+.mobile-summary-accordion-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.summary-btn-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1d442b;
+}
+
+.summary-btn-icon {
+  color: #1d442b;
+}
+
+.summary-btn-total {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1d442b;
+}
+
+.mobile-summary-dropdown {
+  padding: 1rem 1.25rem 1.25rem;
+  border-top: 1px solid #eae5db;
+  background: #ffffff;
+}
+
+.summary-items-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 220px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.summary-pricing-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eee7da;
+  font-size: 0.88rem;
+  color: #475569;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing-row.total-row {
+  padding-top: 0.5rem;
+  border-top: 1.5px solid #ded7ca;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1d442b;
+}
+
+/* ==========================================================================
+   MAIN 2-COLUMN SPLIT CONTENT
+   ========================================================================== */
+.shopify-checkout-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  overflow: hidden;
+  height: calc(100vh - 64px);
+}
+
+/* LEFT PANE: FORM */
+.shopify-main-pane {
+  overflow-y: auto;
+  padding: 2.25rem 2rem 3.5rem;
+  background: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-pane-inner {
+  width: 100%;
+  max-width: 620px;
+}
+
+/* Breadcrumbs */
+.shopify-stepper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+.step-item.done {
+  color: #1d442b;
+  font-weight: 600;
+}
+
+.step-item.active {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.step-separator {
+  color: #cbd5e1;
+  font-size: 0.75rem;
+}
+
+/* Form Sections */
+.shopify-order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-card-section {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid #f0ebe1;
+}
+
+.card-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+}
+
+.section-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1d442b;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Form Fields & Clean Inputs (No Icon Overlap) */
+.fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.field-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field-box.span-full {
+  grid-column: 1 / -1;
+}
+
+.field-box label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.field-box label .req {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.field-box label .opt {
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.field-box input,
+.field-box select,
+.field-box textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #1e293b;
+  background: #fbfbf9;
+  border: 1.5px solid #ded7ca;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.field-box input::placeholder,
+.field-box textarea::placeholder {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.field-box input:focus,
+.field-box select:focus,
+.field-box textarea:focus {
+  background: #ffffff;
+  border-color: #1d442b;
+  box-shadow: 0 0 0 3px rgba(29, 68, 43, 0.12);
+}
+
+.field-box input.field-error {
+  border-color: #ef4444;
+  background: #fffafa;
+}
+
+.error-text {
+  font-size: 0.76rem;
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.help-text {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* WhatsApp Phone Input with +91 Country Badge */
+.phone-input-group {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.country-prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.85rem;
+  background: #f1f5f9;
+  border: 1.5px solid #ded7ca;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #334155;
+  user-select: none;
+}
+
+.phone-input-group input {
+  border-radius: 0 8px 8px 0;
+  flex: 1;
+}
+
+/* Payment Selection Radio Cards */
+.payment-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.payment-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.15rem;
+  border: 1.5px solid #ded7ca;
+  border-radius: 12px;
+  background: #fbfbf9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-card:hover {
+  border-color: #1d442b;
+  background: #f6faf5;
+}
+
+.payment-card.active {
+  border-color: #1d442b;
+  background: #f2f8f2;
+  box-shadow: 0 2px 10px rgba(29, 68, 43, 0.08);
+}
+
+.payment-card input[type="radio"] {
+  margin-top: 0.25rem;
+  accent-color: #1d442b;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.payment-card-body {
+  flex: 1;
+}
+
+.payment-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.payment-label-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pay-icon {
+  color: #1d442b;
+}
+
+.pay-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.pay-tag.popular {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #195f36;
+  background: #eaf4ed;
+  border: 1px solid #cde4d3;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pay-tag.instant {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #0284c7;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pay-subtitle {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Submit Box */
+.checkout-action-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.whatsapp-submit-btn {
+  width: 100%;
+  min-height: 54px;
+  background: #25d366;
+  color: #0c3319;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.28);
+  transition: all 0.22s ease;
+  font-family: inherit;
+  gap: 0.75rem;
+  box-sizing: border-box;
+}
+
+.whatsapp-submit-btn:hover {
+  background: #20ba59;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+}
+
+.submit-wa-icon {
+  color: #0c3319;
+  flex-shrink: 0;
+}
+
+.submit-main-text {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-align: center;
+  flex: 1;
+}
+
+.submit-price-pill {
+  background: rgba(0, 0, 0, 0.12);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.checkout-guarantee-note {
+  font-size: 0.76rem;
+  color: #64748b;
+  text-align: center;
+  margin: 0;
+}
+
+/* ==========================================================================
+   RIGHT PANE: STICKY ORDER SUMMARY (DESKTOP)
+   ========================================================================== */
+.shopify-sidebar-pane {
+  overflow-y: auto;
+  background: #faf8f5;
+  border-left: 1px solid #eae5db;
+  padding: 2.25rem 2.5rem 3.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sidebar-pane-inner {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.summary-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #e8e2d5;
+}
+
+.sidebar-heading {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.sidebar-count-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1d442b;
+  background: #eaf4ed;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+/* Items List */
+.sidebar-items-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 0.35rem;
+}
+
+.summary-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.summary-thumb-wrapper {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e0d8ca;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.summary-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.summary-thumb-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #1d442b;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.summary-item-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.summary-item-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.2rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary-item-unit {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.summary-item-price {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+/* Price Breakdown */
+.sidebar-price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e8e2d5;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.free-tag {
+  font-weight: 800;
+  color: #16a34a;
+}
+
+.price-row.total-highlight {
+  padding-top: 0.85rem;
+  border-top: 1.5px solid #ded7ca;
+  margin-top: 0.35rem;
+}
+
+.total-label-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-head {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.total-tax-note {
+  font-size: 0.74rem;
+  color: #64748b;
+}
+
+.total-price-group {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.total-price-group .curr {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.grand-amount {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #1d442b;
+}
+
+/* Trust Badges */
+.sidebar-trust-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #eae5db;
+}
+
+.trust-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.trust-ic {
+  color: #1d442b;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   ORDER SUCCESS FULLSCREEN
+   ========================================================================== */
+.shopify-success-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.shopify-success-inner {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.success-icon-badge {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  border: 3px solid #bbf7d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.success-check-icon {
+  color: #16a34a;
+}
+
+.success-pill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.success-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.success-subtitle {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 1.75rem 0;
+}
+
+.success-order-card {
+  width: 100%;
+  background: #fbf9f6;
+  border: 1px solid #e8e1d5;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+  text-align: left;
+}
+
+.success-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #e8e1d5;
+  margin-bottom: 0.85rem;
+}
+
+.success-id-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.success-id-label {
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.success-id-value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1d442b;
+}
+
+.success-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b45309;
+  background: #fef3c7;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+.success-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.88rem;
+  color: #334155;
+}
+
+.success-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.success-detail-row.total-highlight {
+  padding-top: 0.55rem;
+  border-top: 1px dashed #ded7ca;
+  font-size: 0.98rem;
+}
+
+.success-total-price {
+  font-size: 1.2rem;
+  color: #1d442b;
+  font-weight: 800;
+}
+
+.success-whatsapp-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e8e1d5;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.success-whatsapp-note .wa-icon {
+  color: #25d366;
+  flex-shrink: 0;
+}
+
+.wa-reopen-link {
+  color: #15803d;
+  font-weight: 700;
+  margin-left: 0.25rem;
+  text-decoration: underline;
+}
+
+.success-continue-btn {
+  height: 50px;
+  background: #1d442b;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.success-continue-btn:hover {
+  background: #143520;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(29, 68, 43, 0.22);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Tablets & Mobile Screens)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .shopify-checkout-content {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .shopify-main-pane {
+    padding: 1.5rem 1.5rem 3rem;
+    justify-content: center;
+    overflow-y: visible;
+  }
+
+  .shopify-sidebar-pane {
+    display: none;
+  }
+
+  .mobile-summary-bar {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .shopify-checkout-header {
+    height: 58px;
+  }
+
+  .header-inner {
+    padding: 0 1rem;
+  }
+
+  .checkout-back-btn span {
+    display: none;
+  }
+
+  .checkout-back-btn {
+    padding: 0.4rem;
+    border-radius: 50%;
+  }
+
+  .header-brand-title {
+    font-size: 1rem;
+  }
+
+  .header-secure-pill {
+    display: none;
+  }
+
+  .shopify-main-pane {
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whatsapp-submit-btn {
+    min-height: 50px;
+    padding: 0.65rem 0.85rem;
+    gap: 0.45rem;
+  }
+
+  .submit-main-text {
+    font-size: 0.94rem;
+  }
+
+  .submit-price-pill {
+    font-size: 0.88rem;
+    padding: 0.3rem 0.55rem;
+  }
+}
