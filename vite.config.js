@@ -5,11 +5,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   server: {
-    watch: {
-      usePolling: false,
-      ignored: ['**/public/images/**', '**/node_modules/**'],
-    },
     port: 5173,
     host: true,
   },
 })
+
