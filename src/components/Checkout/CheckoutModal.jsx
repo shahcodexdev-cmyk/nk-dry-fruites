@@ -65,8 +65,48 @@ const CheckoutModal = ({
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     if (formErrors[name]) {
-      setFormErrors((prev) => ({ ...prev, [name]: '' }));
+      setFormErrors((prev) => {
+        const updated = { ...prev };
+        delete updated[name];
+        return updated;
+      });
     }
+  };
+
+  const scrollToErrorField = (fieldId) => {
+    // Wait for DOM update & error state rendering
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        const targetInput = document.getElementById(fieldId);
+        if (!targetInput) return;
+
+        // Find enclosing field-box container or the input itself
+        const fieldBox = targetInput.closest('.field-box') || targetInput;
+
+        // Smooth scroll container to center the erroneous input
+        fieldBox.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+          inline: 'nearest'
+        });
+
+        // Focus the input directly for immediate correction
+        try {
+          targetInput.focus({ preventScroll: true });
+        } catch (err) {
+          targetInput.focus();
+        }
+
+        // Trigger Shopify-style shake & pulse glow animation
+        fieldBox.classList.remove('field-highlight-shake');
+        void fieldBox.offsetWidth; // Force DOM reflow
+        fieldBox.classList.add('field-highlight-shake');
+
+        setTimeout(() => {
+          fieldBox.classList.remove('field-highlight-shake');
+        }, 1200);
+      }, 50);
+    });
   };
 
   const validateForm = () => {
@@ -89,14 +129,24 @@ const CheckoutModal = ({
       errors.pincode = 'Please enter a valid 6-digit PIN code';
     }
     setFormErrors(errors);
-    return Object.keys(errors).length === 0;
+    return errors;
   };
 
   const handlePlaceWhatsAppOrder = (e) => {
     e.preventDefault();
-    if (!validateForm()) {
+    const errors = validateForm();
+    const errorKeys = Object.keys(errors);
+
+    if (errorKeys.length > 0) {
+      // Find the first error field according to display hierarchy
+      const fieldOrder = ['fullName', 'phone', 'address', 'city', 'pincode'];
+      const firstErrorField = fieldOrder.find((field) => errors[field]) || errorKeys[0];
+
+      // Auto-scroll and focus to the specific error input (Shopify checkout behavior)
+      scrollToErrorField(firstErrorField);
+
       if (onShowToast) {
-        onShowToast('Please fill all required shipping fields ⚠️');
+        onShowToast(errors[firstErrorField] || 'Please complete all required fields ⚠️');
       }
       return;
     }
