@@ -1,24 +1,25 @@
 {
-  "sectionTitle": "Our Products",
-  "searchPlaceholder": "Search dry fruits...",
+  "sectionTitle": "Our Handpicked Collection",
+  "searchPlaceholder": "Search dry fruits, seeds, dates, honey, crushes...",
   "categories": [
     "All",
-    "Almonds",
-    "Cashews",
-    "Pistachios",
-    "Walnuts",
-    "Peanuts",
-    "Exotic Nuts"
+    "Dry Fruits & Nuts",
+    "Seeds",
+    "Dates",
+    "Honey",
+    "Olives & Olive Oil",
+    "Mala's Crushes"
   ],
   "products": [
     {
-      "id": "prod-almonds",
-      "name": "Premium Almonds",
-      "subtitle": "California Whole Raw Almonds",
+      "id": "prod-almonds-regular",
+      "name": "Regular Badam",
+      "subtitle": "California Select Raw Whole Almonds",
       "unitPrice": "Unit price: ₹890 / kg",
-      "price": 289,
-      "originalPrice": 369,
-      "category": "Almonds",
+      "price": 249,
+      "originalPrice": 320,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Almonds",
       "image": "/images/products/almonds.jpeg",
       "gallery": [
         "/images/products/almonds.jpeg",
@@ -26,259 +27,1037 @@
         "/images/products/pistachios.jpeg",
         "/images/products/walnuts.jpeg"
       ],
-      "alt": "Premium California raw almonds",
-      "description": "Enjoy the rich, naturally nutty flavour and satisfying crunch of carefully selected premium almonds. Perfect for everyday snacking, breakfast, desserts, and traditional recipes.",
+      "alt": "Premium California raw regular badam",
+      "description": "Enjoy the rich, naturally nutty flavour and wholesome crunch of carefully selected California raw regular badam. 100% natural, vacuum-packed to preserve crunchiness and essential nutrients.",
       "highlights": [
-        "Premium-quality almonds",
-        "Naturally crunchy & delicious",
-        "Perfect for everyday snacking",
-        "Ideal for cooking and desserts",
-        "Great for gifting and festive occasions"
+        "100% Natural California Badam",
+        "Rich in Protein, Vitamin E & Dietary Fibre",
+        "Naturally crunchy and unpolished",
+        "Perfect for daily soaking and snacking",
+        "Fresh nitrogen-sealed pack"
       ],
       "variants": [
-        { "weight": "250g", "price": 289, "originalPrice": 369 },
-        { "weight": "500g", "price": 499, "originalPrice": 649 },
-        { "weight": "1kg", "price": 899, "originalPrice": 1199 }
+        { "weight": "250g", "price": 249, "originalPrice": 320 },
+        { "weight": "500g", "price": 479, "originalPrice": 620 },
+        { "weight": "1kg", "price": 890, "originalPrice": 1150 }
       ]
     },
     {
-      "id": "prod-cashews",
-      "name": "Premium Cashews",
-      "subtitle": "King Jumbo W240 Whole Cashews",
-      "unitPrice": "Unit price: ₹990 / kg",
-      "price": 319,
-      "originalPrice": 399,
-      "category": "Cashews",
+      "id": "prod-almonds-salted",
+      "name": "Salted Badam",
+      "subtitle": "Slow Roasted & Himalayan Salted Almonds",
+      "unitPrice": "Unit price: ₹960 / kg",
+      "price": 269,
+      "originalPrice": 350,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Almonds",
+      "image": "/images/products/almonds.jpeg",
+      "gallery": [
+        "/images/products/almonds.jpeg",
+        "/images/products/Cashews.jpeg",
+        "/images/products/pistachios.jpeg"
+      ],
+      "alt": "Crispy roasted and salted badam",
+      "description": "Slow dry-roasted to golden perfection and seasoned with pure Himalayan rock salt. Delightfully crunchy with balanced savoury taste.",
+      "highlights": [
+        "Slow dry-roasted with zero oil",
+        "Lightly seasoned with natural pink rock salt",
+        "High energy gourmet snack",
+        "Crispy and airtight packed",
+        "Great for tea-time and party grazing"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 269, "originalPrice": 350 },
+        { "weight": "500g", "price": 519, "originalPrice": 670 },
+        { "weight": "1kg", "price": 960, "originalPrice": 1250 }
+      ]
+    },
+    {
+      "id": "prod-kaju-210",
+      "name": "Kaju 210",
+      "subtitle": "King Jumbo W210 Grade Whole Cashews",
+      "unitPrice": "Unit price: ₹1190 / kg",
+      "price": 339,
+      "originalPrice": 420,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Cashews",
       "image": "/images/products/Cashews.jpeg",
       "gallery": [
         "/images/products/Cashews.jpeg",
         "/images/products/almonds.jpeg",
-        "/images/products/pistachios.jpeg",
-        "/images/products/walnuts.jpeg"
+        "/images/products/pistachios.jpeg"
       ],
-      "alt": "Premium jumbo whole cashews",
-      "description": "Enjoy the naturally creamy taste and satisfying crunch of premium-quality cashews. Carefully selected for their quality, they are perfect for everyday snacking, cooking, desserts, and festive treats.",
+      "alt": "King jumbo 210 grade kaju",
+      "description": "Extra large, hand-picked King Jumbo 210 count whole cashews. Renowned for their majestic size, natural sweetness, and supremely buttery texture.",
       "highlights": [
-        "Premium-quality cashews",
-        "Naturally creamy & crunchy",
-        "Rich, delicious nutty flavour",
-        "Perfect for snacking & cooking",
-        "Ideal for sweets, desserts & gifting"
+        "King Jumbo Grade 210 Whole Cashews",
+        "Supreme buttery & melt-in-mouth texture",
+        "Zero preservatives, unadulterated purity",
+        "Hand-sorted for unbroken uniform kernels",
+        "Luxury choice for festive gifting"
       ],
       "variants": [
-        { "weight": "250g", "price": 319, "originalPrice": 399 },
-        { "weight": "500g", "price": 549, "originalPrice": 699 },
-        { "weight": "1kg", "price": 999, "originalPrice": 1299 }
+        { "weight": "250g", "price": 339, "originalPrice": 420 },
+        { "weight": "500g", "price": 629, "originalPrice": 799 },
+        { "weight": "1kg", "price": 1190, "originalPrice": 1499 }
       ]
     },
     {
-      "id": "prod-pistachios",
-      "name": "Premium Pistachios",
-      "subtitle": "Roasted & Lightly Salted Emerald Pistachios",
+      "id": "prod-kaju-240",
+      "name": "Kaju 240",
+      "subtitle": "Premium Grade W240 Creamy Whole Cashews",
+      "unitPrice": "Unit price: ₹1050 / kg",
+      "price": 299,
+      "originalPrice": 380,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Cashews",
+      "image": "/images/products/Cashews.jpeg",
+      "gallery": [
+        "/images/products/Cashews.jpeg",
+        "/images/products/almonds.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Premium W240 whole kaju",
+      "description": "The golden standard of cashews — Grade W240 whole kernels. Creamy, mildly sweet, and bursting with rich natural cashew flavour.",
+      "highlights": [
+        "Premium W240 Grade Whole Cashews",
+        "Naturally creamy & sweet flavour",
+        "Ideal for daily snacking & royal Indian gravies",
+        "Rich in healthy plant fats & magnesium",
+        "Aroma-locked pouch packing"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 299, "originalPrice": 380 },
+        { "weight": "500g", "price": 549, "originalPrice": 699 },
+        { "weight": "1kg", "price": 1050, "originalPrice": 1350 }
+      ]
+    },
+    {
+      "id": "prod-kaju-salted",
+      "name": "Salted Kaju",
+      "subtitle": "Roasted & Himalayan Salted Crisp Cashews",
       "unitPrice": "Unit price: ₹1150 / kg",
-      "price": 349,
-      "originalPrice": 449,
-      "category": "Pistachios",
+      "price": 329,
+      "originalPrice": 410,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Cashews",
+      "image": "/images/products/Cashews.jpeg",
+      "gallery": [
+        "/images/products/Cashews.jpeg",
+        "/images/products/pistachios.jpeg",
+        "/images/products/almonds.jpeg"
+      ],
+      "alt": "Roasted and salted kaju",
+      "description": "Freshly roasted cashews tossed with fine rock salt. Crisp on the outside, buttery on the inside.",
+      "highlights": [
+        "Golden dry-roasted cashews",
+        "Flavoured with pure rock salt",
+        "Super crunchy texture",
+        "No artificial colours or MSG",
+        "Irresistible evening snack"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 329, "originalPrice": 410 },
+        { "weight": "500g", "price": 599, "originalPrice": 780 },
+        { "weight": "1kg", "price": 1150, "originalPrice": 1490 }
+      ]
+    },
+    {
+      "id": "prod-pista",
+      "name": "Pista (Pistachios)",
+      "subtitle": "Raw Natural Emerald Green Pistachio Kernels",
+      "unitPrice": "Unit price: ₹1250 / kg",
+      "price": 359,
+      "originalPrice": 460,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Pistachios",
       "image": "/images/products/pistachios.jpeg",
       "gallery": [
         "/images/products/pistachios.jpeg",
         "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg",
-        "/images/products/walnuts.jpeg"
+        "/images/products/Cashews.jpeg"
       ],
-      "alt": "Premium roasted salted pistachios",
-      "description": "Enjoy the naturally rich, mildly sweet flavour and satisfying crunch of premium pistachios. Carefully selected for quality, they are perfect for everyday snacking, desserts, sweets, and festive treats.",
+      "alt": "Raw natural emerald green pista",
+      "description": "Vibrant emerald green raw pistachio kernels without salt. Rich in antioxidants and perfect for sweets, kheer, baking, and healthy snacking.",
       "highlights": [
-        "Premium-quality pistachios",
-        "Naturally crunchy & delicious",
-        "Rich, mildly sweet flavour",
-        "Perfect for everyday snacking",
-        "Ideal for sweets, desserts & gifting"
+        "100% Raw unsalted green pista kernels",
+        "Naturally vibrant emerald colour",
+        "High in antioxidants, lutein & zeaxanthin",
+        "Ideal for biryani garnishing & mithai",
+        "Supreme fresh aroma"
       ],
       "variants": [
-        { "weight": "250g", "price": 349, "originalPrice": 449 },
-        { "weight": "500g", "price": 599, "originalPrice": 749 },
-        { "weight": "1kg", "price": 1099, "originalPrice": 1399 }
+        { "weight": "250g", "price": 359, "originalPrice": 460 },
+        { "weight": "500g", "price": 669, "originalPrice": 880 },
+        { "weight": "1kg", "price": 1250, "originalPrice": 1650 }
+      ]
+    },
+    {
+      "id": "prod-salted-pista",
+      "name": "Salted Pista",
+      "subtitle": "Roasted & Lightly Salted In-Shell Pistachios",
+      "unitPrice": "Unit price: ₹1190 / kg",
+      "price": 339,
+      "originalPrice": 440,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Pistachios",
+      "image": "/images/products/pistachios.jpeg",
+      "gallery": [
+        "/images/products/pistachios.jpeg",
+        "/images/products/almonds.jpeg",
+        "/images/products/Cashews.jpeg"
+      ],
+      "alt": "Roasted and lightly salted in-shell pista",
+      "description": "Premium naturally opened in-shell pistachios, roasted with a hint of salt. Crisp, delicious, and easy to crack open.",
+      "highlights": [
+        "Naturally split in-shell pistachios",
+        "Crispy dry-roasted crunch",
+        "Lightly salted for premium taste",
+        "Loaded with potassium and B-vitamins",
+        "Top choice for healthy munching"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 339, "originalPrice": 440 },
+        { "weight": "500g", "price": 629, "originalPrice": 820 },
+        { "weight": "1kg", "price": 1190, "originalPrice": 1550 }
       ]
     },
     {
       "id": "prod-walnuts",
-      "name": "Premium Walnuts",
-      "subtitle": "Kashmiri Extra Light Halves",
-      "unitPrice": "Unit price: ₹950 / kg",
+      "name": "Walnuts (Akhrot)",
+      "subtitle": "Kashmiri Extra Light Brain-Nut Halves",
+      "unitPrice": "Unit price: ₹990 / kg",
       "price": 289,
-      "originalPrice": 369,
-      "category": "Walnuts",
+      "originalPrice": 370,
+      "category": "Dry Fruits & Nuts",
       "image": "/images/products/walnuts.jpeg",
       "gallery": [
         "/images/products/walnuts.jpeg",
         "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg",
-        "/images/products/pecans.jpeg"
+        "/images/products/Cashews.jpeg"
       ],
-      "alt": "Premium Kashmiri walnut halves",
-      "description": "Enjoy the rich, earthy flavour and naturally satisfying crunch of premium-quality walnuts. Carefully selected for freshness and quality, they are perfect for everyday snacking, breakfast, desserts, and cooking.",
+      "alt": "Kashmiri extra light walnut akhrot halves",
+      "description": "Direct from the lush orchards of Kashmir. Extra light coloured unbroken walnut halves packed with plant-based Omega-3 ALA.",
       "highlights": [
-        "Premium-quality walnuts",
-        "Rich, earthy flavour",
-        "Naturally crunchy & satisfying",
-        "Perfect for everyday snacking",
-        "Ideal for breakfast, desserts & cooking"
+        "Kashmiri Extra Light Giri (Halves)",
+        "Rich in Omega-3 fatty acids for brain health",
+        "Fresh, mild flavour with zero bitterness",
+        "Cold-stored to prevent oxidation",
+        "Excellent for oats, smoothies & salads"
       ],
       "variants": [
-        { "weight": "250g", "price": 289, "originalPrice": 369 },
-        { "weight": "500g", "price": 499, "originalPrice": 649 },
-        { "weight": "1kg", "price": 899, "originalPrice": 1199 }
+        { "weight": "250g", "price": 289, "originalPrice": 370 },
+        { "weight": "500g", "price": 529, "originalPrice": 690 },
+        { "weight": "1kg", "price": 990, "originalPrice": 1290 }
       ]
     },
     {
-      "id": "prod-hazelnuts",
-      "name": "Premium Hazelnuts",
-      "subtitle": "Whole Roasted Gourmet Hazelnuts",
-      "unitPrice": "Unit price: ₹1250 / kg",
-      "price": 369,
-      "originalPrice": 469,
-      "category": "Exotic Nuts",
+      "id": "prod-charoli",
+      "name": "Charoli (Chironji)",
+      "subtitle": "Wild Harvested Natural Chironji Kernels",
+      "unitPrice": "Unit price: ₹1450 / kg",
+      "price": 179,
+      "originalPrice": 240,
+      "category": "Dry Fruits & Nuts",
       "image": "/images/products/hazelnuts.jpeg",
       "gallery": [
         "/images/products/hazelnuts.jpeg",
-        "/images/products/pecans.jpeg",
-        "/images/products/brazil-nuts.jpeg",
-        "/images/products/pine-nuts.jpeg"
-      ],
-      "alt": "Premium roasted hazelnuts",
-      "description": "Enjoy the naturally sweet, buttery flavour and satisfying crunch of premium-quality hazelnuts. Carefully selected for freshness and quality, they are perfect for snacking, baking, desserts, and homemade treats.",
-      "highlights": [
-        "Premium-quality hazelnuts",
-        "Naturally sweet & crunchy",
-        "Rich, buttery nutty flavour",
-        "Perfect for snacking & baking",
-        "Ideal for desserts & homemade treats"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 369, "originalPrice": 469 },
-        { "weight": "500g", "price": 649, "originalPrice": 799 },
-        { "weight": "1kg", "price": 1199, "originalPrice": 1499 }
-      ]
-    },
-    {
-      "id": "prod-pecans",
-      "name": "Premium Pecans",
-      "subtitle": "Sweet Butter Mammoth Pecan Halves",
-      "unitPrice": "Unit price: ₹1350 / kg",
-      "price": 399,
-      "originalPrice": 499,
-      "category": "Exotic Nuts",
-      "image": "/images/products/pecans.jpeg",
-      "gallery": [
-        "/images/products/pecans.jpeg",
-        "/images/products/hazelnuts.jpeg",
-        "/images/products/brazil-nuts.jpeg",
-        "/images/products/walnuts.jpeg"
-      ],
-      "alt": "Premium raw pecan halves",
-      "description": "Enjoy the naturally sweet, buttery flavour and delicate crunch of premium-quality pecans. Carefully selected for their rich taste, they are perfect for everyday snacking, baking, desserts, and homemade treats.",
-      "highlights": [
-        "Premium-quality pecans",
-        "Naturally sweet & crunchy",
-        "Rich, buttery nutty flavour",
-        "Perfect for snacking & baking",
-        "Ideal for desserts & homemade treats"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 399, "originalPrice": 499 },
-        { "weight": "500g", "price": 699, "originalPrice": 899 },
-        { "weight": "1kg", "price": 1299, "originalPrice": 1699 }
-      ]
-    },
-    {
-      "id": "prod-brazil-nuts",
-      "name": "Premium Brazil Nuts",
-      "subtitle": "Amazon Rainforest Raw Whole Brazil Nuts",
-      "unitPrice": "Unit price: ₹1499 / kg",
-      "price": 449,
-      "originalPrice": 549,
-      "category": "Exotic Nuts",
-      "image": "/images/products/brazil-nuts.jpeg",
-      "gallery": [
-        "/images/products/brazil-nuts.jpeg",
         "/images/products/pine-nuts.jpeg",
-        "/images/products/hazelnuts.jpeg",
-        "/images/products/pecans.jpeg"
+        "/images/products/almonds.jpeg"
       ],
-      "alt": "Premium Amazon Brazil nuts",
-      "description": "Enjoy the rich, creamy texture and naturally nutty flavour of premium Brazil nuts. Carefully selected for quality and freshness, they are perfect for everyday snacking, breakfast, baking, and adding to your favourite recipes.",
+      "alt": "Natural wild harvested charoli chironji",
+      "description": "Tiny, nutty, almond-flavoured wild chironji seeds. Highly revered in traditional sweets, sheer khurma, payasam, and Ayurvedic wellness.",
       "highlights": [
-        "Premium-quality Brazil nuts",
-        "Rich, creamy & crunchy texture",
-        "Naturally nutty flavour",
-        "Perfect for everyday snacking",
-        "Great for baking, breakfast & recipes"
+        "100% Pure & Cleaned Charoli / Chironji",
+        "Subtle almond-like nutty flavour",
+        "Essential for Sheer Khurma, Kheer & Halwa",
+        "Rich in essential minerals & proteins",
+        "Hygienically sorted and packed"
       ],
       "variants": [
-        { "weight": "250g", "price": 449, "originalPrice": 549 },
-        { "weight": "500g", "price": 799, "originalPrice": 999 },
-        { "weight": "1kg", "price": 1499, "originalPrice": 1899 }
+        { "weight": "100g", "price": 179, "originalPrice": 240 },
+        { "weight": "250g", "price": 399, "originalPrice": 520 },
+        { "weight": "500g", "price": 749, "originalPrice": 980 }
       ]
     },
     {
-      "id": "prod-pine-nuts",
-      "name": "Premium Pine Nuts (Chilgoza)",
-      "subtitle": "Himalayan Hand-Harvested Chilgoza Kernels",
-      "unitPrice": "Unit price: ₹2499 / kg",
-      "price": 699,
-      "originalPrice": 849,
-      "category": "Exotic Nuts",
+      "id": "prod-chuhara",
+      "name": "Chuhara (Dry Dates)",
+      "subtitle": "Naturally Sundried Yellow Sweet Dry Dates",
+      "unitPrice": "Unit price: ₹450 / kg",
+      "price": 139,
+      "originalPrice": 180,
+      "category": "Dry Fruits & Nuts",
       "image": "/images/products/pine-nuts.jpeg",
       "gallery": [
         "/images/products/pine-nuts.jpeg",
-        "/images/products/brazil-nuts.jpeg",
-        "/images/products/pistachios.jpeg",
-        "/images/products/hazelnuts.jpeg"
+        "/images/products/walnuts.jpeg"
       ],
-      "alt": "Premium Himalayan Chilgoza pine nuts",
-      "description": "Enjoy the delicate, buttery flavour and naturally crunchy texture of premium pine nuts (Chilgoza). Carefully selected for quality and freshness, they are perfect for snacking, desserts, traditional sweets, and adding a rich touch to your favourite recipes.",
+      "alt": "Natural dry yellow chuhara",
+      "description": "Sun-dried natural yellow chuhara dry dates. Loaded with natural iron and calcium, ideal for energy milk drinks, festive rituals, and digestion.",
       "highlights": [
-        "Premium-quality Pine Nuts (Chilgoza)",
-        "Delicate, buttery & nutty flavour",
-        "Naturally crunchy texture",
-        "Perfect for snacking & desserts",
-        "Ideal for sweets and traditional recipes"
+        "Natural sweet yellow chuhara",
+        "High in Dietary Fibre, Calcium & Iron",
+        "Traditional remedy for vitality and strength",
+        "Great for boiling with dry fruit milk",
+        "Long shelf-life and moisture-protected"
       ],
       "variants": [
-        { "weight": "250g", "price": 699, "originalPrice": 849 },
-        { "weight": "500g", "price": 1299, "originalPrice": 1599 },
-        { "weight": "1kg", "price": 2499, "originalPrice": 2999 }
+        { "weight": "250g", "price": 139, "originalPrice": 180 },
+        { "weight": "500g", "price": 249, "originalPrice": 330 },
+        { "weight": "1kg", "price": 450, "originalPrice": 590 }
       ]
     },
     {
-      "id": "prod-peanuts",
-      "name": "Premium Peanuts",
-      "subtitle": "Slow Roasted Golden Crunchy Peanuts",
-      "unitPrice": "Unit price: ₹450 / kg",
+      "id": "prod-kishmish",
+      "name": "Kishmish (Afghan Raisins)",
+      "subtitle": "Afghan Long Golden Sweet Seedless Raisins",
+      "unitPrice": "Unit price: ₹490 / kg",
       "price": 149,
       "originalPrice": 199,
-      "category": "Peanuts",
+      "category": "Dry Fruits & Nuts",
       "image": "/images/products/peanut.jpeg",
       "gallery": [
         "/images/products/peanut.jpeg",
-        "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg",
-        "/images/products/walnuts.jpeg"
+        "/images/products/almonds.jpeg"
       ],
-      "alt": "Premium golden roasted peanuts",
-      "description": "Enjoy the classic roasted nutty flavour and satisfying crunch of quality peanuts. A versatile everyday snack, perfect for munching, cooking, homemade snacks, and adding to your favourite recipes.",
+      "alt": "Long golden afghan kishmish",
+      "description": "Plump, naturally sun-cured Afghan long golden seedless kishmish. Sweet, tender, and free from added sugar.",
       "highlights": [
-        "Quality peanuts",
-        "Naturally crunchy & delicious",
-        "Rich, nutty flavour",
-        "Perfect for everyday snacking",
-        "Great for cooking & homemade snacks"
+        "100% Seedless Afghan Golden Raisins",
+        "Naturally sweet with zero added sugar",
+        "Rich in Iron, Potassium & Antioxidants",
+        "Perfect for morning energy water & desserts",
+        "Soft and juicy texture"
       ],
       "variants": [
         { "weight": "250g", "price": 149, "originalPrice": 199 },
-        { "weight": "500g", "price": 249, "originalPrice": 349 },
-        { "weight": "1kg", "price": 449, "originalPrice": 599 }
+        { "weight": "500g", "price": 269, "originalPrice": 360 },
+        { "weight": "1kg", "price": 490, "originalPrice": 650 }
+      ]
+    },
+    {
+      "id": "prod-munakka",
+      "name": "Munakka (Black Munakka)",
+      "subtitle": "Ayurvedic Jumbo Seeded Black Munakka",
+      "unitPrice": "Unit price: ₹750 / kg",
+      "price": 219,
+      "originalPrice": 290,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Munakka",
+      "image": "/images/products/pecans.jpeg",
+      "gallery": [
+        "/images/products/pecans.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Ayurvedic jumbo black munakka",
+      "description": "Large, fleshy black munakka known in Ayurveda for boosting hemoglobin, soothing acidity, and enhancing stamina. Fleshy with natural seeds.",
+      "highlights": [
+        "Authentic Jumbo Black Munakka with seeds",
+        "Ayurvedic powerhouse for hemoglobin & immunity",
+        "Natural digestive and cooling properties",
+        "Soft and rich caramelized sweetness",
+        "Hygienically cleaned and packaged"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 219, "originalPrice": 290 },
+        { "weight": "500g", "price": 399, "originalPrice": 530 },
+        { "weight": "1kg", "price": 750, "originalPrice": 980 }
+      ]
+    },
+    {
+      "id": "prod-makhana",
+      "name": "Makhana (Fox Nuts)",
+      "subtitle": "Jumbo 6-Soot Handpicked Phool Makhana",
+      "unitPrice": "Unit price: ₹890 / kg",
+      "price": 249,
+      "originalPrice": 330,
+      "category": "Dry Fruits & Nuts",
+      "image": "/images/products/brazil-nuts.jpeg",
+      "gallery": [
+        "/images/products/brazil-nuts.jpeg",
+        "/images/products/Cashews.jpeg"
+      ],
+      "alt": "Jumbo 6-soot phool makhana",
+      "description": "Fluffy, extra-large handpicked lotus seeds (Phool Makhana). Gluten-free, low-calorie, and calcium-rich superfood for roasting and fasting recipes.",
+      "highlights": [
+        "Jumbo Grade Hand-Sorted Makhana",
+        "Naturally gluten-free & low glycemic index",
+        "High in plant protein, calcium & magnesium",
+        "Roasts into light, crispy, crunchy snack",
+        "Zero oil and zero additives"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 249, "originalPrice": 330 },
+        { "weight": "500g", "price": 469, "originalPrice": 620 },
+        { "weight": "1kg", "price": 890, "originalPrice": 1180 }
+      ]
+    },
+    {
+      "id": "prod-anjir",
+      "name": "Anjir (Sundried Figs)",
+      "subtitle": "Royal Afghan Soft Ring Sundried Figs",
+      "unitPrice": "Unit price: ₹1190 / kg",
+      "price": 339,
+      "originalPrice": 430,
+      "category": "Dry Fruits & Nuts",
+      "image": "/images/products/walnuts.jpeg",
+      "gallery": [
+        "/images/products/walnuts.jpeg",
+        "/images/products/pecans.jpeg"
+      ],
+      "alt": "Sundried afghan anjir figs",
+      "description": "Rich, chewy garland-strung Afghan sundried figs. Packed with dietary fibre, potassium, and calcium for bone and gut health.",
+      "highlights": [
+        "Royal Afghan Garland (Chakki) Anjir",
+        "Rich source of soluble fibre & calcium",
+        "Naturally sweet without sugar coating",
+        "Great for morning soaking & digestion",
+        "Soft and plump chewy texture"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 339, "originalPrice": 430 },
+        { "weight": "500g", "price": 629, "originalPrice": 820 },
+        { "weight": "1kg", "price": 1190, "originalPrice": 1550 }
+      ]
+    },
+    {
+      "id": "prod-seed-watermelon",
+      "name": "Watermelon Seeds",
+      "subtitle": "Raw Dehulled Tarbuj Magaz Kernels",
+      "unitPrice": "Unit price: ₹590 / kg",
+      "price": 169,
+      "originalPrice": 220,
+      "category": "Seeds",
+      "image": "/images/products/pine-nuts.jpeg",
+      "gallery": [
+        "/images/products/pine-nuts.jpeg",
+        "/images/products/hazelnuts.jpeg"
+      ],
+      "alt": "Raw watermelon seeds tarbuj magaz",
+      "description": "Premium dehulled raw watermelon seeds (Tarbuj Magaz). Rich in protein, magnesium, zinc, and healthy fatty acids.",
+      "highlights": [
+        "100% Raw & Unsalted Watermelon Kernels",
+        "Packed with Zinc, Magnesium & Plant Protein",
+        "Perfect for baking, smoothies & curries",
+        "Crispy mild nutty crunch",
+        "Hygienically sorted & cleaned"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 169, "originalPrice": 220 },
+        { "weight": "500g", "price": 319, "originalPrice": 410 },
+        { "weight": "1kg", "price": 590, "originalPrice": 780 }
+      ]
+    },
+    {
+      "id": "prod-seed-muskmelon",
+      "name": "Muskmelon Seeds",
+      "subtitle": "Raw Kharbuja Magaz Nutritious Kernels",
+      "unitPrice": "Unit price: ₹640 / kg",
+      "price": 179,
+      "originalPrice": 230,
+      "category": "Seeds",
+      "image": "/images/products/pine-nuts.jpeg",
+      "gallery": [
+        "/images/products/pine-nuts.jpeg",
+        "/images/products/almonds.jpeg"
+      ],
+      "alt": "Raw muskmelon seeds kharbuja magaz",
+      "description": "Natural cleaned muskmelon seed kernels (Kharbuja Magaz). Rich in vitamins A and C, ideal for royal Mughlai gravies and energy trail mixes.",
+      "highlights": [
+        "Cleaned Raw Muskmelon Seeds",
+        "Rich in Vitamin A, C & Healthy Fats",
+        "Essential for creamy gravies and thandai",
+        "Naturally cooling & nourishing",
+        "Airtight moisture-safe pouch"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 179, "originalPrice": 230 },
+        { "weight": "500g", "price": 339, "originalPrice": 440 },
+        { "weight": "1kg", "price": 640, "originalPrice": 840 }
+      ]
+    },
+    {
+      "id": "prod-seed-chia",
+      "name": "Chia Seeds",
+      "subtitle": "Raw Superfood Black & White Chia Seeds",
+      "unitPrice": "Unit price: ₹580 / kg",
+      "price": 169,
+      "originalPrice": 220,
+      "category": "Seeds",
+      "image": "/images/products/pecans.jpeg",
+      "gallery": [
+        "/images/products/pecans.jpeg",
+        "/images/products/pine-nuts.jpeg"
+      ],
+      "alt": "Raw natural superfood chia seeds",
+      "description": "Nutrient-dense raw chia seeds loaded with soluble dietary fibre, protein, and omega-3. Perfect for weight management and overnight puddings.",
+      "highlights": [
+        "100% Raw & Unprocessed Chia Seeds",
+        "Absorbs 10x its weight in water for hydration",
+        "High soluble fibre & Omega-3 ALA",
+        "Ideal for chia pudding, juices & oatmeal",
+        "Zero bitterness, easy to consume"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 169, "originalPrice": 220 },
+        { "weight": "500g", "price": 299, "originalPrice": 390 },
+        { "weight": "1kg", "price": 580, "originalPrice": 750 }
+      ]
+    },
+    {
+      "id": "prod-seed-flax",
+      "name": "Alsi / Flax Seeds",
+      "subtitle": "Golden Brown Omega-3 Loaded Flax Seeds",
+      "unitPrice": "Unit price: ₹380 / kg",
+      "price": 119,
+      "originalPrice": 160,
+      "category": "Seeds",
+      "image": "/images/products/peanut.jpeg",
+      "gallery": [
+        "/images/products/peanut.jpeg",
+        "/images/products/hazelnuts.jpeg"
+      ],
+      "alt": "Golden brown alsi flax seeds",
+      "description": "Wholesome golden brown flax seeds (Alsi). Renowned for heart health, lignans, and digestive wellness.",
+      "highlights": [
+        "100% Pure Cleaned Alsi (Flax Seeds)",
+        "Rich in Lignans & Omega-3 Fats",
+        "Supports heart health and digestion",
+        "Great for roasting with pink salt",
+        "Fresh harvest batch"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 119, "originalPrice": 160 },
+        { "weight": "500g", "price": 210, "originalPrice": 280 },
+        { "weight": "1kg", "price": 380, "originalPrice": 490 }
+      ]
+    },
+    {
+      "id": "prod-seed-sesame",
+      "name": "Til / Sesame Seeds",
+      "subtitle": "Premium Polished White Sesame Seeds",
+      "unitPrice": "Unit price: ₹420 / kg",
+      "price": 129,
+      "originalPrice": 170,
+      "category": "Seeds",
+      "image": "/images/products/hazelnuts.jpeg",
+      "gallery": [
+        "/images/products/hazelnuts.jpeg",
+        "/images/products/pine-nuts.jpeg"
+      ],
+      "alt": "White til sesame seeds",
+      "description": "High-grade polished white sesame seeds (Safed Til). Packed with natural calcium, zinc, and nutty aroma for baking and traditional laddus.",
+      "highlights": [
+        "Cleaned & Polished Natural White Til",
+        "Exceptional source of plant Calcium",
+        "Rich nutty flavour when roasted",
+        "Essential for chikki, sweets, and Asian cuisine",
+        "Hygienically machine-cleaned"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 129, "originalPrice": 170 },
+        { "weight": "500g", "price": 230, "originalPrice": 310 },
+        { "weight": "1kg", "price": 420, "originalPrice": 550 }
+      ]
+    },
+    {
+      "id": "prod-date-kalmi",
+      "name": "Kalmi Dates (Safawi)",
+      "subtitle": "Premium Soft & Chewy Saudi Kalmi Dates",
+      "unitPrice": "Unit price: ₹790 / kg",
+      "price": 229,
+      "originalPrice": 310,
+      "category": "Dates",
+      "image": "/images/products/walnuts.jpeg",
+      "gallery": [
+        "/images/products/walnuts.jpeg",
+        "/images/products/pecans.jpeg"
+      ],
+      "alt": "Saudi kalmi safawi dates",
+      "description": "Authentic Saudi Kalmi (Safawi) dates. Medium-sized, dark brown, delightfully chewy with a rich caramel sweetness and dense flesh.",
+      "highlights": [
+        "Authentic Medina Imported Kalmi Dates",
+        "Soft and pleasantly chewy texture",
+        "Loaded with potassium, iron & magnesium",
+        "Natural instant stamina booster",
+        "Non-sticky, clean packing"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 229, "originalPrice": 310 },
+        { "weight": "500g", "price": 420, "originalPrice": 560 },
+        { "weight": "1kg", "price": 790, "originalPrice": 1050 }
+      ]
+    },
+    {
+      "id": "prod-date-mabrum",
+      "name": "Mabrum Dates",
+      "subtitle": "Royal Slender & Firm Caramel Mabrum Dates",
+      "unitPrice": "Unit price: ₹990 / kg",
+      "price": 289,
+      "originalPrice": 380,
+      "category": "Dates",
+      "image": "/images/products/pecans.jpeg",
+      "gallery": [
+        "/images/products/pecans.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Royal mabrum dates",
+      "description": "Long, slender, firm Saudi Mabrum dates. Chewy with subtle toffee notes and pleasant non-overpowering natural sweetness.",
+      "highlights": [
+        "Royal Medina Mabrum Dates",
+        "Slender shape with toffee-like flavour",
+        "Firm yet tender chewiness",
+        "Premium gift-grade presentation",
+        "Rich in natural minerals"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 289, "originalPrice": 380 },
+        { "weight": "500g", "price": 529, "originalPrice": 690 },
+        { "weight": "1kg", "price": 990, "originalPrice": 1290 }
+      ]
+    },
+    {
+      "id": "prod-date-ajwa",
+      "name": "Ajwa Dates",
+      "subtitle": "Holy Al-Madinah Al-Munawwarah Black Ajwa",
+      "unitPrice": "Unit price: ₹1390 / kg",
+      "price": 399,
+      "originalPrice": 520,
+      "category": "Dates",
+      "image": "/images/products/pine-nuts.jpeg",
+      "gallery": [
+        "/images/products/pine-nuts.jpeg",
+        "/images/products/walnuts.jpeg",
+        "/images/products/pecans.jpeg"
+      ],
+      "alt": "Holy medina ajwa black dates",
+      "description": "Directly imported from the holy groves of Medina. Small, round, soft, finely wrinkled dark black dates cherished worldwide for health and spiritual blessing.",
+      "highlights": [
+        "100% Certified Medina Ajwa Dates",
+        "Soft, luscious dark texture with fine white veins",
+        "Famous for heart health and cardiovascular wellness",
+        "High in polyphenols and antioxidants",
+        "Direct orchard sourcing"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 399, "originalPrice": 520 },
+        { "weight": "500g", "price": 749, "originalPrice": 980 },
+        { "weight": "1kg", "price": 1390, "originalPrice": 1850 }
+      ]
+    },
+    {
+      "id": "prod-date-kimia",
+      "name": "Kimia Dates",
+      "subtitle": "Fresh Soft Melt-in-Mouth Iranian Kimia Gold",
+      "unitPrice": "Unit price: ₹420 / kg",
+      "price": 219,
+      "originalPrice": 290,
+      "category": "Dates",
+      "image": "/images/products/brazil-nuts.jpeg",
+      "gallery": [
+        "/images/products/brazil-nuts.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Soft fresh iranian kimia dates",
+      "description": "Ultra soft, juicy, and sweet Iranian Kimia dates. Known for their glossy dark skin and melt-in-mouth creamy honey pulp.",
+      "highlights": [
+        "Fresh Soft Iranian Kimia Dates",
+        "Melt-in-mouth honey sweetness",
+        "Naturally juicy and plump",
+        "Packed in sealed fresh box",
+        "Ideal for daily breakfast and energy shakes"
+      ],
+      "variants": [
+        { "weight": "500g Box", "price": 219, "originalPrice": 290 },
+        { "weight": "1kg (2 Boxes)", "price": 399, "originalPrice": 540 }
+      ]
+    },
+    {
+      "id": "prod-date-irani",
+      "name": "Irani Dates",
+      "subtitle": "Mazafati Fresh Black Chocolatey Irani Dates",
+      "unitPrice": "Unit price: ₹440 / kg",
+      "price": 219,
+      "originalPrice": 290,
+      "category": "Dates",
+      "image": "/images/products/pecans.jpeg",
+      "gallery": [
+        "/images/products/pecans.jpeg",
+        "/images/products/brazil-nuts.jpeg"
+      ],
+      "alt": "Fresh irani mazafati dates",
+      "description": "Authentic Bam Mazafati Irani dates. Deep black, velvety soft, and possessing natural notes of dark chocolate and brown sugar.",
+      "highlights": [
+        "Authentic Iranian Mazafati Fresh Harvest",
+        "Rich chocolatey caramel texture",
+        "Very high moisture and softness",
+        "Free from artificial glucose syrups",
+        "Quick natural energy provider"
+      ],
+      "variants": [
+        { "weight": "500g Box", "price": 219, "originalPrice": 290 },
+        { "weight": "1kg (2 Boxes)", "price": 399, "originalPrice": 540 }
+      ]
+    },
+    {
+      "id": "prod-date-maryam",
+      "name": "Maryam Dates",
+      "subtitle": "Gourmet Semi-Dry Piarom / Maryam Dates",
+      "unitPrice": "Unit price: ₹1150 / kg",
+      "price": 329,
+      "originalPrice": 440,
+      "category": "Dates",
+      "image": "/images/products/walnuts.jpeg",
+      "gallery": [
+        "/images/products/walnuts.jpeg",
+        "/images/products/pine-nuts.jpeg"
+      ],
+      "alt": "Gourmet maryam piarom dates",
+      "description": "Also known as the 'Chocolate Date' (Piarom). Semi-dry, long, dark brown dates with thin skin and an exquisite toffee flavour.",
+      "highlights": [
+        "Luxury Piarom / Maryam Dates",
+        "Unique toffee & caramel notes",
+        "Semi-dry non-sticky skin",
+        "Low sucrose content suitable for mindful eating",
+        "Exotic gourmet date variety"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 329, "originalPrice": 440 },
+        { "weight": "500g", "price": 599, "originalPrice": 790 },
+        { "weight": "1kg", "price": 1150, "originalPrice": 1490 }
+      ]
+    },
+    {
+      "id": "prod-date-ambar",
+      "name": "Ambar Dates",
+      "subtitle": "Jumbo Size Royal Saudi Amber Al-Madinah",
+      "unitPrice": "Unit price: ₹1450 / kg",
+      "price": 419,
+      "originalPrice": 550,
+      "category": "Dates",
+      "image": "/images/products/hazelnuts.jpeg",
+      "gallery": [
+        "/images/products/hazelnuts.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Jumbo royal ambar dates",
+      "description": "Among the largest varieties of Medina dates. Ambar dates feature thick fleshy meat, pleasant sweetness, and high nutritional density.",
+      "highlights": [
+        "Extra Large Jumbo King Ambar Dates",
+        "Dense, fleshy pulp with fine texture",
+        "Gentle sweet taste",
+        "Rich in natural iron & fibre",
+        "Royal presentation pack"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 419, "originalPrice": 550 },
+        { "weight": "500g", "price": 789, "originalPrice": 990 },
+        { "weight": "1kg", "price": 1450, "originalPrice": 1890 }
+      ]
+    },
+    {
+      "id": "prod-date-sukhr",
+      "name": "Sukhr Dates (Sukkari)",
+      "subtitle": "Golden Sweet Crispy & Soft Saudi Sukkari",
+      "unitPrice": "Unit price: ₹850 / kg",
+      "price": 249,
+      "originalPrice": 340,
+      "category": "Dates",
+      "image": "/images/products/peanut.jpeg",
+      "gallery": [
+        "/images/products/peanut.jpeg",
+        "/images/products/walnuts.jpeg"
+      ],
+      "alt": "Golden sweet sukhr sukkari dates",
+      "description": "Known as the 'Royal Date of Kings' in Al-Qassim. Cone-shaped golden dates with crunchy crystallized sugars and soft honeyed centre.",
+      "highlights": [
+        "Al-Qassim Golden Sukkari / Sukhr Dates",
+        "Natural sugary melt-in-mouth crunch",
+        "Bright golden amber colour",
+        "Pair amazingly with Arabic coffee & tea",
+        "100% Raw & unfiltered date harvest"
+      ],
+      "variants": [
+        { "weight": "250g", "price": 249, "originalPrice": 340 },
+        { "weight": "500g", "price": 460, "originalPrice": 620 },
+        { "weight": "1kg", "price": 850, "originalPrice": 1150 }
+      ]
+    },
+    {
+      "id": "prod-honey-pure",
+      "name": "Pure Honey",
+      "subtitle": "100% Raw Unpasteurized Natural Farm Honey",
+      "unitPrice": "Unit price: ₹650 / kg",
+      "price": 199,
+      "originalPrice": 270,
+      "category": "Honey",
+      "image": "/images/products/pine-nuts.jpeg",
+      "gallery": [
+        "/images/products/pine-nuts.jpeg",
+        "/images/products/heart-shap-dry-fruites.jpg"
+      ],
+      "alt": "Pure raw natural farm honey",
+      "description": "Pure, unheated, unfiltered bee honey harvested straight from natural apiaries. Contains natural pollen, enzymes, and antioxidants.",
+      "highlights": [
+        "100% Pure Raw Honey with active bee enzymes",
+        "Zero added sugar, corn syrup, or preservatives",
+        "NMR tested for 100% purity",
+        "Natural immunity and throat soother",
+        "Packed in premium glass jar"
+      ],
+      "variants": [
+        { "weight": "250g Jar", "price": 199, "originalPrice": 270 },
+        { "weight": "500g Jar", "price": 369, "originalPrice": 480 },
+        { "weight": "1kg Jar", "price": 650, "originalPrice": 850 }
+      ]
+    },
+    {
+      "id": "prod-honey-kashmiri",
+      "name": "Kashmiri Honey",
+      "subtitle": "Rare White Blossom Kashmiri Forest Honey",
+      "unitPrice": "Unit price: ₹890 / kg",
+      "price": 269,
+      "originalPrice": 360,
+      "category": "Honey",
+      "image": "/images/products/pine-nuts.jpeg",
+      "gallery": [
+        "/images/products/pine-nuts.jpeg",
+        "/images/products/heart-shap-dry-fruites.jpg"
+      ],
+      "alt": "Kashmiri acacia white blossom honey",
+      "description": "Harvested from pristine high-altitude valleys of Kashmir. Light amber in colour with a delicate floral aroma and smooth taste.",
+      "highlights": [
+        "Single-origin Kashmiri Acacia Blossom Honey",
+        "Light golden hue with exquisite floral aroma",
+        "Slow-crystallizing pure nectar",
+        "Rich in flavonoids & micronutrients",
+        "Pure Himalayan valley harvest"
+      ],
+      "variants": [
+        { "weight": "250g Jar", "price": 269, "originalPrice": 360 },
+        { "weight": "500g Jar", "price": 499, "originalPrice": 650 },
+        { "weight": "1kg Jar", "price": 890, "originalPrice": 1190 }
+      ]
+    },
+    {
+      "id": "prod-honey-multiflora",
+      "name": "Multi Flora Honey",
+      "subtitle": "Wildflower Forest Blossom Organic Honey",
+      "unitPrice": "Unit price: ₹690 / kg",
+      "price": 219,
+      "originalPrice": 290,
+      "category": "Honey",
+      "image": "/images/products/pine-nuts.jpeg",
+      "gallery": [
+        "/images/products/pine-nuts.jpeg",
+        "/images/products/heart-shap-dry-fruites.jpg"
+      ],
+      "alt": "Wildflower multi flora honey",
+      "description": "Collected by bees foraging from hundreds of wild forest medicinal flowers. Rich, robust flavour with complex therapeutic benefits.",
+      "highlights": [
+        "Harvested from diverse wild forest blossoms",
+        "Deep amber colour with full-bodied taste",
+        "Boosts digestion and overall vitality",
+        "100% Natural, chemical-free extraction",
+        "Sealed in heavy glass jar"
+      ],
+      "variants": [
+        { "weight": "250g Jar", "price": 219, "originalPrice": 290 },
+        { "weight": "500g Jar", "price": 399, "originalPrice": 520 },
+        { "weight": "1kg Jar", "price": 690, "originalPrice": 890 }
+      ]
+    },
+    {
+      "id": "prod-honey-dryfruit-mix",
+      "name": "Dry Fruit Honey Mix",
+      "subtitle": "Pure Honey with Almonds, Cashews, Pista & Walnuts",
+      "unitPrice": "Unit price: ₹950 / kg",
+      "price": 389,
+      "originalPrice": 499,
+      "category": "Honey",
+      "image": "/images/products/heart-shap-dry-fruites.jpg",
+      "gallery": [
+        "/images/products/heart-shap-dry-fruites.jpg",
+        "/images/products/almonds.jpeg",
+        "/images/products/Cashews.jpeg"
+      ],
+      "alt": "Royal dry fruit honey mix",
+      "description": "A royal Ayurvedic concoction of pure raw honey loaded with crunchy whole almonds, cashews, pistachios, and walnuts. Supercharge your mornings with instant stamina.",
+      "highlights": [
+        "Loaded with Almonds, Kaju, Pista & Akhrot",
+        "Infused in 100% Pure Raw Honey",
+        "Powerhouse of energy, protein and natural minerals",
+        "Delicious immunity booster for all age groups",
+        "Luxury glass jar presentation"
+      ],
+      "variants": [
+        { "weight": "350g Jar", "price": 389, "originalPrice": 499 },
+        { "weight": "500g Jar", "price": 549, "originalPrice": 699 },
+        { "weight": "1kg Jar", "price": 950, "originalPrice": 1250 }
+      ]
+    },
+    {
+      "id": "prod-olives",
+      "name": "Olives",
+      "subtitle": "Imported Spanish Pitted Green & Black Olives",
+      "unitPrice": "Unit price: ₹320 / jar",
+      "price": 199,
+      "originalPrice": 260,
+      "category": "Olives & Olive Oil",
+      "image": "/images/products/pistachios.jpeg",
+      "gallery": [
+        "/images/products/pistachios.jpeg",
+        "/images/products/hazelnuts.jpeg"
+      ],
+      "alt": "Spanish pitted green and black olives",
+      "description": "Succulent, plump Spanish pitted olives preserved in light brine. Ideal for Mediterranean salads, pastas, pizzas, and gourmet platters.",
+      "highlights": [
+        "Premium Spanish Pitted Olives",
+        "Plump, firm, and succulent texture",
+        "Rich in healthy monounsaturated fats & Vitamin E",
+        "Convenient seedless pitted cut",
+        "Sealed in freshness brine glass jar"
+      ],
+      "variants": [
+        { "weight": "350g Jar", "price": 199, "originalPrice": 260 },
+        { "weight": "700g Jar", "price": 369, "originalPrice": 480 }
+      ]
+    },
+    {
+      "id": "prod-olive-oil",
+      "name": "Olive Oil",
+      "subtitle": "Extra Virgin First Cold Pressed Olive Oil",
+      "unitPrice": "Unit price: ₹890 / bottle",
+      "price": 529,
+      "originalPrice": 680,
+      "category": "Olives & Olive Oil",
+      "image": "/images/products/hazelnuts.jpeg",
+      "gallery": [
+        "/images/products/hazelnuts.jpeg",
+        "/images/products/pistachios.jpeg"
+      ],
+      "alt": "Extra virgin cold pressed olive oil",
+      "description": "100% Pure First Cold-Pressed Spanish Extra Virgin Olive Oil. Rich in polyphenols and oleic acid, featuring a fresh fruity aroma with a peppery finish.",
+      "highlights": [
+        "First Cold-Pressed Extra Virgin Olive Oil",
+        "Low Acidity (<0.5%) for supreme health benefits",
+        "Ideal for salad dressings, sautéing & dipping",
+        "Zero cholesterol & trans fats",
+        "Dark UV-protected bottle packaging"
+      ],
+      "variants": [
+        { "weight": "500ml Bottle", "price": 529, "originalPrice": 680 },
+        { "weight": "1 Litre Bottle", "price": 999, "originalPrice": 1290 },
+        { "weight": "2 Litre Can", "price": 1890, "originalPrice": 2400 }
+      ]
+    },
+    {
+      "id": "prod-malas-strawberry",
+      "name": "Mala's Strawberry Crush",
+      "subtitle": "Mahabaleshwar Fresh Strawberry Fruit Pulp Crush",
+      "unitPrice": "Unit price: ₹240 / bottle",
+      "price": 219,
+      "originalPrice": 270,
+      "category": "Mala's Crushes",
+      "image": "/images/products/dry-fruites.jpg",
+      "gallery": [
+        "/images/products/dry-fruites.jpg",
+        "/images/products/heart-shap-dry-fruites.jpg"
+      ],
+      "alt": "Malas strawberry fruit crush",
+      "description": "Crafted with sun-ripened Mahabaleshwar strawberries. Bursting with real fruit pulp for milkshakes, mocktails, ice-cream toppings, and desserts.",
+      "highlights": [
+        "Authentic Mala's Fruit Crush with real strawberry pulp",
+        "Rich fruit chunks and vibrant natural aroma",
+        "Makes refreshing milkshakes, mocktails & smoothies",
+        "Trusted brand quality",
+        "Easy-pour bottle"
+      ],
+      "variants": [
+        { "weight": "750ml Bottle", "price": 219, "originalPrice": 270 },
+        { "weight": "1 Litre Bottle", "price": 279, "originalPrice": 350 }
+      ]
+    },
+    {
+      "id": "prod-malas-mango",
+      "name": "Mala's Mango Crush",
+      "subtitle": "King Alphonso Mango Pulp Fruit Crush",
+      "unitPrice": "Unit price: ₹240 / bottle",
+      "price": 219,
+      "originalPrice": 270,
+      "category": "Mala's Crushes",
+      "image": "/images/products/dry-fruites.jpg",
+      "gallery": [
+        "/images/products/dry-fruites.jpg",
+        "/images/products/heart-shap-dry-fruites.jpg"
+      ],
+      "alt": "Malas mango alphonso fruit crush",
+      "description": "Rich, luscious Alphonso mango crush loaded with sweet golden pulp. Perfect for summer coolers, lassi, kulfi, and baking.",
+      "highlights": [
+        "Rich Alphonso Mango fruit puree blend",
+        "Thick luscious texture & tropical aroma",
+        "Perfect for mango shakes, puddings & cocktails",
+        "High fruit content",
+        "Hygienic sealed bottle"
+      ],
+      "variants": [
+        { "weight": "750ml Bottle", "price": 219, "originalPrice": 270 },
+        { "weight": "1 Litre Bottle", "price": 279, "originalPrice": 350 }
+      ]
+    },
+    {
+      "id": "prod-malas-blueberry",
+      "name": "Mala's Blueberry Crush",
+      "subtitle": "Gourmet Wild Blueberry Pulp Fruit Crush",
+      "unitPrice": "Unit price: ₹280 / bottle",
+      "price": 259,
+      "originalPrice": 320,
+      "category": "Mala's Crushes",
+      "image": "/images/products/dry-fruites.jpg",
+      "gallery": [
+        "/images/products/dry-fruites.jpg",
+        "/images/products/heart-shap-dry-fruites.jpg"
+      ],
+      "alt": "Malas wild blueberry fruit crush",
+      "description": "Exotic gourmet blueberry crush filled with sweet-tangy wild berry pulp. Gives gorgeous purple hue and rich flavour to cheesecakes and sodas.",
+      "highlights": [
+        "Exotic Wild Blueberry fruit pulp",
+        "Delightful sweet-tangy berry flavour",
+        "Top choice for cheesecakes, mojitos & sundaes",
+        "Rich in natural berry antioxidants",
+        "Premium quality fruit crush"
+      ],
+      "variants": [
+        { "weight": "750ml Bottle", "price": 259, "originalPrice": 320 },
+        { "weight": "1 Litre Bottle", "price": 329, "originalPrice": 399 }
+      ]
+    },
+    {
+      "id": "prod-malas-kiwi",
+      "name": "Mala's Kiwi Crush",
+      "subtitle": "Tangy & Refreshing Green Kiwi Pulp Crush",
+      "unitPrice": "Unit price: ₹250 / bottle",
+      "price": 229,
+      "originalPrice": 290,
+      "category": "Mala's Crushes",
+      "image": "/images/products/dry-fruites.jpg",
+      "gallery": [
+        "/images/products/dry-fruites.jpg",
+        "/images/products/heart-shap-dry-fruites.jpg"
+      ],
+      "alt": "Malas green kiwi fruit crush",
+      "description": "Vibrant emerald green kiwi crush featuring real kiwi seeds and pulp. Tangy, zesty, and incredibly refreshing in ice-cold coolers and mocktails.",
+      "highlights": [
+        "Real Green Kiwi fruit pulp with crunch seeds",
+        "Zesty sweet-tangy refreshing kick",
+        "Ideal for green kiwi sodas, slushes & cocktails",
+        "Vibrant colour presentation",
+        "Hygienically bottled"
+      ],
+      "variants": [
+        { "weight": "750ml Bottle", "price": 229, "originalPrice": 290 },
+        { "weight": "1 Litre Bottle", "price": 289, "originalPrice": 360 }
       ]
     }
   ]

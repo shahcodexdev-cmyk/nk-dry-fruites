@@ -2,7 +2,7 @@
   "brand": {
     "name": "NK Dry Fruits",
     "logoPath": "/images/logo.jpeg",
-    "tagline": "Premium Dry Fruits"
+    "tagline": "Premium Dry Fruits & Gourmet Collection"
   },
   "announcements": [
     "✨ Welcome to NK Dry Fruits • Premium Organic Harvest & Royal Dry Fruits",
@@ -20,12 +20,12 @@
       "href": "#products",
       "hasDropdown": true,
       "subCategories": [
-        { "name": "Almonds", "category": "Almonds", "desc": "California Whole Raw Almonds", "href": "#products" },
-        { "name": "Cashews", "category": "Cashews", "desc": "King Jumbo W240 Whole Cashews", "href": "#products" },
-        { "name": "Pistachios", "category": "Pistachios", "desc": "Roasted & Lightly Salted Pistachios", "href": "#products" },
-        { "name": "Walnuts", "category": "Walnuts", "desc": "Kashmiri Extra Light Halves", "href": "#products" },
-        { "name": "Peanuts", "category": "Peanuts", "desc": "Slow Roasted Golden Crunchy Peanuts", "href": "#products" },
-        { "name": "Exotic Nuts", "category": "Exotic Nuts", "desc": "Hazelnuts, Pecans, Brazil & Pine Nuts", "href": "#products" }
+        { "name": "Dry Fruits & Nuts", "category": "Dry Fruits & Nuts", "desc": "Almonds, Cashews, Pista, Walnuts, Makhana & Anjir", "href": "#products" },
+        { "name": "Seeds", "category": "Seeds", "desc": "Chia, Flax, Sesame, Watermelon & Muskmelon Seeds", "href": "#products" },
+        { "name": "Dates (Khajoor)", "category": "Dates", "desc": "Ajwa, Kalmi, Mabrum, Kimia, Irani & Maryam Dates", "href": "#products" },
+        { "name": "Honey", "category": "Honey", "desc": "Pure Farm, Kashmiri, Multi Flora & Dry Fruit Mix", "href": "#products" },
+        { "name": "Olives & Olive Oil", "category": "Olives & Olive Oil", "desc": "Premium Pitted Olives & Extra Virgin Olive Oil", "href": "#products" },
+        { "name": "Mala's Crushes", "category": "Mala's Crushes", "desc": "Strawberry, Mango, Blueberry & Kiwi Fruit Crushes", "href": "#products" }
       ]
     },
     { "id": "nav-about", "label": "About Us", "href": "#about" },
@@ -33,36 +33,36 @@
   ],
   "categories": [
     { "title": "All", "category": "All", "href": "#products" },
-    { "title": "Almonds", "category": "Almonds", "href": "#products" },
-    { "title": "Cashews", "category": "Cashews", "href": "#products" },
-    { "title": "Pistachios", "category": "Pistachios", "href": "#products" },
-    { "title": "Walnuts", "category": "Walnuts", "href": "#products" },
-    { "title": "Peanuts", "category": "Peanuts", "href": "#products" },
-    { "title": "Exotic Nuts", "category": "Exotic Nuts", "href": "#products" }
+    { "title": "Dry Fruits & Nuts", "category": "Dry Fruits & Nuts", "href": "#products" },
+    { "title": "Seeds", "category": "Seeds", "href": "#products" },
+    { "title": "Dates", "category": "Dates", "href": "#products" },
+    { "title": "Honey", "category": "Honey", "href": "#products" },
+    { "title": "Olives & Olive Oil", "category": "Olives & Olive Oil", "href": "#products" },
+    { "title": "Mala's Crushes", "category": "Mala's Crushes", "href": "#products" }
   ],
   "cart": {
     "initialCount": 3,
     "items": [
       {
-        "id": "item-1",
-        "name": "NK Dry Fruits California Raw Almonds (500g)",
-        "price": 499,
+        "id": "prod-almonds-regular",
+        "name": "Regular Badam (California Almonds) - 500g",
+        "price": 479,
         "quantity": 1,
         "image": "/images/products/almonds.jpeg"
       },
       {
-        "id": "item-2",
-        "name": "NK Dry Fruits Kashmiri Extra Light Walnuts (500g)",
-        "price": 499,
+        "id": "prod-kaju-240",
+        "name": "King Jumbo Kaju W240 - 500g",
+        "price": 549,
         "quantity": 1,
-        "image": "/images/products/walnuts.jpeg"
+        "image": "/images/products/Cashews.jpeg"
       },
       {
-        "id": "item-3",
-        "name": "NK Dry Fruits Roasted Salted Pistachios (500g)",
-        "price": 599,
+        "id": "prod-date-ajwa",
+        "name": "Royal Medina Ajwa Dates - 500g",
+        "price": 749,
         "quantity": 1,
-        "image": "/images/products/pistachios.jpeg"
+        "image": "/images/products/pine-nuts.jpeg"
       }
     ]
   },

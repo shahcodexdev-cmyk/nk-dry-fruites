@@ -166,7 +166,7 @@ function App() {
   };
 
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 8;
+  const productsPerPage = 12;
 
   // Filter products by JSON category and search filter
   const allProducts = productsData.products;

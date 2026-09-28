@@ -81,7 +81,7 @@ const SearchModal = ({
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search almonds, walnuts, cashews..."
+              placeholder={productsData.searchPlaceholder || "Search dry fruits, seeds, dates, honey, crushes..."}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               aria-label="Search NK Dry Fruits products"
