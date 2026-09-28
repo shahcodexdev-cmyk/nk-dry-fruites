@@ -16,7 +16,8 @@ const Navbar = ({
   onOpenProduct,
   cartDrawerOpen: controlledCartDrawerOpen,
   setCartDrawerOpen: setControlledCartDrawerOpen,
-  onProceedToCheckout
+  onProceedToCheckout,
+  isInstantCart = false
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -384,6 +385,7 @@ const Navbar = ({
         onUpdateQuantity={onUpdateQuantity}
         onRemoveItem={onRemoveItem}
         onProceedToCheckout={onProceedToCheckout}
+        isInstant={isInstantCart}
       />
     </>
   );

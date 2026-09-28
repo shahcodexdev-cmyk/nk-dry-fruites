@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { 
   X, 
@@ -15,6 +15,7 @@ import {
   RotateCcw
 } from 'lucide-react';
 import productsData from '../../json-data/productsData.json';
+import { getPDPRecommendations } from '../../utils/recommendationEngine';
 import './ProductModal.css';
 
 const ProductModal = ({ 
@@ -118,6 +119,15 @@ const ProductModal = ({
     }
   }, [isOpen, onClose, zoomImage]);
 
+  // Pure Client-Side Deterministic Recommendations from recommendationEngine.js
+  const {
+    frequentlyBoughtTogether,
+    youMayAlsoLike,
+    exploreMore
+  } = useMemo(() => {
+    return getPDPRecommendations(product, allProducts);
+  }, [product, allProducts]);
+
   if (!isOpen || !product) return null;
 
   // Gallery calculation
@@ -145,9 +155,6 @@ const ProductModal = ({
   const currentVariant = variants.find((v) => v.weight === selectedWeight) || variants[0];
   const basePrice = currentVariant.price;
   const originalPrice = currentVariant.originalPrice;
-
-  // Related products
-  const relatedProducts = allProducts.filter((p) => p.id !== product.id).slice(0, 4);
 
   const handleAddToCartClick = () => {
     if (onAddToCart) {
@@ -619,46 +626,241 @@ const ProductModal = ({
           </div>
         </div>
 
-        {/* YOU MIGHT ALSO LIKE SECTION */}
-        <section className="pdp-related-section" aria-label="Related Products">
-          <div className="pdp-related-header">
-            <h2 className="pdp-related-title">You might also like</h2>
-          </div>
-
-          <div className="pdp-related-grid">
-            {relatedProducts.map((item) => {
-              const itemPrice = item.variants?.[0]?.price || item.price;
-              const itemOrigPrice = item.variants?.[0]?.originalPrice || item.originalPrice;
-              return (
-                <div 
-                  key={item.id} 
-                  className="pdp-related-card"
-                  onClick={() => handleSelectRelatedProduct(item)}
-                >
-                  <div className="pdp-related-img-box">
-                    <img src={item.image} alt={item.alt || item.name} loading="lazy" />
+        {/* PDP RECOMMENDATIONS SECTIONS (POWERED BY STATIC JSON ENGINE) */}
+        
+        {/* SECTION 1: FREQUENTLY BOUGHT TOGETHER BUNDLE */}
+        {frequentlyBoughtTogether && frequentlyBoughtTogether.length > 0 && (
+          <section className="pdp-recommendation-section pdp-fbt-section" aria-label="Frequently Bought Together">
+            <div className="pdp-related-header">
+              <h2 className="pdp-related-title">Frequently Bought Together</h2>
+              <span className="pdp-fbt-badge">Perfect Pair</span>
+            </div>
+            
+            <div className="pdp-fbt-bundle-card">
+              <div className="pdp-fbt-items-row">
+                {/* Current Product Item */}
+                <div className="pdp-fbt-item">
+                  <div className="pdp-fbt-img-wrap">
+                    <img src={mainImage || product.image} alt={product.name} />
                   </div>
-                  <div className="pdp-related-info">
-                    <h3 className="pdp-related-name">{item.name}</h3>
-                    <div className="pdp-related-price-row">
-                      {itemOrigPrice && (
-                        <span className="pdp-related-orig-price">₹{itemOrigPrice}</span>
-                      )}
-                      <span className="pdp-related-curr-price">₹{itemPrice}</span>
-                    </div>
+                  <div className="pdp-fbt-item-info">
+                    <span className="pdp-fbt-tag">This Item</span>
+                    <span className="pdp-fbt-item-name">{product.name}</span>
+                    <span className="pdp-fbt-item-price">₹{basePrice}</span>
                   </div>
                 </div>
-              );
-            })}
-          </div>
 
-          <div className="pdp-more-products-center">
-            <button type="button" className="pdp-more-products-btn" onClick={handleNavigateShop}>
-              <span>More products</span>
-              <ArrowRight size={16} />
-            </button>
-          </div>
-        </section>
+                {frequentlyBoughtTogether.map((item) => {
+                  const itemPrice = item.variants?.[0]?.price || item.price;
+                  return (
+                    <React.Fragment key={item.id}>
+                      <div className="pdp-fbt-plus-symbol">+</div>
+                      <div 
+                        className="pdp-fbt-item clickable"
+                        onClick={() => handleSelectRelatedProduct(item)}
+                        title={`View ${item.name}`}
+                      >
+                        <div className="pdp-fbt-img-wrap">
+                          <img src={item.image} alt={item.name} />
+                        </div>
+                        <div className="pdp-fbt-item-info">
+                          <span className="pdp-fbt-item-name">{item.name}</span>
+                          <span className="pdp-fbt-item-price">₹{itemPrice}</span>
+                        </div>
+                      </div>
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+
+              {/* Bundle Add Action */}
+              <div className="pdp-fbt-action-box">
+                <div className="pdp-fbt-total-price-box">
+                  <span className="pdp-fbt-total-label">Total Price:</span>
+                  <span className="pdp-fbt-total-val">
+                    ₹{basePrice + frequentlyBoughtTogether.reduce((sum, item) => sum + (item.variants?.[0]?.price || item.price), 0)}
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  className="pdp-fbt-add-btn"
+                  onClick={() => {
+                    if (onAddToCart) {
+                      onAddToCart({
+                        ...product,
+                        name: `${product.name} (${selectedWeight})`,
+                        price: basePrice,
+                        quantity: 1,
+                        image: mainImage,
+                        selectedWeight: selectedWeight
+                      });
+                      frequentlyBoughtTogether.forEach(item => {
+                        onAddToCart({
+                          ...item,
+                          name: `${item.name} (${item.variants?.[0]?.weight || '500g'})`,
+                          price: item.variants?.[0]?.price || item.price,
+                          quantity: 1,
+                          image: item.image,
+                          selectedWeight: item.variants?.[0]?.weight || '500g'
+                        });
+                      });
+                      setAddedSuccess(true);
+                      setTimeout(() => setAddedSuccess(false), 2200);
+                    }
+                  }}
+                >
+                  <ShoppingBag size={18} />
+                  <span>Add Bundle to Cart</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* SECTION 2: YOU MAY ALSO LIKE */}
+        {youMayAlsoLike && youMayAlsoLike.length > 0 && (
+          <section className="pdp-recommendation-section" aria-label="You May Also Like">
+            <div className="pdp-related-header">
+              <div>
+                <h2 className="pdp-related-title">You May Also Like</h2>
+                <span className="pdp-section-subtitle">Recommended matches based on attributes & quality</span>
+              </div>
+            </div>
+
+            <div className="bestseller-products-grid pdp-recommendations-grid">
+              {youMayAlsoLike.map((item) => {
+                const defaultVariant = item.variants?.[0];
+                const itemPrice = defaultVariant?.price || item.price;
+                const itemOrigPrice = defaultVariant?.originalPrice || item.originalPrice;
+                const discountPercent = itemOrigPrice > itemPrice ? Math.round(((itemOrigPrice - itemPrice) / itemOrigPrice) * 100) : 0;
+
+                return (
+                  <div 
+                    key={item.id} 
+                    className="bestseller-card pdp-related-card"
+                    onClick={() => handleSelectRelatedProduct(item)}
+                  >
+                    <div className="card-image-wrap">
+                      {discountPercent > 0 && (
+                        <span className="card-discount-tag">{discountPercent}% OFF</span>
+                      )}
+                      <img 
+                        src={item.image} 
+                        alt={item.alt || item.name} 
+                        className="card-nut-img" 
+                        loading="lazy"
+                        onError={(e) => {
+                          e.target.src = "/images/products/almonds.jpeg";
+                        }}
+                      />
+                    </div>
+                    <div className="card-info-wrap">
+                      <span className="card-unit-price">{item.subtitle || item.name}</span>
+                      <h3 className="card-product-name">{item.name}</h3>
+                      <div className="card-price-row">
+                        <div className="card-prices-box">
+                          <span className="card-price-tag">₹{itemPrice}</span>
+                          {itemOrigPrice && (
+                            <span className="card-orig-price-tag">₹{itemOrigPrice}</span>
+                          )}
+                        </div>
+                        <button
+                          type="button"
+                          className="card-cart-btn"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (onAddToCart) {
+                              onAddToCart(item, defaultVariant?.weight || '500g', 1);
+                            }
+                          }}
+                          title="Add to cart"
+                        >
+                          <ShoppingBag size={18} />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* SECTION 3: EXPLORE MORE IN CATEGORY */}
+        {exploreMore && exploreMore.length > 0 && (
+          <section className="pdp-recommendation-section" aria-label="Explore More Products">
+            <div className="pdp-related-header">
+              <div>
+                <h2 className="pdp-related-title">Explore More in {product.category || 'Collection'}</h2>
+                <span className="pdp-section-subtitle">Discover popular selections from our shop</span>
+              </div>
+            </div>
+
+            <div className="bestseller-products-grid pdp-recommendations-grid">
+              {exploreMore.map((item) => {
+                const defaultVariant = item.variants?.[0];
+                const itemPrice = defaultVariant?.price || item.price;
+                const itemOrigPrice = defaultVariant?.originalPrice || item.originalPrice;
+                const discountPercent = itemOrigPrice > itemPrice ? Math.round(((itemOrigPrice - itemPrice) / itemOrigPrice) * 100) : 0;
+
+                return (
+                  <div 
+                    key={item.id} 
+                    className="bestseller-card pdp-related-card"
+                    onClick={() => handleSelectRelatedProduct(item)}
+                  >
+                    <div className="card-image-wrap">
+                      {discountPercent > 0 && (
+                        <span className="card-discount-tag">{discountPercent}% OFF</span>
+                      )}
+                      <img 
+                        src={item.image} 
+                        alt={item.alt || item.name} 
+                        className="card-nut-img" 
+                        loading="lazy"
+                        onError={(e) => {
+                          e.target.src = "/images/products/almonds.jpeg";
+                        }}
+                      />
+                    </div>
+                    <div className="card-info-wrap">
+                      <span className="card-unit-price">{item.subtitle || item.name}</span>
+                      <h3 className="card-product-name">{item.name}</h3>
+                      <div className="card-price-row">
+                        <div className="card-prices-box">
+                          <span className="card-price-tag">₹{itemPrice}</span>
+                          {itemOrigPrice && (
+                            <span className="card-orig-price-tag">₹{itemOrigPrice}</span>
+                          )}
+                        </div>
+                        <button
+                          type="button"
+                          className="card-cart-btn"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (onAddToCart) {
+                              onAddToCart(item, defaultVariant?.weight || '500g', 1);
+                            }
+                          }}
+                          title="Add to cart"
+                        >
+                          <ShoppingBag size={18} />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="pdp-more-products-center" style={{ marginTop: '2rem' }}>
+              <button type="button" className="pdp-more-products-btn" onClick={handleNavigateShop}>
+                <span>Browse Full Catalog</span>
+                <ArrowRight size={16} />
+              </button>
+            </div>
+          </section>
+        )}
       </div>
 
       {/* Interactive Zoom / Lightbox Fullscreen Modal */}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ShoppingBag, Star, Layers } from 'lucide-react';
 import productsData from '../../json-data/productsData.json';
+import { matchesSmartSearch } from '../../utils/searchUtils';
 import './SearchModal.css';
 
 const SearchModal = ({ 
@@ -55,11 +56,7 @@ const SearchModal = ({
       ? true 
       : (p.category && p.category.toLowerCase() === selectedCategory.toLowerCase());
     
-    const matchesQuery = query.trim() === ''
-      ? true
-      : (p.name && p.name.toLowerCase().includes(query.toLowerCase())) ||
-        (p.category && p.category.toLowerCase().includes(query.toLowerCase())) ||
-        (p.subtitle && p.subtitle.toLowerCase().includes(query.toLowerCase()));
+    const matchesQuery = matchesSmartSearch(p, query);
 
     return matchesCategory && matchesQuery;
   });

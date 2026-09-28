@@ -8,17 +8,38 @@ import ContactSection from './components/Contact/ContactSection';
 import sliderData from './json-data/sliderData.json';
 import navigationData from './json-data/navigationData.json';
 import productsData from './json-data/productsData.json';
-import { ShoppingCart, ShoppingBag, Sparkles, Heart, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { matchesSmartSearch } from './utils/searchUtils';
+import { ShoppingCart, ShoppingBag, Sparkles, Heart, ArrowRight, Phone, Mail, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import './App.css';
 
 function App() {
-  const [cartItems, setCartItems] = useState(navigationData.cart.items);
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      const stored = localStorage.getItem('nk_cart_items');
+      if (stored !== null) {
+        return JSON.parse(stored);
+      }
+    } catch (e) {
+      console.error("Failed to parse cart items from localStorage:", e);
+    }
+    return navigationData.cart?.items || [];
+  });
   const [toastMessage, setToastMessage] = useState(null);
   const [cartDrawerOpen, setCartDrawerOpen] = useState(false);
+  const [isInstantCart, setIsInstantCart] = useState(false);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(productsData.categories[0] || "All");
   const [searchFilter, setSearchFilter] = useState("");
   const [activeProductModal, setActiveProductModal] = useState(null);
+
+  // Sync cartItems changes to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('nk_cart_items', JSON.stringify(cartItems));
+    } catch (e) {
+      console.error("Failed to save cart items to localStorage:", e);
+    }
+  }, [cartItems]);
 
   // Open / Close PDP Modal with mobile/browser back history integration
   const handleOpenProduct = (product) => {
@@ -29,10 +50,11 @@ function App() {
   };
 
   const handleCloseProduct = () => {
+    setActiveProductModal(null);
     if (window.history.state?.modal === 'pdp') {
-      window.history.back();
-    } else {
-      setActiveProductModal(null);
+      try {
+        window.history.back();
+      } catch (e) {}
     }
   };
 
@@ -47,10 +69,12 @@ function App() {
       }
       setCartDrawerOpen(true);
     } else {
+      setCartDrawerOpen(false);
+      setIsInstantCart(false);
       if (window.history.state?.modal === 'cart') {
-        window.history.back();
-      } else {
-        setCartDrawerOpen(false);
+        try {
+          window.history.back();
+        } catch (e) {}
       }
     }
   };
@@ -63,11 +87,47 @@ function App() {
     setCheckoutOpen(true);
   };
 
+  const handleProceedFromCartToCheckout = () => {
+    try {
+      window.history.pushState({ modal: 'checkout' }, '');
+    } catch (e) {}
+    setCartDrawerOpen(false);
+    setCheckoutOpen(true);
+  };
+
   const handleCloseCheckout = () => {
+    setCheckoutOpen(false);
     if (window.history.state?.modal === 'checkout') {
-      window.history.back();
+      try {
+        window.history.back();
+      } catch (e) {}
+    }
+  };
+
+  const handleNavigateHomeFromCheckout = () => {
+    try {
+      window.history.replaceState(null, '', window.location.pathname);
+    } catch (e) {}
+    setCheckoutOpen(false);
+    setCartDrawerOpen(false);
+    setActiveProductModal(null);
+    setIsInstantCart(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const homeEl = document.getElementById('home');
+    if (homeEl) {
+      homeEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleOpenCartFromCheckout = () => {
+    setIsInstantCart(true);
+    if (window.history.state?.modal === 'checkout') {
+      try {
+        window.history.back();
+      } catch (e) {}
     } else {
       setCheckoutOpen(false);
+      setCartDrawerOpen(true);
     }
   };
 
@@ -78,35 +138,42 @@ function App() {
   // Listen to popstate event (mobile device native back button / swipe back gesture)
   useEffect(() => {
     const handlePopState = (e) => {
-      // If Checkout Modal is open, close it unless state is still checkout
-      if (checkoutOpen) {
-        if (e.state && e.state.modal === 'checkout') {
-          return;
-        }
+      const modalState = e.state?.modal;
+
+      if (!modalState) {
+        // Returned to Home state
         setCheckoutOpen(false);
-        return;
-      }
-      // If Cart Drawer is open, close it unless state is still cart
-      if (cartDrawerOpen) {
-        if (e.state && e.state.modal === 'cart') {
-          return;
-        }
         setCartDrawerOpen(false);
+        setActiveProductModal(null);
+        setIsInstantCart(false);
         return;
       }
-      // If PDP Modal is open, close it unless state is still pdp (e.g. popped back from zoom)
-      if (activeProductModal) {
-        if (e.state && e.state.modal === 'pdp') {
-          return;
-        }
+
+      if (modalState === 'cart') {
+        setCheckoutOpen(false);
         setActiveProductModal(null);
+        setIsInstantCart(true);
+        setCartDrawerOpen(true);
+        return;
+      }
+
+      if (modalState === 'checkout') {
+        setCartDrawerOpen(false);
+        setActiveProductModal(null);
+        setCheckoutOpen(true);
+        return;
+      }
+
+      if (modalState === 'pdp') {
+        setCheckoutOpen(false);
+        setCartDrawerOpen(false);
         return;
       }
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [checkoutOpen, cartDrawerOpen, activeProductModal]);
+  }, []);
 
   const showToast = (msg) => {
     setToastMessage(msg);
@@ -136,20 +203,31 @@ function App() {
 
   const handleAddToCart = (product) => {
     setCartItems((prev) => {
-      const existing = prev.find((item) => item.id === product.id);
+      const cartItemId = product.selectedWeight 
+        ? `${product.id}-${product.selectedWeight}` 
+        : product.id;
+        
+      const existing = prev.find(
+        (item) => item.id === cartItemId || (item.productId === product.id && item.selectedWeight === product.selectedWeight)
+      );
+
       if (existing) {
         return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + (product.quantity || 1) } : item
+          (item.id === cartItemId || (item.productId === product.id && item.selectedWeight === product.selectedWeight))
+            ? { ...item, quantity: item.quantity + (product.quantity || 1) }
+            : item
         );
       } else {
         return [
           ...prev,
           {
-            id: product.id,
+            id: cartItemId,
+            productId: product.id,
             name: product.name,
             price: product.price,
             quantity: product.quantity || 1,
-            image: product.image
+            image: product.image,
+            selectedWeight: product.selectedWeight
           }
         ];
       }
@@ -168,15 +246,14 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
 
-  // Filter products by JSON category and search filter
+  // Filter products by JSON category and smart multilingual search filter
   const allProducts = productsData.products;
   const filteredProducts = allProducts.filter((product) => {
-    const matchesCat = selectedCategory === "All"
-    ? true
-    : product.category.toLowerCase() === selectedCategory.toLowerCase();
-    const matchesSearch = searchFilter.trim() === ""
+    const isSearching = searchFilter.trim() !== "";
+    const matchesCat = (selectedCategory === "All" || isSearching)
       ? true
-      : product.name.toLowerCase().includes(searchFilter.toLowerCase());
+      : product.category.toLowerCase() === selectedCategory.toLowerCase();
+    const matchesSearch = matchesSmartSearch(product, searchFilter);
     return matchesCat && matchesSearch;
   });
 
@@ -214,7 +291,8 @@ function App() {
         onOpenProduct={(prod) => handleOpenProduct(prod)}
         cartDrawerOpen={cartDrawerOpen}
         setCartDrawerOpen={handleSetCartDrawerOpen}
-        onProceedToCheckout={handleOpenCheckout}
+        onProceedToCheckout={handleProceedFromCartToCheckout}
+        isInstantCart={isInstantCart}
         onSelectCategory={(cat) => {
           setSelectedCategory(cat);
           setSearchFilter("");
@@ -272,7 +350,7 @@ function App() {
             {/* Uniform Product Grid (8 per page) */}
             <div className="bestseller-products-grid">
               {paginatedProducts.map((prod) => {
-                const isInCart = cartItems.some((item) => item.id === prod.id);
+                const isInCart = cartItems.some((item) => item.id === prod.id || item.productId === prod.id);
                 const defaultVariant = prod.variants?.[0];
                 const price = defaultVariant?.price || prod.price || 289;
                 const originalPrice = defaultVariant?.originalPrice || prod.originalPrice || Math.round(price * 1.3);
@@ -343,7 +421,8 @@ function App() {
                   }}
                   aria-label="Previous page"
                 >
-                  &laquo; Prev
+                  <ChevronLeft size={18} />
+                  <span className="btn-text">Prev</span>
                 </button>
 
                 <div className="pagination-numbers">
@@ -375,7 +454,8 @@ function App() {
                   }}
                   aria-label="Next page"
                 >
-                  Next &raquo;
+                  <span className="btn-text">Next</span>
+                  <ChevronRight size={18} />
                 </button>
               </div>
             )}
@@ -438,6 +518,8 @@ function App() {
         cartItems={cartItems}
         onClearCart={handleClearCart}
         onShowToast={showToast}
+        onNavigateHome={handleNavigateHomeFromCheckout}
+        onOpenCart={handleOpenCartFromCheckout}
       />
 
       {/* Footer */}

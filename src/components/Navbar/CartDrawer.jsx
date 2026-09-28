@@ -8,16 +8,33 @@ const CartDrawer = ({
   cartItems, 
   onUpdateQuantity, 
   onRemoveItem,
-  onProceedToCheckout 
+  onProceedToCheckout,
+  isInstant = false
 }) => {
+  // Lock background body scroll and prevent touch scroll chaining when drawer is open
+  React.useEffect(() => {
+    if (isOpen) {
+      const origOverflow = document.body.style.overflow;
+      const origHtmlOverflow = document.documentElement.style.overflow;
+
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+
+      return () => {
+        document.body.style.overflow = origOverflow || 'unset';
+        document.documentElement.style.overflow = origHtmlOverflow || 'unset';
+      };
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const totalItemsCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <div className="cart-drawer-overlay" onClick={onClose}>
-      <div className="cart-drawer" onClick={(e) => e.stopPropagation()}>
+    <div className={`cart-drawer-overlay ${isInstant ? 'instant-open' : ''}`} onClick={onClose}>
+      <div className={`cart-drawer ${isInstant ? 'instant-open' : ''}`} onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div className="cart-drawer-header">
           <div className="cart-drawer-title-group">
@@ -115,9 +132,10 @@ const CartDrawer = ({
             <button 
               className="cart-checkout-btn"
               onClick={() => {
-                onClose();
                 if (onProceedToCheckout) {
                   onProceedToCheckout();
+                } else {
+                  onClose();
                 }
               }}
             >

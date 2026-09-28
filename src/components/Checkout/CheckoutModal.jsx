@@ -23,7 +23,9 @@ const CheckoutModal = ({
   onClose, 
   cartItems, 
   onClearCart, 
-  onShowToast 
+  onShowToast,
+  onNavigateHome,
+  onOpenCart
 }) => {
   // Form State
   const [formData, setFormData] = useState({
@@ -33,7 +35,7 @@ const CheckoutModal = ({
     address: '',
     apartment: '',
     city: '',
-    state: 'Karnataka',
+    state: 'Maharashtra',
     pincode: '',
     paymentMethod: 'cod', // 'cod' | 'upi'
     orderNotes: ''
@@ -317,25 +319,44 @@ Please confirm my order and share delivery schedule. Thank you!`;
           {/* TOP HEADER */}
           <header className="shopify-checkout-header">
             <div className="header-inner">
-              <div className="header-left">
-                <button type="button" className="checkout-back-btn" onClick={onClose} aria-label="Return to cart">
-                  <ArrowLeft size={16} />
-                  <span>Return to Cart</span>
-                </button>
-              </div>
-
-              <div className="header-center">
+              {/* Left Side: Brand Logo + Brand Name (Click goes to Home Page) */}
+              <div 
+                className="header-left header-brand-clickable"
+                onClick={() => {
+                  if (onNavigateHome) {
+                    onNavigateHome();
+                  } else {
+                    onClose();
+                  }
+                }}
+                title="Go to Home page"
+                role="button"
+                tabIndex={0}
+              >
                 <img src="/images/logo.jpeg" alt="NK Dry Fruits" className="header-logo-img" />
                 <span className="header-brand-title">NK Dry Fruits</span>
               </div>
 
+              {/* Right Side: Security Badge + Shopping Cart Icon Button */}
               <div className="header-right">
                 <div className="header-secure-pill">
                   <ShieldCheck size={15} />
                   <span>WhatsApp Verified</span>
                 </div>
-                <button type="button" className="checkout-close-circle" onClick={onClose} aria-label="Close checkout">
-                  <X size={18} />
+                <button 
+                  type="button" 
+                  className="checkout-cart-icon-btn" 
+                  onClick={() => {
+                    if (onOpenCart) {
+                      onOpenCart();
+                    } else {
+                      onClose();
+                    }
+                  }} 
+                  aria-label="Open cart drawer"
+                  title="Open cart drawer"
+                >
+                  <ShoppingBag size={20} />
                 </button>
               </div>
             </div>
@@ -513,7 +534,7 @@ Please confirm my order and share delivery schedule. Thank you!`;
                           id="city"
                           type="text"
                           name="city"
-                          placeholder="e.g. Bangalore"
+                          placeholder="e.g. Mumbai"
                           value={formData.city}
                           onChange={handleInputChange}
                           className={formErrors.city ? 'field-error' : ''}
@@ -687,22 +708,6 @@ Please confirm my order and share delivery schedule. Thank you!`;
                       <span className="curr">INR</span>
                       <span className="grand-amount">₹{grandTotal}</span>
                     </div>
-                  </div>
-                </div>
-
-                {/* Trust & Guarantee Badges */}
-                <div className="sidebar-trust-box">
-                  <div className="trust-row">
-                    <Truck size={17} className="trust-ic" />
-                    <span>Free Express Dispatch Across India</span>
-                  </div>
-                  <div className="trust-row">
-                    <ShieldCheck size={17} className="trust-ic" />
-                    <span>100% Quality & Freshness Guarantee</span>
-                  </div>
-                  <div className="trust-row">
-                    <Sparkles size={17} className="trust-ic" />
-                    <span>Nitrogen Aroma-Lock Fresh Pouches</span>
                   </div>
                 </div>
 

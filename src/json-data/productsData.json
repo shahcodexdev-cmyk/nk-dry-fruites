@@ -1,6 +1,6 @@
 {
   "sectionTitle": "Our Handpicked Collection",
-  "searchPlaceholder": "Search dry fruits, seeds, dates, honey, crushes...",
+  "searchPlaceholder": "Search in English or Hindi (e.g. Badam, Almond, Kaju, Khajoor...)",
   "categories": [
     "All",
     "Dry Fruits & Nuts",
@@ -12,23 +12,42 @@
   ],
   "products": [
     {
-      "id": "prod-almonds-regular",
+      "id": "prod-regular-badam",
       "name": "Regular Badam",
-      "subtitle": "California Select Raw Whole Almonds",
+      "subtitle": "Premium California Raw Whole Almonds",
       "unitPrice": "Unit price: ₹890 / kg",
       "price": 249,
       "originalPrice": 320,
       "category": "Dry Fruits & Nuts",
       "subCategory": "Almonds",
-      "image": "/images/products/almonds.jpeg",
-      "gallery": [
-        "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg",
-        "/images/products/pistachios.jpeg",
-        "/images/products/walnuts.jpeg"
-      ],
       "alt": "Premium California raw regular badam",
-      "description": "Enjoy the rich, naturally nutty flavour and wholesome crunch of carefully selected California raw regular badam. 100% natural, vacuum-packed to preserve crunchiness and essential nutrients.",
+      "tags": [
+        "dry fruits",
+        "nuts",
+        "badam",
+        "almond",
+        "almonds",
+        "california badam",
+        "raw badam",
+        "healthy snack",
+        "protein",
+        "vitamin e",
+        "immunity",
+        "brain food",
+        "soaked badam"
+      ],
+      "searchKeywords": [
+        "badam",
+        "badaam",
+        "almond",
+        "almonds",
+        "giri",
+        "california badam",
+        "raw badam",
+        "badam giri",
+        "badam nuts"
+      ],
+      "description": "Enjoy the rich, naturally nutty flavour and wholesome crunch of carefully selected California raw regular badam. 100% natural, vacuum-packed to preserve crunchiness and essential nutrients. Ideal for daily soaking, smoothies, or eating raw.",
       "highlights": [
         "100% Natural California Badam",
         "Rich in Protein, Vitamin E & Dietary Fibre",
@@ -37,13 +56,38 @@
         "Fresh nitrogen-sealed pack"
       ],
       "variants": [
-        { "weight": "250g", "price": 249, "originalPrice": 320 },
-        { "weight": "500g", "price": 479, "originalPrice": 620 },
-        { "weight": "1kg", "price": 890, "originalPrice": 1150 }
+        {
+          "weight": "250g",
+          "price": 249,
+          "originalPrice": 320
+        },
+        {
+          "weight": "500g",
+          "price": 479,
+          "originalPrice": 620
+        },
+        {
+          "weight": "1kg",
+          "price": 890,
+          "originalPrice": 1150
+        }
+      ],
+      "recommendedProducts": [
+        "prod-salted-badam",
+        "prod-kaju",
+        "prod-walnuts",
+        "prod-pista"
+      ],
+      "image": "/images/product-images/dry fruits/Almonds/Almonds_arranged_on_white_surface_20260926223049.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Almonds/Almonds_arranged_on_white_surface_20260926223049.jpg",
+        "/images/product-images/dry fruits/Almonds/Almonds_in_glass_bowl_20260926223056.jpg",
+        "/images/product-images/dry fruits/Almonds/Almonds_in_white_bowl_20260926223040.jpg",
+        "/images/product-images/dry fruits/Almonds/Almonds_spilling_from_wooden_scoop_20260926223101.jpg"
       ]
     },
     {
-      "id": "prod-almonds-salted",
+      "id": "prod-salted-badam",
       "name": "Salted Badam",
       "subtitle": "Slow Roasted & Himalayan Salted Almonds",
       "unitPrice": "Unit price: ₹960 / kg",
@@ -51,14 +95,32 @@
       "originalPrice": 350,
       "category": "Dry Fruits & Nuts",
       "subCategory": "Almonds",
-      "image": "/images/products/almonds.jpeg",
-      "gallery": [
-        "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg",
-        "/images/products/pistachios.jpeg"
-      ],
       "alt": "Crispy roasted and salted badam",
-      "description": "Slow dry-roasted to golden perfection and seasoned with pure Himalayan rock salt. Delightfully crunchy with balanced savoury taste.",
+      "tags": [
+        "dry fruits",
+        "nuts",
+        "badam",
+        "almond",
+        "almonds",
+        "salted badam",
+        "roasted badam",
+        "namkeen badam",
+        "party snack",
+        "tea time snack",
+        "himalayan salt"
+      ],
+      "searchKeywords": [
+        "badam",
+        "badaam",
+        "almond",
+        "almonds",
+        "salted badam",
+        "roasted badam",
+        "namkeen badam",
+        "salted almond",
+        "roasted almond"
+      ],
+      "description": "Slow dry-roasted to golden perfection and seasoned with pure Himalayan rock salt. Delightfully crunchy with a perfectly balanced savoury taste — the ultimate guilt-free snack for all occasions.",
       "highlights": [
         "Slow dry-roasted with zero oil",
         "Lightly seasoned with natural pink rock salt",
@@ -67,997 +129,3307 @@
         "Great for tea-time and party grazing"
       ],
       "variants": [
-        { "weight": "250g", "price": 269, "originalPrice": 350 },
-        { "weight": "500g", "price": 519, "originalPrice": 670 },
-        { "weight": "1kg", "price": 960, "originalPrice": 1250 }
+        {
+          "weight": "250g",
+          "price": 269,
+          "originalPrice": 350
+        },
+        {
+          "weight": "500g",
+          "price": 519,
+          "originalPrice": 670
+        },
+        {
+          "weight": "1kg",
+          "price": 960,
+          "originalPrice": 1250
+        }
+      ],
+      "recommendedProducts": [
+        "prod-regular-badam",
+        "prod-salted-kaju",
+        "prod-salted-pista",
+        "prod-walnuts"
+      ],
+      "image": "/images/product-images/dry fruits/Salted Almonds/Salted_almonds_arranged_on_white_20260926223119.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Salted Almonds/Salted_almonds_arranged_on_white_20260926223119.jpg",
+        "/images/product-images/dry fruits/Salted Almonds/Salted_almonds_in_ceramic_bowl_20260926223128.jpg",
+        "/images/product-images/dry fruits/Salted Almonds/Salted_almonds_in_glass_bowl_20260926223137.jpg",
+        "/images/product-images/dry fruits/Salted Almonds/Salted_almonds_in_wooden_scoop_20260926223124.jpg"
       ]
     },
     {
-      "id": "prod-kaju-210",
-      "name": "Kaju 210",
-      "subtitle": "King Jumbo W210 Grade Whole Cashews",
-      "unitPrice": "Unit price: ₹1190 / kg",
-      "price": 339,
-      "originalPrice": 420,
+      "id": "prod-kaju",
+      "name": "Kaju",
+      "subtitle": "Whole Premium King Cashews",
+      "unitPrice": "Unit price: ₹1,050 / kg",
+      "price": 289,
+      "originalPrice": 370,
       "category": "Dry Fruits & Nuts",
       "subCategory": "Cashews",
-      "image": "/images/products/Cashews.jpeg",
-      "gallery": [
-        "/images/products/Cashews.jpeg",
-        "/images/products/almonds.jpeg",
-        "/images/products/pistachios.jpeg"
+      "alt": "Premium white whole cashew nuts",
+      "tags": [
+        "dry fruits",
+        "nuts",
+        "kaju",
+        "cashew",
+        "cashews",
+        "king cashew",
+        "sweet kaju",
+        "raw kaju",
+        "sweets",
+        "gravy",
+        "magnesium",
+        "protein"
       ],
-      "alt": "King jumbo 210 grade kaju",
-      "description": "Extra large, hand-picked King Jumbo 210 count whole cashews. Renowned for their majestic size, natural sweetness, and supremely buttery texture.",
+      "searchKeywords": [
+        "kaju",
+        "kaaju",
+        "cashew",
+        "cashews",
+        "kaju giri",
+        "white kaju",
+        "plain kaju",
+        "raw kaju",
+        "cashew nuts"
+      ],
+      "description": "Crisp, creamy, and sweet whole cashew nuts sourced directly from pristine cashew orchards. Rich in healthy fats, iron, and magnesium. Excellent for snacking, desserts, and rich gravies.",
       "highlights": [
-        "King Jumbo Grade 210 Whole Cashews",
-        "Supreme buttery & melt-in-mouth texture",
-        "Zero preservatives, unadulterated purity",
-        "Hand-sorted for unbroken uniform kernels",
-        "Luxury choice for festive gifting"
+        "Premium Large Whole Cashews",
+        "Naturally sweet, rich & buttery texture",
+        "No artificial preservatives or bleach",
+        "Packed with magnesium, zinc & healthy fats",
+        "Perfect for Indian sweets and daily snacking"
       ],
       "variants": [
-        { "weight": "250g", "price": 339, "originalPrice": 420 },
-        { "weight": "500g", "price": 629, "originalPrice": 799 },
-        { "weight": "1kg", "price": 1190, "originalPrice": 1499 }
+        {
+          "weight": "250g",
+          "price": 289,
+          "originalPrice": 370
+        },
+        {
+          "weight": "500g",
+          "price": 559,
+          "originalPrice": 720
+        },
+        {
+          "weight": "1kg",
+          "price": 1050,
+          "originalPrice": 1380
+        }
+      ],
+      "recommendedProducts": [
+        "prod-salted-kaju",
+        "prod-regular-badam",
+        "prod-pista",
+        "prod-kishmish"
+      ],
+      "image": "/images/product-images/dry fruits/Cashew/Cashews_spilling_from_wooden_scoop_20260926223152.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Cashew/Cashews_spilling_from_wooden_scoop_20260926223152.jpg",
+        "/images/product-images/dry fruits/Cashew/Cashew_nuts_arranged_on_surface_20260926223157.jpg",
+        "/images/product-images/dry fruits/Cashew/Cashew_nuts_in_glass_bowl_20260926223143.jpg",
+        "/images/product-images/dry fruits/Cashew/Cashew_nuts_in_white_bowl_20260926223148.jpg"
       ]
     },
     {
-      "id": "prod-kaju-240",
-      "name": "Kaju 240",
-      "subtitle": "Premium Grade W240 Creamy Whole Cashews",
-      "unitPrice": "Unit price: ₹1050 / kg",
-      "price": 299,
-      "originalPrice": 380,
-      "category": "Dry Fruits & Nuts",
-      "subCategory": "Cashews",
-      "image": "/images/products/Cashews.jpeg",
-      "gallery": [
-        "/images/products/Cashews.jpeg",
-        "/images/products/almonds.jpeg",
-        "/images/products/walnuts.jpeg"
-      ],
-      "alt": "Premium W240 whole kaju",
-      "description": "The golden standard of cashews — Grade W240 whole kernels. Creamy, mildly sweet, and bursting with rich natural cashew flavour.",
-      "highlights": [
-        "Premium W240 Grade Whole Cashews",
-        "Naturally creamy & sweet flavour",
-        "Ideal for daily snacking & royal Indian gravies",
-        "Rich in healthy plant fats & magnesium",
-        "Aroma-locked pouch packing"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 299, "originalPrice": 380 },
-        { "weight": "500g", "price": 549, "originalPrice": 699 },
-        { "weight": "1kg", "price": 1050, "originalPrice": 1350 }
-      ]
-    },
-    {
-      "id": "prod-kaju-salted",
+      "id": "prod-salted-kaju",
       "name": "Salted Kaju",
-      "subtitle": "Roasted & Himalayan Salted Crisp Cashews",
-      "unitPrice": "Unit price: ₹1150 / kg",
-      "price": 329,
+      "subtitle": "Gourmet Salted & Roasted Cashew Nuts",
+      "unitPrice": "Unit price: ₹1,150 / kg",
+      "price": 319,
       "originalPrice": 410,
       "category": "Dry Fruits & Nuts",
       "subCategory": "Cashews",
-      "image": "/images/products/Cashews.jpeg",
-      "gallery": [
-        "/images/products/Cashews.jpeg",
-        "/images/products/pistachios.jpeg",
-        "/images/products/almonds.jpeg"
+      "alt": "Roasted salted kaju cashew nuts",
+      "tags": [
+        "dry fruits",
+        "nuts",
+        "kaju",
+        "cashew",
+        "cashews",
+        "salted kaju",
+        "roasted kaju",
+        "namkeen kaju",
+        "gourmet snack",
+        "party snack",
+        "festive gift"
       ],
-      "alt": "Roasted and salted kaju",
-      "description": "Freshly roasted cashews tossed with fine rock salt. Crisp on the outside, buttery on the inside.",
+      "searchKeywords": [
+        "kaju",
+        "kaaju",
+        "cashew",
+        "cashews",
+        "salted kaju",
+        "namkeen kaju",
+        "roasted kaju",
+        "salted cashew",
+        "roasted cashew"
+      ],
+      "description": "Hand-picked whole cashews dry-roasted to a light golden hue and tossed in subtle sea salt. Offers an irresistibly rich, crunchy taste in every single bite.",
       "highlights": [
-        "Golden dry-roasted cashews",
-        "Flavoured with pure rock salt",
-        "Super crunchy texture",
-        "No artificial colours or MSG",
-        "Irresistible evening snack"
+        "Gourmet roasted whole cashews",
+        "Lightly sea-salted for superior flavor",
+        "Zero trans fats or cholesterol",
+        "Individually checked for premium size",
+        "Ideal for festive gifting and snacking"
       ],
       "variants": [
-        { "weight": "250g", "price": 329, "originalPrice": 410 },
-        { "weight": "500g", "price": 599, "originalPrice": 780 },
-        { "weight": "1kg", "price": 1150, "originalPrice": 1490 }
+        {
+          "weight": "250g",
+          "price": 319,
+          "originalPrice": 410
+        },
+        {
+          "weight": "500g",
+          "price": 619,
+          "originalPrice": 790
+        },
+        {
+          "weight": "1kg",
+          "price": 1150,
+          "originalPrice": 1490
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kaju",
+        "prod-salted-badam",
+        "prod-salted-pista",
+        "prod-walnuts"
+      ],
+      "image": "/images/product-images/dry fruits/New folSalted Cashewsder/Salted_cashews_arranged_on_surface_20260926223205.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/New folSalted Cashewsder/Salted_cashews_arranged_on_surface_20260926223205.jpg",
+        "/images/product-images/dry fruits/New folSalted Cashewsder/Salted_cashews_in_ceramic_bowl_20260926223202.jpg",
+        "/images/product-images/dry fruits/New folSalted Cashewsder/Salted_cashews_in_glass_bowl_20260926223215.jpg",
+        "/images/product-images/dry fruits/New folSalted Cashewsder/Salted_cashews_in_wooden_scoop_20260926223209.jpg"
       ]
     },
     {
       "id": "prod-pista",
-      "name": "Pista (Pistachios)",
-      "subtitle": "Raw Natural Emerald Green Pistachio Kernels",
-      "unitPrice": "Unit price: ₹1250 / kg",
-      "price": 359,
-      "originalPrice": 460,
+      "name": "Pista",
+      "subtitle": "Raw Irani Unsalted Shell Pistachios",
+      "unitPrice": "Unit price: ₹1,290 / kg",
+      "price": 349,
+      "originalPrice": 450,
       "category": "Dry Fruits & Nuts",
       "subCategory": "Pistachios",
-      "image": "/images/products/pistachios.jpeg",
-      "gallery": [
-        "/images/products/pistachios.jpeg",
-        "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg"
+      "alt": "Raw unsalted pistachios in shell",
+      "tags": [
+        "dry fruits",
+        "nuts",
+        "pista",
+        "pistachio",
+        "pistachios",
+        "irani pista",
+        "raw pista",
+        "unsalted pista",
+        "heart health",
+        "dessert garnish"
       ],
-      "alt": "Raw natural emerald green pista",
-      "description": "Vibrant emerald green raw pistachio kernels without salt. Rich in antioxidants and perfect for sweets, kheer, baking, and healthy snacking.",
+      "searchKeywords": [
+        "pista",
+        "peesta",
+        "pistachio",
+        "pistachios",
+        "raw pista",
+        "pista nut",
+        "plain pista"
+      ],
+      "description": "Naturally opened raw pistachios with vibrant green kernels and thin shells. Packed with antioxidants, lutein, and potassium. Great for healthy heart care and garnishing desserts.",
       "highlights": [
-        "100% Raw unsalted green pista kernels",
-        "Naturally vibrant emerald colour",
-        "High in antioxidants, lutein & zeaxanthin",
-        "Ideal for biryani garnishing & mithai",
-        "Supreme fresh aroma"
+        "100% Natural raw in-shell pistachios",
+        "Rich source of antioxidants & lutein",
+        "Naturally split easy-to-crack shells",
+        "No added salt or preservatives",
+        "Great for baking, garnishing & snacking"
       ],
       "variants": [
-        { "weight": "250g", "price": 359, "originalPrice": 460 },
-        { "weight": "500g", "price": 669, "originalPrice": 880 },
-        { "weight": "1kg", "price": 1250, "originalPrice": 1650 }
+        {
+          "weight": "250g",
+          "price": 349,
+          "originalPrice": 450
+        },
+        {
+          "weight": "500g",
+          "price": 679,
+          "originalPrice": 870
+        },
+        {
+          "weight": "1kg",
+          "price": 1290,
+          "originalPrice": 1650
+        }
+      ],
+      "recommendedProducts": [
+        "prod-salted-pista",
+        "prod-regular-badam",
+        "prod-kaju",
+        "prod-anjir"
+      ],
+      "image": "/images/product-images/dry fruits/Pistachios/Pistachios_arranged_on_white_sur…_20260926223229.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Pistachios/Pistachios_arranged_on_white_sur…_20260926223229.jpg",
+        "/images/product-images/dry fruits/Pistachios/Pistachios_in_glass_bowl_20260926223221.jpg",
+        "/images/product-images/dry fruits/Pistachios/Pistachios_in_white_ceramic_bowl_20260926223225.jpg",
+        "/images/product-images/dry fruits/Pistachios/Pistachios_spilling_from_wooden_…_20260926223232.jpg"
       ]
     },
     {
       "id": "prod-salted-pista",
       "name": "Salted Pista",
-      "subtitle": "Roasted & Lightly Salted In-Shell Pistachios",
-      "unitPrice": "Unit price: ₹1190 / kg",
-      "price": 339,
-      "originalPrice": 440,
+      "subtitle": "Roasted & Salted Iranian Pistachios",
+      "unitPrice": "Unit price: ₹1,350 / kg",
+      "price": 369,
+      "originalPrice": 480,
       "category": "Dry Fruits & Nuts",
       "subCategory": "Pistachios",
-      "image": "/images/products/pistachios.jpeg",
-      "gallery": [
-        "/images/products/pistachios.jpeg",
-        "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg"
+      "alt": "Roasted salted pista in shell",
+      "tags": [
+        "dry fruits",
+        "nuts",
+        "pista",
+        "pistachio",
+        "pistachios",
+        "salted pista",
+        "roasted pista",
+        "namkeen pista",
+        "in shell pista",
+        "crunchy snack"
       ],
-      "alt": "Roasted and lightly salted in-shell pista",
-      "description": "Premium naturally opened in-shell pistachios, roasted with a hint of salt. Crisp, delicious, and easy to crack open.",
+      "searchKeywords": [
+        "pista",
+        "peesta",
+        "pistachio",
+        "pistachios",
+        "salted pista",
+        "namkeen pista",
+        "roasted pista",
+        "salted pistachio"
+      ],
+      "description": "Expertly roasted in-shell pistachios lightly seasoned with sea salt. Opens effortlessly to reveal mouthwatering savory green nuts. High fiber and protein packed snack.",
       "highlights": [
-        "Naturally split in-shell pistachios",
-        "Crispy dry-roasted crunch",
-        "Lightly salted for premium taste",
-        "Loaded with potassium and B-vitamins",
-        "Top choice for healthy munching"
+        "Crispy dry-roasted in-shell pistachios",
+        "Seasoned with natural sea salt",
+        "High dietary fibre and protein content",
+        "Naturally open jumbo size kernels",
+        "Airtight foil packed for peak freshness"
       ],
       "variants": [
-        { "weight": "250g", "price": 339, "originalPrice": 440 },
-        { "weight": "500g", "price": 629, "originalPrice": 820 },
-        { "weight": "1kg", "price": 1190, "originalPrice": 1550 }
+        {
+          "weight": "250g",
+          "price": 369,
+          "originalPrice": 480
+        },
+        {
+          "weight": "500g",
+          "price": 719,
+          "originalPrice": 930
+        },
+        {
+          "weight": "1kg",
+          "price": 1350,
+          "originalPrice": 1750
+        }
+      ],
+      "recommendedProducts": [
+        "prod-pista",
+        "prod-salted-badam",
+        "prod-salted-kaju",
+        "prod-walnuts"
+      ],
+      "image": "/images/product-images/dry fruits/Salted Pistachios/Salted_pistachios_in_ceramic_bowl_20260926223242.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Salted Pistachios/Salted_pistachios_in_ceramic_bowl_20260926223242.jpg",
+        "/images/product-images/dry fruits/Salted Pistachios/Salted_pistachios_in_glass_bowl_20260926223237.jpg",
+        "/images/product-images/dry fruits/Salted Pistachios/Salted_pistachios_in_wooden_scoop_20260926223246.jpg",
+        "/images/product-images/dry fruits/Salted Pistachios/Salted_pistachios_on_white_surface_20260926223249.jpg"
       ]
     },
     {
       "id": "prod-walnuts",
-      "name": "Walnuts (Akhrot)",
-      "subtitle": "Kashmiri Extra Light Brain-Nut Halves",
-      "unitPrice": "Unit price: ₹990 / kg",
-      "price": 289,
-      "originalPrice": 370,
+      "name": "Walnuts",
+      "subtitle": "California Snow-White Walnut Kernels (Akhrot)",
+      "unitPrice": "Unit price: ₹1,250 / kg",
+      "price": 339,
+      "originalPrice": 440,
       "category": "Dry Fruits & Nuts",
-      "image": "/images/products/walnuts.jpeg",
-      "gallery": [
-        "/images/products/walnuts.jpeg",
-        "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg"
+      "subCategory": "Walnuts",
+      "alt": "California raw walnut kernels akhrot halves",
+      "tags": [
+        "dry fruits",
+        "nuts",
+        "walnut",
+        "walnuts",
+        "akhrot",
+        "akrot",
+        "california walnut",
+        "omega 3",
+        "brain food",
+        "heart health",
+        "akhrot giri"
       ],
-      "alt": "Kashmiri extra light walnut akhrot halves",
-      "description": "Direct from the lush orchards of Kashmir. Extra light coloured unbroken walnut halves packed with plant-based Omega-3 ALA.",
+      "searchKeywords": [
+        "walnut",
+        "walnuts",
+        "akhrot",
+        "akrot",
+        "akhroat",
+        "akhrot giri",
+        "brain food"
+      ],
+      "description": "Extra-light halve kernels of California walnuts packed with Omega-3 fatty acids (ALA). Known as brain food, walnuts support cognitive health, heart wellness, and glowing skin.",
       "highlights": [
-        "Kashmiri Extra Light Giri (Halves)",
-        "Rich in Omega-3 fatty acids for brain health",
-        "Fresh, mild flavour with zero bitterness",
-        "Cold-stored to prevent oxidation",
-        "Excellent for oats, smoothies & salads"
+        "100% California Extra-Light Walnut Halves",
+        "Rich in Plant-Based Omega-3 (ALA)",
+        "Supports brain health & heart function",
+        "Crisp, mild, sweet nutty flavour",
+        "Nitrogen flushed to avoid bitterness"
       ],
       "variants": [
-        { "weight": "250g", "price": 289, "originalPrice": 370 },
-        { "weight": "500g", "price": 529, "originalPrice": 690 },
-        { "weight": "1kg", "price": 990, "originalPrice": 1290 }
+        {
+          "weight": "250g",
+          "price": 339,
+          "originalPrice": 440
+        },
+        {
+          "weight": "500g",
+          "price": 649,
+          "originalPrice": 840
+        },
+        {
+          "weight": "1kg",
+          "price": 1250,
+          "originalPrice": 1600
+        }
+      ],
+      "recommendedProducts": [
+        "prod-regular-badam",
+        "prod-anjir",
+        "prod-kaju",
+        "prod-munakka"
+      ],
+      "image": "/images/product-images/dry fruits/Walnuts/Walnut_halves_arranged_on_surface_20260926223300.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Walnuts/Walnut_halves_arranged_on_surface_20260926223300.jpg",
+        "/images/product-images/dry fruits/Walnuts/Walnut_halves_in_ceramic_bowl_20260926223256.jpg",
+        "/images/product-images/dry fruits/Walnuts/Walnut_halves_in_glass_bowl_20260926223253.jpg",
+        "/images/product-images/dry fruits/Walnuts/Walnut_halves_in_wooden_scoop_20260926223305.jpg"
       ]
     },
     {
       "id": "prod-charoli",
-      "name": "Charoli (Chironji)",
-      "subtitle": "Wild Harvested Natural Chironji Kernels",
-      "unitPrice": "Unit price: ₹1450 / kg",
-      "price": 179,
-      "originalPrice": 240,
+      "name": "Charoli",
+      "subtitle": "Pure Chironji Seeds for Traditional Sweets",
+      "unitPrice": "Unit price: ₹1,850 / kg",
+      "price": 499,
+      "originalPrice": 650,
       "category": "Dry Fruits & Nuts",
-      "image": "/images/products/hazelnuts.jpeg",
-      "gallery": [
-        "/images/products/hazelnuts.jpeg",
-        "/images/products/pine-nuts.jpeg",
-        "/images/products/almonds.jpeg"
+      "subCategory": "Charoli",
+      "alt": "Fresh raw chironji charoli seeds",
+      "tags": [
+        "dry fruits",
+        "seeds",
+        "charoli",
+        "chironji",
+        "sweets",
+        "kheer",
+        "halwa",
+        "payasam",
+        "mughlai",
+        "garnishing"
       ],
-      "alt": "Natural wild harvested charoli chironji",
-      "description": "Tiny, nutty, almond-flavoured wild chironji seeds. Highly revered in traditional sweets, sheer khurma, payasam, and Ayurvedic wellness.",
+      "searchKeywords": [
+        "charoli",
+        "chironji",
+        "chironjee",
+        "charoli beej",
+        "payasam nut",
+        "cudappah"
+      ],
+      "description": "Small, rounded chironji seeds with a tender almond-like flavour. An indispensable ingredient in traditional Indian sweets like kheer, halwa, payasam, and royal Mughlai curries.",
       "highlights": [
-        "100% Pure & Cleaned Charoli / Chironji",
-        "Subtle almond-like nutty flavour",
-        "Essential for Sheer Khurma, Kheer & Halwa",
-        "Rich in essential minerals & proteins",
-        "Hygienically sorted and packed"
+        "100% Pure Raw Chironji / Charoli Seeds",
+        "Rich in essential oils, protein & minerals",
+        "Essential garnish for Kheer & Halwa",
+        "Soft texture with sweet almond taste",
+        "Hygienically sorted and vacuum packed"
       ],
       "variants": [
-        { "weight": "100g", "price": 179, "originalPrice": 240 },
-        { "weight": "250g", "price": 399, "originalPrice": 520 },
-        { "weight": "500g", "price": 749, "originalPrice": 980 }
+        {
+          "weight": "250g",
+          "price": 499,
+          "originalPrice": 650
+        },
+        {
+          "weight": "500g",
+          "price": 959,
+          "originalPrice": 1250
+        },
+        {
+          "weight": "1kg",
+          "price": 1850,
+          "originalPrice": 2400
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kishmish",
+        "prod-regular-badam",
+        "prod-kaju",
+        "prod-anjir"
+      ],
+      "image": "/images/product-images/dry fruits/Chironji (Charoli)/Chironji_seeds_arranged_on_surface_20260926223333.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Chironji (Charoli)/Chironji_seeds_arranged_on_surface_20260926223333.jpg",
+        "/images/product-images/dry fruits/Chironji (Charoli)/Chironji_seeds_in_ceramic_bowl_20260926223321.jpg",
+        "/images/product-images/dry fruits/Chironji (Charoli)/Chironji_seeds_in_glass_bowl_20260926223313.jpg",
+        "/images/product-images/dry fruits/Chironji (Charoli)/Chironji_seeds_in_wooden_scoop_20260926223317.jpg"
       ]
     },
     {
       "id": "prod-chuhara",
-      "name": "Chuhara (Dry Dates)",
-      "subtitle": "Naturally Sundried Yellow Sweet Dry Dates",
-      "unitPrice": "Unit price: ₹450 / kg",
+      "name": "Chuhara",
+      "subtitle": "Premium Dry Dates (Pind Khajoor / Chuhara)",
+      "unitPrice": "Unit price: ₹480 / kg",
       "price": 139,
       "originalPrice": 180,
       "category": "Dry Fruits & Nuts",
-      "image": "/images/products/pine-nuts.jpeg",
-      "gallery": [
-        "/images/products/pine-nuts.jpeg",
-        "/images/products/walnuts.jpeg"
+      "subCategory": "Chuhara",
+      "alt": "Dried dry dates chuhara",
+      "tags": [
+        "dry fruits",
+        "dates",
+        "chuhara",
+        "chuara",
+        "dry date",
+        "dry dates",
+        "pind khajoor",
+        "iron",
+        "calcium",
+        "milk dates",
+        "ayurveda"
       ],
-      "alt": "Natural dry yellow chuhara",
-      "description": "Sun-dried natural yellow chuhara dry dates. Loaded with natural iron and calcium, ideal for energy milk drinks, festive rituals, and digestion.",
+      "searchKeywords": [
+        "chuhara",
+        "chuara",
+        "chohara",
+        "dry date",
+        "dry dates",
+        "pind khajoor",
+        "sookha khajoor"
+      ],
+      "description": "Naturally sun-dried sweet dates rich in natural dietary fiber, calcium, and iron. Ideal for energy tonics, milk boiling, ayurvedic formulations, and festive offerings.",
       "highlights": [
-        "Natural sweet yellow chuhara",
-        "High in Dietary Fibre, Calcium & Iron",
-        "Traditional remedy for vitality and strength",
-        "Great for boiling with dry fruit milk",
-        "Long shelf-life and moisture-protected"
+        "Sun-dried yellow dry dates",
+        "Rich in Iron, Calcium & Fibre",
+        "Natural energy booster for all ages",
+        "Great for cooking with warm milk",
+        "Long shelf life naturally preserved"
       ],
       "variants": [
-        { "weight": "250g", "price": 139, "originalPrice": 180 },
-        { "weight": "500g", "price": 249, "originalPrice": 330 },
-        { "weight": "1kg", "price": 450, "originalPrice": 590 }
+        {
+          "weight": "250g",
+          "price": 139,
+          "originalPrice": 180
+        },
+        {
+          "weight": "500g",
+          "price": 259,
+          "originalPrice": 340
+        },
+        {
+          "weight": "1kg",
+          "price": 480,
+          "originalPrice": 640
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kishmish",
+        "prod-munakka",
+        "prod-anjir",
+        "prod-regular-badam"
+      ],
+      "image": "/images/product-images/dry fruits/Dried Dates (Chuhara)/Dried_dates_arranged_on_surface_20260926223350.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Dried Dates (Chuhara)/Dried_dates_arranged_on_surface_20260926223350.jpg",
+        "/images/product-images/dry fruits/Dried Dates (Chuhara)/Dried_dates_in_glass_bowl_20260926223338.jpg",
+        "/images/product-images/dry fruits/Dried Dates (Chuhara)/Dried_dates_in_white_bowl_20260926223342.jpg",
+        "/images/product-images/dry fruits/Dried Dates (Chuhara)/Dried_dates_spilling_from_scoop_20260926223347.jpg"
       ]
     },
     {
       "id": "prod-kishmish",
-      "name": "Kishmish (Afghan Raisins)",
-      "subtitle": "Afghan Long Golden Sweet Seedless Raisins",
-      "unitPrice": "Unit price: ₹490 / kg",
-      "price": 149,
-      "originalPrice": 199,
+      "name": "Kishmish",
+      "subtitle": "Sweet Green Indian Raisins (Kishmish)",
+      "unitPrice": "Unit price: ₹420 / kg",
+      "price": 119,
+      "originalPrice": 160,
       "category": "Dry Fruits & Nuts",
-      "image": "/images/products/peanut.jpeg",
-      "gallery": [
-        "/images/products/peanut.jpeg",
-        "/images/products/almonds.jpeg"
+      "subCategory": "Kishmish",
+      "alt": "Sweet seedless green raisins kishmish",
+      "tags": [
+        "dry fruits",
+        "raisins",
+        "kishmish",
+        "kismis",
+        "green raisins",
+        "seedless raisins",
+        "digestion",
+        "iron",
+        "natural sweet"
       ],
-      "alt": "Long golden afghan kishmish",
-      "description": "Plump, naturally sun-cured Afghan long golden seedless kishmish. Sweet, tender, and free from added sugar.",
+      "searchKeywords": [
+        "kishmish",
+        "kishmis",
+        "kismis",
+        "raisin",
+        "raisins",
+        "green raisins",
+        "sultana",
+        "draksh"
+      ],
+      "description": "Juicy, naturally sweet seedless green raisins dried from premium seedless grapes. Great source of quick natural glucose, iron, and digestive antioxidants.",
       "highlights": [
-        "100% Seedless Afghan Golden Raisins",
-        "Naturally sweet with zero added sugar",
+        "Juicy & sweet seedless green raisins",
         "Rich in Iron, Potassium & Antioxidants",
-        "Perfect for morning energy water & desserts",
-        "Soft and juicy texture"
+        "Promotes healthy digestion",
+        "Perfect for bakery, kheer & oatmeal",
+        "Cleaned and sorted hygienically"
       ],
       "variants": [
-        { "weight": "250g", "price": 149, "originalPrice": 199 },
-        { "weight": "500g", "price": 269, "originalPrice": 360 },
-        { "weight": "1kg", "price": 490, "originalPrice": 650 }
+        {
+          "weight": "250g",
+          "price": 119,
+          "originalPrice": 160
+        },
+        {
+          "weight": "500g",
+          "price": 229,
+          "originalPrice": 300
+        },
+        {
+          "weight": "1kg",
+          "price": 420,
+          "originalPrice": 560
+        }
+      ],
+      "recommendedProducts": [
+        "prod-munakka",
+        "prod-regular-badam",
+        "prod-kaju",
+        "prod-chuhara"
+      ],
+      "image": "/images/product-images/dry fruits/Raisins/Black_raisins_arranged_on_white_20260926223414.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Raisins/Black_raisins_arranged_on_white_20260926223414.jpg",
+        "/images/product-images/dry fruits/Raisins/Black_raisins_in_ceramic_bowl_20260926223408.jpg",
+        "/images/product-images/dry fruits/Raisins/Black_raisins_in_glass_bowl_20260926223404.jpg",
+        "/images/product-images/dry fruits/Raisins/Black_raisins_spilling_from_scoop_20260926223417.jpg"
       ]
     },
     {
       "id": "prod-munakka",
-      "name": "Munakka (Black Munakka)",
-      "subtitle": "Ayurvedic Jumbo Seeded Black Munakka",
-      "unitPrice": "Unit price: ₹750 / kg",
+      "name": "Munakka",
+      "subtitle": "Big Brown Seeded Medicinal Raisins",
+      "unitPrice": "Unit price: ₹680 / kg",
+      "price": 189,
+      "originalPrice": 250,
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Munakka",
+      "alt": "Large brown seeded munakka raisins",
+      "tags": [
+        "dry fruits",
+        "raisins",
+        "munakka",
+        "brown munakka",
+        "seeded raisin",
+        "ayurveda",
+        "hemoglobin",
+        "throat relief",
+        "iron"
+      ],
+      "searchKeywords": [
+        "munakka",
+        "munaka",
+        "seeded raisin",
+        "big raisin",
+        "brown munakka",
+        "draksh"
+      ],
+      "description": "Large brown seeded raisins revered in Ayurveda for blood purification, digestion improvement, and soothing throat relief when soaked overnight in milk.",
+      "highlights": [
+        "Ayurvedic Grade Large Seeded Munakka",
+        "High Iron & Natural Bio-active Nutrients",
+        "Boiled with milk for vitality",
+        "Soothes stomach acid & digestion",
+        "Sweet, dark amber plump berries"
+      ],
+      "variants": [
+        {
+          "weight": "250g",
+          "price": 189,
+          "originalPrice": 250
+        },
+        {
+          "weight": "500g",
+          "price": 359,
+          "originalPrice": 470
+        },
+        {
+          "weight": "1kg",
+          "price": 680,
+          "originalPrice": 890
+        }
+      ],
+      "recommendedProducts": [
+        "prod-black-munakka",
+        "prod-kishmish",
+        "prod-anjir",
+        "prod-regular-badam"
+      ],
+      "image": "/images/product-images/dry fruits/Munakka/Munakka_arranged_on_white_surface_20260926223435.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Munakka/Munakka_arranged_on_white_surface_20260926223435.jpg",
+        "/images/product-images/dry fruits/Munakka/Munakka_in_glass_bowl_20260926223431.jpg",
+        "/images/product-images/dry fruits/Munakka/Munakka_in_white_bowl_20260926223438.jpg",
+        "/images/product-images/dry fruits/Munakka/Munakka_in_wooden_scoop_20260926223443.jpg"
+      ]
+    },
+    {
+      "id": "prod-black-munakka",
+      "name": "Black Munakka",
+      "subtitle": "Black Seeded Abjosh Munakka",
+      "unitPrice": "Unit price: ₹790 / kg",
       "price": 219,
       "originalPrice": 290,
       "category": "Dry Fruits & Nuts",
       "subCategory": "Munakka",
-      "image": "/images/products/pecans.jpeg",
-      "gallery": [
-        "/images/products/pecans.jpeg",
-        "/images/products/walnuts.jpeg"
+      "alt": "Dark black seeded munakka raisins",
+      "tags": [
+        "dry fruits",
+        "raisins",
+        "munakka",
+        "black munakka",
+        "kala munakka",
+        "abjosh",
+        "hemoglobin",
+        "antioxidants",
+        "blood booster"
       ],
-      "alt": "Ayurvedic jumbo black munakka",
-      "description": "Large, fleshy black munakka known in Ayurveda for boosting hemoglobin, soothing acidity, and enhancing stamina. Fleshy with natural seeds.",
+      "searchKeywords": [
+        "munakka",
+        "munaka",
+        "kala munakka",
+        "black munakka",
+        "black raisin",
+        "abjosh"
+      ],
+      "description": "Deep black jumbo raisins packed with anthocyanins, iron, and dietary fiber. Known to boost hemoglobin levels and improve energy stamina naturally.",
       "highlights": [
-        "Authentic Jumbo Black Munakka with seeds",
-        "Ayurvedic powerhouse for hemoglobin & immunity",
-        "Natural digestive and cooling properties",
-        "Soft and rich caramelized sweetness",
-        "Hygienically cleaned and packaged"
+        "Dark Black Seeded Premium Munakka",
+        "Exceptional Iron & Hemoglobin Booster",
+        "Packed with natural antioxidants",
+        "Great for overnight soaking regimen",
+        "Soft, sweet, and chewy texture"
       ],
       "variants": [
-        { "weight": "250g", "price": 219, "originalPrice": 290 },
-        { "weight": "500g", "price": 399, "originalPrice": 530 },
-        { "weight": "1kg", "price": 750, "originalPrice": 980 }
+        {
+          "weight": "250g",
+          "price": 219,
+          "originalPrice": 290
+        },
+        {
+          "weight": "500g",
+          "price": 419,
+          "originalPrice": 550
+        },
+        {
+          "weight": "1kg",
+          "price": 790,
+          "originalPrice": 1050
+        }
+      ],
+      "recommendedProducts": [
+        "prod-munakka",
+        "prod-anjir",
+        "prod-kishmish",
+        "prod-regular-badam"
+      ],
+      "image": "/images/product-images/dry fruits/Black Munakka/Black_Munakka_in_glass_bowl_20260926223456.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Black Munakka/Black_Munakka_in_glass_bowl_20260926223456.jpg",
+        "/images/product-images/dry fruits/Black Munakka/Black_munakka_product_shot_20260926223459.jpg",
+        "/images/product-images/dry fruits/Black Munakka/Black_raisins_in_ceramic_bowl_20260926223452.jpg",
+        "/images/product-images/dry fruits/Black Munakka/Black_raisins_in_wooden_scoop_20260926223448.jpg"
       ]
     },
     {
       "id": "prod-makhana",
-      "name": "Makhana (Fox Nuts)",
-      "subtitle": "Jumbo 6-Soot Handpicked Phool Makhana",
-      "unitPrice": "Unit price: ₹890 / kg",
-      "price": 249,
-      "originalPrice": 330,
+      "name": "Makhana",
+      "subtitle": "Jumbo Phool Makhana (Fox Nuts / Lotus Seeds)",
+      "unitPrice": "Unit price: ₹1,150 / kg",
+      "price": 319,
+      "originalPrice": 420,
       "category": "Dry Fruits & Nuts",
-      "image": "/images/products/brazil-nuts.jpeg",
-      "gallery": [
-        "/images/products/brazil-nuts.jpeg",
-        "/images/products/Cashews.jpeg"
+      "subCategory": "Makhana",
+      "alt": "Crispy white phool makhana lotus seeds",
+      "tags": [
+        "dry fruits",
+        "superfood",
+        "makhana",
+        "phool makhana",
+        "fox nuts",
+        "lotus seeds",
+        "vrat food",
+        "fasting",
+        "low calorie",
+        "calcium",
+        "keto"
       ],
-      "alt": "Jumbo 6-soot phool makhana",
-      "description": "Fluffy, extra-large handpicked lotus seeds (Phool Makhana). Gluten-free, low-calorie, and calcium-rich superfood for roasting and fasting recipes.",
+      "searchKeywords": [
+        "makhana",
+        "makana",
+        "phool makhana",
+        "fox nut",
+        "fox nuts",
+        "lotus seed",
+        "lotus seeds",
+        "vrat food"
+      ],
+      "description": "Handpicked Grade-A raw Lotus Seeds / Fox Nuts. Low in calories, rich in calcium, protein, and antioxidants. The perfect healthy base for roasting with ghee and spices.",
       "highlights": [
-        "Jumbo Grade Hand-Sorted Makhana",
-        "Naturally gluten-free & low glycemic index",
-        "High in plant protein, calcium & magnesium",
-        "Roasts into light, crispy, crunchy snack",
-        "Zero oil and zero additives"
+        "Super-sized Grade Phool Makhana",
+        "Low Calorie, High Calcium & Protein",
+        "Gluten-free keto friendly superfood",
+        "Ideal for fasts (Vrat) & daily roasting",
+        "100% Organic & pesticide-free"
       ],
       "variants": [
-        { "weight": "250g", "price": 249, "originalPrice": 330 },
-        { "weight": "500g", "price": 469, "originalPrice": 620 },
-        { "weight": "1kg", "price": 890, "originalPrice": 1180 }
+        {
+          "weight": "250g",
+          "price": 319,
+          "originalPrice": 420
+        },
+        {
+          "weight": "500g",
+          "price": 619,
+          "originalPrice": 800
+        },
+        {
+          "weight": "1kg",
+          "price": 1150,
+          "originalPrice": 1500
+        }
+      ],
+      "recommendedProducts": [
+        "prod-regular-badam",
+        "prod-kaju",
+        "prod-chia-seeds",
+        "prod-walnuts"
+      ],
+      "image": "/images/product-images/dry fruits/Fox Nuts (Makhana)/Fox_nuts_arranged_on_white_20260926223521.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Fox Nuts (Makhana)/Fox_nuts_arranged_on_white_20260926223521.jpg",
+        "/images/product-images/dry fruits/Fox Nuts (Makhana)/Fox_nuts_in_ceramic_bowl_20260926223506.jpg",
+        "/images/product-images/dry fruits/Fox Nuts (Makhana)/Fox_nuts_in_glass_bowl_20260926223511.jpg",
+        "/images/product-images/dry fruits/Fox Nuts (Makhana)/Fox_nuts_spilling_from_scoop_20260926223515.jpg"
       ]
     },
     {
       "id": "prod-anjir",
-      "name": "Anjir (Sundried Figs)",
-      "subtitle": "Royal Afghan Soft Ring Sundried Figs",
-      "unitPrice": "Unit price: ₹1190 / kg",
-      "price": 339,
-      "originalPrice": 430,
-      "category": "Dry Fruits & Nuts",
-      "image": "/images/products/walnuts.jpeg",
-      "gallery": [
-        "/images/products/walnuts.jpeg",
-        "/images/products/pecans.jpeg"
-      ],
-      "alt": "Sundried afghan anjir figs",
-      "description": "Rich, chewy garland-strung Afghan sundried figs. Packed with dietary fibre, potassium, and calcium for bone and gut health.",
-      "highlights": [
-        "Royal Afghan Garland (Chakki) Anjir",
-        "Rich source of soluble fibre & calcium",
-        "Naturally sweet without sugar coating",
-        "Great for morning soaking & digestion",
-        "Soft and plump chewy texture"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 339, "originalPrice": 430 },
-        { "weight": "500g", "price": 629, "originalPrice": 820 },
-        { "weight": "1kg", "price": 1190, "originalPrice": 1550 }
-      ]
-    },
-    {
-      "id": "prod-seed-watermelon",
-      "name": "Watermelon Seeds",
-      "subtitle": "Raw Dehulled Tarbuj Magaz Kernels",
-      "unitPrice": "Unit price: ₹590 / kg",
-      "price": 169,
-      "originalPrice": 220,
-      "category": "Seeds",
-      "image": "/images/products/pine-nuts.jpeg",
-      "gallery": [
-        "/images/products/pine-nuts.jpeg",
-        "/images/products/hazelnuts.jpeg"
-      ],
-      "alt": "Raw watermelon seeds tarbuj magaz",
-      "description": "Premium dehulled raw watermelon seeds (Tarbuj Magaz). Rich in protein, magnesium, zinc, and healthy fatty acids.",
-      "highlights": [
-        "100% Raw & Unsalted Watermelon Kernels",
-        "Packed with Zinc, Magnesium & Plant Protein",
-        "Perfect for baking, smoothies & curries",
-        "Crispy mild nutty crunch",
-        "Hygienically sorted & cleaned"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 169, "originalPrice": 220 },
-        { "weight": "500g", "price": 319, "originalPrice": 410 },
-        { "weight": "1kg", "price": 590, "originalPrice": 780 }
-      ]
-    },
-    {
-      "id": "prod-seed-muskmelon",
-      "name": "Muskmelon Seeds",
-      "subtitle": "Raw Kharbuja Magaz Nutritious Kernels",
-      "unitPrice": "Unit price: ₹640 / kg",
-      "price": 179,
-      "originalPrice": 230,
-      "category": "Seeds",
-      "image": "/images/products/pine-nuts.jpeg",
-      "gallery": [
-        "/images/products/pine-nuts.jpeg",
-        "/images/products/almonds.jpeg"
-      ],
-      "alt": "Raw muskmelon seeds kharbuja magaz",
-      "description": "Natural cleaned muskmelon seed kernels (Kharbuja Magaz). Rich in vitamins A and C, ideal for royal Mughlai gravies and energy trail mixes.",
-      "highlights": [
-        "Cleaned Raw Muskmelon Seeds",
-        "Rich in Vitamin A, C & Healthy Fats",
-        "Essential for creamy gravies and thandai",
-        "Naturally cooling & nourishing",
-        "Airtight moisture-safe pouch"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 179, "originalPrice": 230 },
-        { "weight": "500g", "price": 339, "originalPrice": 440 },
-        { "weight": "1kg", "price": 640, "originalPrice": 840 }
-      ]
-    },
-    {
-      "id": "prod-seed-chia",
-      "name": "Chia Seeds",
-      "subtitle": "Raw Superfood Black & White Chia Seeds",
-      "unitPrice": "Unit price: ₹580 / kg",
-      "price": 169,
-      "originalPrice": 220,
-      "category": "Seeds",
-      "image": "/images/products/pecans.jpeg",
-      "gallery": [
-        "/images/products/pecans.jpeg",
-        "/images/products/pine-nuts.jpeg"
-      ],
-      "alt": "Raw natural superfood chia seeds",
-      "description": "Nutrient-dense raw chia seeds loaded with soluble dietary fibre, protein, and omega-3. Perfect for weight management and overnight puddings.",
-      "highlights": [
-        "100% Raw & Unprocessed Chia Seeds",
-        "Absorbs 10x its weight in water for hydration",
-        "High soluble fibre & Omega-3 ALA",
-        "Ideal for chia pudding, juices & oatmeal",
-        "Zero bitterness, easy to consume"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 169, "originalPrice": 220 },
-        { "weight": "500g", "price": 299, "originalPrice": 390 },
-        { "weight": "1kg", "price": 580, "originalPrice": 750 }
-      ]
-    },
-    {
-      "id": "prod-seed-flax",
-      "name": "Alsi / Flax Seeds",
-      "subtitle": "Golden Brown Omega-3 Loaded Flax Seeds",
-      "unitPrice": "Unit price: ₹380 / kg",
-      "price": 119,
-      "originalPrice": 160,
-      "category": "Seeds",
-      "image": "/images/products/peanut.jpeg",
-      "gallery": [
-        "/images/products/peanut.jpeg",
-        "/images/products/hazelnuts.jpeg"
-      ],
-      "alt": "Golden brown alsi flax seeds",
-      "description": "Wholesome golden brown flax seeds (Alsi). Renowned for heart health, lignans, and digestive wellness.",
-      "highlights": [
-        "100% Pure Cleaned Alsi (Flax Seeds)",
-        "Rich in Lignans & Omega-3 Fats",
-        "Supports heart health and digestion",
-        "Great for roasting with pink salt",
-        "Fresh harvest batch"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 119, "originalPrice": 160 },
-        { "weight": "500g", "price": 210, "originalPrice": 280 },
-        { "weight": "1kg", "price": 380, "originalPrice": 490 }
-      ]
-    },
-    {
-      "id": "prod-seed-sesame",
-      "name": "Til / Sesame Seeds",
-      "subtitle": "Premium Polished White Sesame Seeds",
-      "unitPrice": "Unit price: ₹420 / kg",
-      "price": 129,
-      "originalPrice": 170,
-      "category": "Seeds",
-      "image": "/images/products/hazelnuts.jpeg",
-      "gallery": [
-        "/images/products/hazelnuts.jpeg",
-        "/images/products/pine-nuts.jpeg"
-      ],
-      "alt": "White til sesame seeds",
-      "description": "High-grade polished white sesame seeds (Safed Til). Packed with natural calcium, zinc, and nutty aroma for baking and traditional laddus.",
-      "highlights": [
-        "Cleaned & Polished Natural White Til",
-        "Exceptional source of plant Calcium",
-        "Rich nutty flavour when roasted",
-        "Essential for chikki, sweets, and Asian cuisine",
-        "Hygienically machine-cleaned"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 129, "originalPrice": 170 },
-        { "weight": "500g", "price": 230, "originalPrice": 310 },
-        { "weight": "1kg", "price": 420, "originalPrice": 550 }
-      ]
-    },
-    {
-      "id": "prod-date-kalmi",
-      "name": "Kalmi Dates (Safawi)",
-      "subtitle": "Premium Soft & Chewy Saudi Kalmi Dates",
-      "unitPrice": "Unit price: ₹790 / kg",
-      "price": 229,
-      "originalPrice": 310,
-      "category": "Dates",
-      "image": "/images/products/walnuts.jpeg",
-      "gallery": [
-        "/images/products/walnuts.jpeg",
-        "/images/products/pecans.jpeg"
-      ],
-      "alt": "Saudi kalmi safawi dates",
-      "description": "Authentic Saudi Kalmi (Safawi) dates. Medium-sized, dark brown, delightfully chewy with a rich caramel sweetness and dense flesh.",
-      "highlights": [
-        "Authentic Medina Imported Kalmi Dates",
-        "Soft and pleasantly chewy texture",
-        "Loaded with potassium, iron & magnesium",
-        "Natural instant stamina booster",
-        "Non-sticky, clean packing"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 229, "originalPrice": 310 },
-        { "weight": "500g", "price": 420, "originalPrice": 560 },
-        { "weight": "1kg", "price": 790, "originalPrice": 1050 }
-      ]
-    },
-    {
-      "id": "prod-date-mabrum",
-      "name": "Mabrum Dates",
-      "subtitle": "Royal Slender & Firm Caramel Mabrum Dates",
-      "unitPrice": "Unit price: ₹990 / kg",
-      "price": 289,
-      "originalPrice": 380,
-      "category": "Dates",
-      "image": "/images/products/pecans.jpeg",
-      "gallery": [
-        "/images/products/pecans.jpeg",
-        "/images/products/walnuts.jpeg"
-      ],
-      "alt": "Royal mabrum dates",
-      "description": "Long, slender, firm Saudi Mabrum dates. Chewy with subtle toffee notes and pleasant non-overpowering natural sweetness.",
-      "highlights": [
-        "Royal Medina Mabrum Dates",
-        "Slender shape with toffee-like flavour",
-        "Firm yet tender chewiness",
-        "Premium gift-grade presentation",
-        "Rich in natural minerals"
-      ],
-      "variants": [
-        { "weight": "250g", "price": 289, "originalPrice": 380 },
-        { "weight": "500g", "price": 529, "originalPrice": 690 },
-        { "weight": "1kg", "price": 990, "originalPrice": 1290 }
-      ]
-    },
-    {
-      "id": "prod-date-ajwa",
-      "name": "Ajwa Dates",
-      "subtitle": "Holy Al-Madinah Al-Munawwarah Black Ajwa",
-      "unitPrice": "Unit price: ₹1390 / kg",
+      "name": "Anjir",
+      "subtitle": "Afghan Dried Figs (Anjeer)",
+      "unitPrice": "Unit price: ₹1,490 / kg",
       "price": 399,
       "originalPrice": 520,
-      "category": "Dates",
-      "image": "/images/products/pine-nuts.jpeg",
-      "gallery": [
-        "/images/products/pine-nuts.jpeg",
-        "/images/products/walnuts.jpeg",
-        "/images/products/pecans.jpeg"
+      "category": "Dry Fruits & Nuts",
+      "subCategory": "Anjir",
+      "alt": "Sun dried afghan anjir figs garland",
+      "tags": [
+        "dry fruits",
+        "figs",
+        "anjir",
+        "anjeer",
+        "afghan anjir",
+        "dried figs",
+        "high fiber",
+        "digestion",
+        "gut health",
+        "low gi"
       ],
-      "alt": "Holy medina ajwa black dates",
-      "description": "Directly imported from the holy groves of Medina. Small, round, soft, finely wrinkled dark black dates cherished worldwide for health and spiritual blessing.",
+      "searchKeywords": [
+        "anjir",
+        "anjeer",
+        "fig",
+        "figs",
+        "dried fig",
+        "afghan anjir",
+        "anjeer giri"
+      ],
+      "description": "Naturally dried disc-shaped Afghan figs rich in dietary fiber, potassium, and minerals. Chewy sweet flavor with crunch from natural tiny seeds inside.",
       "highlights": [
-        "100% Certified Medina Ajwa Dates",
-        "Soft, luscious dark texture with fine white veins",
-        "Famous for heart health and cardiovascular wellness",
-        "High in polyphenols and antioxidants",
-        "Direct orchard sourcing"
+        "Premium Hand-threaded Afghan Anjir",
+        "High Dietary Fibre for Healthy Gut",
+        "Natural sweetener with low GI index",
+        "Soak figs daily for digestive wellness",
+        "No added sugar or chemicals"
       ],
       "variants": [
-        { "weight": "250g", "price": 399, "originalPrice": 520 },
-        { "weight": "500g", "price": 749, "originalPrice": 980 },
-        { "weight": "1kg", "price": 1390, "originalPrice": 1850 }
+        {
+          "weight": "250g",
+          "price": 399,
+          "originalPrice": 520
+        },
+        {
+          "weight": "500g",
+          "price": 779,
+          "originalPrice": 990
+        },
+        {
+          "weight": "1kg",
+          "price": 1490,
+          "originalPrice": 1950
+        }
+      ],
+      "recommendedProducts": [
+        "prod-walnuts",
+        "prod-regular-badam",
+        "prod-munakka",
+        "prod-black-munakka"
+      ],
+      "image": "/images/product-images/dry fruits/Dried Figs (Anjir)/Dried_figs_arranged_on_surface_20260926223543.jpg",
+      "gallery": [
+        "/images/product-images/dry fruits/Dried Figs (Anjir)/Dried_figs_arranged_on_surface_20260926223543.jpg",
+        "/images/product-images/dry fruits/Dried Figs (Anjir)/Dried_figs_in_ceramic_bowl_20260926223532.jpg",
+        "/images/product-images/dry fruits/Dried Figs (Anjir)/Dried_figs_in_glass_bowl_20260926223528.jpg",
+        "/images/product-images/dry fruits/Dried Figs (Anjir)/Dried_figs_spilling_from_scoop_20260926223538.jpg"
       ]
     },
     {
-      "id": "prod-date-kimia",
-      "name": "Kimia Dates",
-      "subtitle": "Fresh Soft Melt-in-Mouth Iranian Kimia Gold",
-      "unitPrice": "Unit price: ₹420 / kg",
-      "price": 219,
-      "originalPrice": 290,
-      "category": "Dates",
-      "image": "/images/products/brazil-nuts.jpeg",
-      "gallery": [
-        "/images/products/brazil-nuts.jpeg",
-        "/images/products/walnuts.jpeg"
+      "id": "prod-watermelon-seeds",
+      "name": "Watermelon Seeds",
+      "subtitle": "Raw Shelled Tarbooj Seeds",
+      "unitPrice": "Unit price: ₹560 / kg",
+      "price": 159,
+      "originalPrice": 210,
+      "category": "Seeds",
+      "subCategory": "Watermelon Seeds",
+      "alt": "Raw shelled watermelon seeds tarbooj magaz",
+      "tags": [
+        "seeds",
+        "watermelon seeds",
+        "tarbooj",
+        "tarbooj beej",
+        "magaz",
+        "raw seeds",
+        "zinc",
+        "magnesium",
+        "protein",
+        "superfood"
       ],
-      "alt": "Soft fresh iranian kimia dates",
-      "description": "Ultra soft, juicy, and sweet Iranian Kimia dates. Known for their glossy dark skin and melt-in-mouth creamy honey pulp.",
+      "searchKeywords": [
+        "watermelon seeds",
+        "watermelon seed",
+        "tarbooj",
+        "tarbuj",
+        "tarbooj beej",
+        "tarbooj magaz",
+        "magaz"
+      ],
+      "description": "Nutrient-dense raw green-white watermelon seed kernels. Loaded with zinc, magnesium, and essential amino acids for immunity and heart health.",
       "highlights": [
-        "Fresh Soft Iranian Kimia Dates",
-        "Melt-in-mouth honey sweetness",
-        "Naturally juicy and plump",
-        "Packed in sealed fresh box",
-        "Ideal for daily breakfast and energy shakes"
+        "100% Raw Shelled Watermelon Kernels",
+        "Abundant in Magnesium, Zinc & Iron",
+        "Supports muscle repair & immune system",
+        "Great crunch for salads, breads & snacks",
+        "Unsalted and raw"
       ],
       "variants": [
-        { "weight": "500g Box", "price": 219, "originalPrice": 290 },
-        { "weight": "1kg (2 Boxes)", "price": 399, "originalPrice": 540 }
+        {
+          "weight": "250g",
+          "price": 159,
+          "originalPrice": 210
+        },
+        {
+          "weight": "500g",
+          "price": 299,
+          "originalPrice": 390
+        },
+        {
+          "weight": "1kg",
+          "price": 560,
+          "originalPrice": 750
+        }
+      ],
+      "recommendedProducts": [
+        "prod-muskmelon-seeds",
+        "prod-chia-seeds",
+        "prod-alsi-flax-seeds",
+        "prod-makhana"
+      ],
+      "image": "/images/product-images/seeds/Watermelon Seeds/Watermelon_seeds_in_bowl_20260927123923.jpg",
+      "gallery": [
+        "/images/product-images/seeds/Watermelon Seeds/Watermelon_seeds_in_bowl_20260927123923.jpg",
+        "/images/product-images/seeds/Watermelon Seeds/Watermelon_seeds_in_glass_bowl_20260927123928.jpg",
+        "/images/product-images/seeds/Watermelon Seeds/Watermelon_seeds_in_wooden_scoop_20260927123937.jpg",
+        "/images/product-images/seeds/Watermelon Seeds/Watermelon_seeds_on_white_surface_20260927123943.jpg"
       ]
     },
     {
-      "id": "prod-date-irani",
-      "name": "Irani Dates",
-      "subtitle": "Mazafati Fresh Black Chocolatey Irani Dates",
-      "unitPrice": "Unit price: ₹440 / kg",
-      "price": 219,
-      "originalPrice": 290,
-      "category": "Dates",
-      "image": "/images/products/pecans.jpeg",
-      "gallery": [
-        "/images/products/pecans.jpeg",
-        "/images/products/brazil-nuts.jpeg"
+      "id": "prod-muskmelon-seeds",
+      "name": "Muskmelon Seeds",
+      "subtitle": "Raw Shelled Kharbooza Magaz",
+      "unitPrice": "Unit price: ₹620 / kg",
+      "price": 169,
+      "originalPrice": 220,
+      "category": "Seeds",
+      "subCategory": "Muskmelon Seeds",
+      "alt": "Shelled muskmelon seeds kharbooza magaz",
+      "tags": [
+        "seeds",
+        "muskmelon seeds",
+        "kharbooza",
+        "kharbooza magaz",
+        "magaz",
+        "thandai",
+        "gravy",
+        "vitamin a",
+        "superfood"
       ],
-      "alt": "Fresh irani mazafati dates",
-      "description": "Authentic Bam Mazafati Irani dates. Deep black, velvety soft, and possessing natural notes of dark chocolate and brown sugar.",
+      "searchKeywords": [
+        "muskmelon seeds",
+        "muskmelon seed",
+        "kharbooza",
+        "kharbuja",
+        "kharbooza beej",
+        "kharbooza magaz",
+        "magaz"
+      ],
+      "description": "Cleaned raw muskmelon kernels packed with vitamin A, C, and plant protein. Widely used in traditional thandai, gravies, and baking.",
       "highlights": [
-        "Authentic Iranian Mazafati Fresh Harvest",
-        "Rich chocolatey caramel texture",
-        "Very high moisture and softness",
-        "Free from artificial glucose syrups",
-        "Quick natural energy provider"
+        "Cleaned Raw Kharbooza Magaz",
+        "Rich in Vitamin A, C & Omega-6",
+        "Ideal for Thandai, sweets & gravies",
+        "Enhances skin radiance & eye health",
+        "100% Pure without shell pieces"
       ],
       "variants": [
-        { "weight": "500g Box", "price": 219, "originalPrice": 290 },
-        { "weight": "1kg (2 Boxes)", "price": 399, "originalPrice": 540 }
+        {
+          "weight": "250g",
+          "price": 169,
+          "originalPrice": 220
+        },
+        {
+          "weight": "500g",
+          "price": 329,
+          "originalPrice": 420
+        },
+        {
+          "weight": "1kg",
+          "price": 620,
+          "originalPrice": 820
+        }
+      ],
+      "recommendedProducts": [
+        "prod-watermelon-seeds",
+        "prod-chia-seeds",
+        "prod-til-sesame-seeds",
+        "prod-regular-badam"
+      ],
+      "image": "/images/product-images/seeds/Muskmelon Seeds/Muskmelon_seeds_arranged_on_surface_20260927124008.jpg",
+      "gallery": [
+        "/images/product-images/seeds/Muskmelon Seeds/Muskmelon_seeds_arranged_on_surface_20260927124008.jpg",
+        "/images/product-images/seeds/Muskmelon Seeds/Muskmelon_seeds_in_glass_bowl_20260927123956.jpg",
+        "/images/product-images/seeds/Muskmelon Seeds/Muskmelon_seeds_in_white_bowl_20260927123951.jpg",
+        "/images/product-images/seeds/Muskmelon Seeds/Muskmelon_seeds_in_wooden_scoop_20260927124001.jpg"
       ]
     },
     {
-      "id": "prod-date-maryam",
-      "name": "Maryam Dates",
-      "subtitle": "Gourmet Semi-Dry Piarom / Maryam Dates",
-      "unitPrice": "Unit price: ₹1150 / kg",
-      "price": 329,
-      "originalPrice": 440,
-      "category": "Dates",
-      "image": "/images/products/walnuts.jpeg",
-      "gallery": [
-        "/images/products/walnuts.jpeg",
-        "/images/products/pine-nuts.jpeg"
+      "id": "prod-chia-seeds",
+      "name": "Chia Seeds",
+      "subtitle": "Organic Black Raw Chia Seeds",
+      "unitPrice": "Unit price: ₹490 / kg",
+      "price": 139,
+      "originalPrice": 190,
+      "category": "Seeds",
+      "subCategory": "Chia Seeds",
+      "alt": "Organic black raw chia seeds",
+      "tags": [
+        "seeds",
+        "superfood",
+        "chia seeds",
+        "chia",
+        "sabja",
+        "tukmaria",
+        "weight loss",
+        "omega 3",
+        "fiber",
+        "smoothie seeds",
+        "hydration"
       ],
-      "alt": "Gourmet maryam piarom dates",
-      "description": "Also known as the 'Chocolate Date' (Piarom). Semi-dry, long, dark brown dates with thin skin and an exquisite toffee flavour.",
+      "searchKeywords": [
+        "chia seeds",
+        "chia seed",
+        "chia",
+        "sabja",
+        "tukmaria",
+        "chia beej"
+      ],
+      "description": "Tiny superfood seeds that swell in water to form a gel. Packed with soluble fiber, omega-3 fatty acids, and protein for weight management.",
       "highlights": [
-        "Luxury Piarom / Maryam Dates",
-        "Unique toffee & caramel notes",
-        "Semi-dry non-sticky skin",
-        "Low sucrose content suitable for mindful eating",
-        "Exotic gourmet date variety"
+        "100% Organic Raw Chia Seeds",
+        "Absorbs water for gut hydration",
+        "High Omega-3 & Soluble Dietary Fibre",
+        "Supports weight loss & fullness",
+        "Perfect for puddings, smoothies & water"
       ],
       "variants": [
-        { "weight": "250g", "price": 329, "originalPrice": 440 },
-        { "weight": "500g", "price": 599, "originalPrice": 790 },
-        { "weight": "1kg", "price": 1150, "originalPrice": 1490 }
+        {
+          "weight": "250g",
+          "price": 139,
+          "originalPrice": 190
+        },
+        {
+          "weight": "500g",
+          "price": 269,
+          "originalPrice": 350
+        },
+        {
+          "weight": "1kg",
+          "price": 490,
+          "originalPrice": 650
+        }
+      ],
+      "recommendedProducts": [
+        "prod-alsi-flax-seeds",
+        "prod-watermelon-seeds",
+        "prod-muskmelon-seeds",
+        "prod-makhana"
+      ],
+      "image": "/images/product-images/seeds/Chia Seeds/Chia_seeds_in_bowl_20260927124020.jpg",
+      "gallery": [
+        "/images/product-images/seeds/Chia Seeds/Chia_seeds_in_bowl_20260927124020.jpg",
+        "/images/product-images/seeds/Chia Seeds/Chia_seeds_in_glass_bowl_20260927124025.jpg",
+        "/images/product-images/seeds/Chia Seeds/Chia_seeds_in_wooden_scoop_20260927124038.jpg",
+        "/images/product-images/seeds/Chia Seeds/Chia_seeds_product_photograph_20260927124033.jpg"
       ]
     },
     {
-      "id": "prod-date-ambar",
+      "id": "prod-alsi-flax-seeds",
+      "name": "Alsi / Flax Seeds",
+      "subtitle": "Raw Golden Brown Flax Seeds",
+      "unitPrice": "Unit price: ₹340 / kg",
+      "price": 99,
+      "originalPrice": 140,
+      "category": "Seeds",
+      "subCategory": "Alsi / Flax Seeds",
+      "alt": "Raw brown alsi flax seeds",
+      "tags": [
+        "seeds",
+        "superfood",
+        "alsi",
+        "flax seeds",
+        "flaxseed",
+        "omega 3",
+        "lignans",
+        "cholesterol",
+        "heart health",
+        "fiber"
+      ],
+      "searchKeywords": [
+        "alsi",
+        "alshi",
+        "flax seeds",
+        "flax seed",
+        "linseed",
+        "alsi beej"
+      ],
+      "description": "Nutritious brown flax seeds rich in alpha-linolenic acid (ALA), lignans, and fiber. Promotes healthy cholesterol levels and smooth digestion.",
+      "highlights": [
+        "Raw Brown Alsi / Flax Seeds",
+        "Highest Plant Source of Omega-3 ALA",
+        "Rich in Lignans for hormone balance",
+        "Roast and powder for easy absorption",
+        "100% Natural raw seeds"
+      ],
+      "variants": [
+        {
+          "weight": "250g",
+          "price": 99,
+          "originalPrice": 140
+        },
+        {
+          "weight": "500g",
+          "price": 189,
+          "originalPrice": 250
+        },
+        {
+          "weight": "1kg",
+          "price": 340,
+          "originalPrice": 460
+        }
+      ],
+      "recommendedProducts": [
+        "prod-chia-seeds",
+        "prod-til-sesame-seeds",
+        "prod-watermelon-seeds",
+        "prod-walnuts"
+      ],
+      "image": "/images/product-images/seeds/Alsi  Flax Seeds/Alsi_seeds_in_wooden_scoop_20260927124104.jpg",
+      "gallery": [
+        "/images/product-images/seeds/Alsi  Flax Seeds/Alsi_seeds_in_wooden_scoop_20260927124104.jpg",
+        "/images/product-images/seeds/Alsi  Flax Seeds/Flax_seeds_in_ceramic_bowl_20260927124045.jpg",
+        "/images/product-images/seeds/Alsi  Flax Seeds/Flax_seeds_in_glass_bowl_20260927124051.jpg",
+        "/images/product-images/seeds/Alsi  Flax Seeds/Flax_seeds_product_photograph_20260927124055.jpg"
+      ]
+    },
+    {
+      "id": "prod-til-sesame-seeds",
+      "name": "Til / Sesame Seeds",
+      "subtitle": "Natural White Sesame Seeds (Safed Til)",
+      "unitPrice": "Unit price: ₹380 / kg",
+      "price": 109,
+      "originalPrice": 150,
+      "category": "Seeds",
+      "subCategory": "Til / Sesame Seeds",
+      "alt": "White sesame seeds safed til",
+      "tags": [
+        "seeds",
+        "til",
+        "safed til",
+        "white sesame",
+        "sesame seeds",
+        "calcium",
+        "copper",
+        "winter sweets",
+        "chikki",
+        "baking"
+      ],
+      "searchKeywords": [
+        "til",
+        "teel",
+        "safed til",
+        "white til",
+        "sesame seeds",
+        "sesame seed",
+        "til beej"
+      ],
+      "description": "Nutty white sesame seeds abundant in calcium, copper, and iron. Essential for winter chikki, laddu, tahini paste, and Asian garnishing.",
+      "highlights": [
+        "Natural White Safed Til",
+        "Exceptional Calcium content for bones",
+        "Rich in Copper, Iron & Zinc",
+        "Great for winter sweets & baking",
+        "Triple cleaned quality"
+      ],
+      "variants": [
+        {
+          "weight": "250g",
+          "price": 109,
+          "originalPrice": 150
+        },
+        {
+          "weight": "500g",
+          "price": 209,
+          "originalPrice": 280
+        },
+        {
+          "weight": "1kg",
+          "price": 380,
+          "originalPrice": 500
+        }
+      ],
+      "recommendedProducts": [
+        "prod-alsi-flax-seeds",
+        "prod-muskmelon-seeds",
+        "prod-chia-seeds",
+        "prod-regular-badam"
+      ],
+      "image": "/images/product-images/seeds/Til  Sesame Seeds/Sesame_seeds_in_bowl_20260927124120.jpg",
+      "gallery": [
+        "/images/product-images/seeds/Til  Sesame Seeds/Sesame_seeds_in_bowl_20260927124120.jpg",
+        "/images/product-images/seeds/Til  Sesame Seeds/Sesame_seeds_in_glass_bowl_20260927124111.jpg",
+        "/images/product-images/seeds/Til  Sesame Seeds/Sesame_seeds_in_wooden_scoop_20260927124127.jpg",
+        "/images/product-images/seeds/Til  Sesame Seeds/Sesame_seeds_on_white_surface_20260927124132.jpg"
+      ]
+    },
+    {
+      "id": "prod-ajwa-dates",
+      "name": "Ajwa Dates",
+      "subtitle": "Original Saudi Madinah Ajwa Dates",
+      "unitPrice": "Unit price: ₹1,690 / kg",
+      "price": 449,
+      "originalPrice": 580,
+      "category": "Dates",
+      "subCategory": "Ajwa Dates",
+      "alt": "Original Madinah Ajwa dates black soft",
+      "tags": [
+        "dates",
+        "khajoor",
+        "ajwa dates",
+        "madinah dates",
+        "saudi dates",
+        "black dates",
+        "soft dates",
+        "heart health",
+        "iron",
+        "blessed dates"
+      ],
+      "searchKeywords": [
+        "ajwa",
+        "ajwa dates",
+        "madinah dates",
+        "khajoor",
+        "khajur",
+        "saudi dates",
+        "black dates"
+      ],
+      "description": "Revered dark black soft dates cultivated exclusively in Madinah Munawwarah. Fruity, rich caramel flavor with dense nutritional benefits.",
+      "highlights": [
+        "Directly imported from Madinah, Saudi Arabia",
+        "Authentic fine white striations on dark skin",
+        "Rich in Iron, Potassium & Magnesium",
+        "Supports heart wellness & stamina",
+        "100% Natural without sugar syrup"
+      ],
+      "variants": [
+        {
+          "weight": "250g",
+          "price": 449,
+          "originalPrice": 580
+        },
+        {
+          "weight": "500g",
+          "price": 879,
+          "originalPrice": 1100
+        },
+        {
+          "weight": "1kg",
+          "price": 1690,
+          "originalPrice": 2150
+        }
+      ],
+      "recommendedProducts": [
+        "prod-ambar-dates",
+        "prod-kalmi-dates",
+        "prod-mabrum-dates",
+        "prod-anjir"
+      ],
+      "image": "/images/product-images/dates/Ajwa dates/Ajwa_dates_in_bowl_20260927130053.jpg",
+      "gallery": [
+        "/images/product-images/dates/Ajwa dates/Ajwa_dates_in_bowl_20260927130053.jpg",
+        "/images/product-images/dates/Ajwa dates/Ajwa_dates_in_glass_bowl_20260927130102.jpg",
+        "/images/product-images/dates/Ajwa dates/Ajwa_dates_in_wooden_scoop_20260927130106.jpg",
+        "/images/product-images/dates/Ajwa dates/Ajwa_dates_product_photograph_20260927130112.jpg"
+      ]
+    },
+    {
+      "id": "prod-ambar-dates",
       "name": "Ambar Dates",
-      "subtitle": "Jumbo Size Royal Saudi Amber Al-Madinah",
-      "unitPrice": "Unit price: ₹1450 / kg",
-      "price": 419,
-      "originalPrice": 550,
+      "subtitle": "Jumbo Size Premium Madinah Ambar Dates",
+      "unitPrice": "Unit price: ₹1,950 / kg",
+      "price": 519,
+      "originalPrice": 680,
       "category": "Dates",
-      "image": "/images/products/hazelnuts.jpeg",
-      "gallery": [
-        "/images/products/hazelnuts.jpeg",
-        "/images/products/walnuts.jpeg"
+      "subCategory": "Ambar Dates",
+      "alt": "Jumbo ambar dates Saudi Arabia",
+      "tags": [
+        "dates",
+        "khajoor",
+        "ambar dates",
+        "jumbo dates",
+        "saudi dates",
+        "chewy dates",
+        "gourmet gift",
+        "energy"
       ],
-      "alt": "Jumbo royal ambar dates",
-      "description": "Among the largest varieties of Medina dates. Ambar dates feature thick fleshy meat, pleasant sweetness, and high nutritional density.",
+      "searchKeywords": [
+        "ambar",
+        "ambar dates",
+        "jumbo dates",
+        "khajoor",
+        "khajur",
+        "saudi dates"
+      ],
+      "description": "Among the largest date varieties grown in Saudi Arabia. Flesh is thick, chewy, and moderately sweet with a pleasant fruity aroma.",
       "highlights": [
-        "Extra Large Jumbo King Ambar Dates",
-        "Dense, fleshy pulp with fine texture",
-        "Gentle sweet taste",
-        "Rich in natural iron & fibre",
-        "Royal presentation pack"
+        "Extra Large King Size Ambar Dates",
+        "Fleshy texture with delicate sweetness",
+        "High in natural energy & minerals",
+        "Luxurious gift choice",
+        "Vacuum sealed pack"
       ],
       "variants": [
-        { "weight": "250g", "price": 419, "originalPrice": 550 },
-        { "weight": "500g", "price": 789, "originalPrice": 990 },
-        { "weight": "1kg", "price": 1450, "originalPrice": 1890 }
+        {
+          "weight": "250g",
+          "price": 519,
+          "originalPrice": 680
+        },
+        {
+          "weight": "500g",
+          "price": 999,
+          "originalPrice": 1300
+        },
+        {
+          "weight": "1kg",
+          "price": 1950,
+          "originalPrice": 2500
+        }
+      ],
+      "recommendedProducts": [
+        "prod-ajwa-dates",
+        "prod-mabrum-dates",
+        "prod-kalmi-dates",
+        "prod-regular-badam"
+      ],
+      "image": "/images/product-images/dates/Ambar dates/Ambar_dates_in_bowl_20260927130246.jpg",
+      "gallery": [
+        "/images/product-images/dates/Ambar dates/Ambar_dates_in_bowl_20260927130246.jpg",
+        "/images/product-images/dates/Ambar dates/Ambar_dates_in_glass_bowl_20260927130414.jpg",
+        "/images/product-images/dates/Ambar dates/Ambar_dates_in_wooden_scoop_20260927130252.jpg",
+        "/images/product-images/dates/Ambar dates/Ambar_dates_on_white_surface_20260927130315.jpg"
       ]
     },
     {
-      "id": "prod-date-sukhr",
-      "name": "Sukhr Dates (Sukkari)",
-      "subtitle": "Golden Sweet Crispy & Soft Saudi Sukkari",
-      "unitPrice": "Unit price: ₹850 / kg",
-      "price": 249,
+      "id": "prod-irani-dates",
+      "name": "Irani Dates",
+      "subtitle": "Soft & Moist Mazafati Fresh Dates",
+      "unitPrice": "Unit price: ₹380 / kg",
+      "price": 109,
+      "originalPrice": 150,
+      "category": "Dates",
+      "subCategory": "Irani Dates",
+      "alt": "Fresh soft black Irani Mazafati dates",
+      "tags": [
+        "dates",
+        "khajoor",
+        "irani dates",
+        "mazafati dates",
+        "fresh dates",
+        "soft dates",
+        "moist dates",
+        "ramadan dates",
+        "sweet"
+      ],
+      "searchKeywords": [
+        "irani dates",
+        "mazafati",
+        "fresh dates",
+        "khajoor",
+        "khajur",
+        "black dates",
+        "soft dates"
+      ],
+      "description": "Juicy, soft, and naturally sweet dark brown Iranian Mazafati dates. Melts in the mouth with a chocolate-caramel likeness.",
+      "highlights": [
+        "Moist & soft Mazafati fresh dates",
+        "Mouth-melting natural sweetness",
+        "Instant natural sugar energy boost",
+        "Kept fresh in cool temperature",
+        "Great for daily fasting break"
+      ],
+      "variants": [
+        {
+          "weight": "250g",
+          "price": 109,
+          "originalPrice": 150
+        },
+        {
+          "weight": "500g",
+          "price": 209,
+          "originalPrice": 280
+        },
+        {
+          "weight": "1kg",
+          "price": 380,
+          "originalPrice": 500
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kimia-dates",
+        "prod-sukhr-dates",
+        "prod-maryam-dates",
+        "prod-kishmish"
+      ],
+      "image": "/images/product-images/dates/Irani dates/Dates_in_white_bowl_20260927130146.jpg",
+      "gallery": [
+        "/images/product-images/dates/Irani dates/Dates_in_white_bowl_20260927130146.jpg",
+        "/images/product-images/dates/Irani dates/Dates_in_wooden_scoop_20260927130159.jpg",
+        "/images/product-images/dates/Irani dates/Irani_dates_in_glass_bowl_20260927130152.jpg",
+        "/images/product-images/dates/Irani dates/Irani_dates_product_photograph_20260927130215.jpg"
+      ]
+    },
+    {
+      "id": "prod-kalmi-dates",
+      "name": "Kalmi Dates",
+      "subtitle": "Safawi / Kalmi Dark Chewy Dates",
+      "unitPrice": "Unit price: ₹950 / kg",
+      "price": 259,
       "originalPrice": 340,
       "category": "Dates",
-      "image": "/images/products/peanut.jpeg",
-      "gallery": [
-        "/images/products/peanut.jpeg",
-        "/images/products/walnuts.jpeg"
+      "subCategory": "Kalmi Dates",
+      "alt": "Kalmi Safawi dark brown dates",
+      "tags": [
+        "dates",
+        "khajoor",
+        "kalmi dates",
+        "safawi dates",
+        "dark dates",
+        "chewy dates",
+        "saudi dates",
+        "fiber"
       ],
-      "alt": "Golden sweet sukhr sukkari dates",
-      "description": "Known as the 'Royal Date of Kings' in Al-Qassim. Cone-shaped golden dates with crunchy crystallized sugars and soft honeyed centre.",
+      "searchKeywords": [
+        "kalmi",
+        "kalmi dates",
+        "safawi",
+        "khajoor",
+        "khajur",
+        "saudi dates"
+      ],
+      "description": "Deep blackish-brown elongated dates known as Safawi/Kalmi. Moderately dry outer layer with intense sweet chewy flesh inside.",
       "highlights": [
-        "Al-Qassim Golden Sukkari / Sukhr Dates",
-        "Natural sugary melt-in-mouth crunch",
-        "Bright golden amber colour",
-        "Pair amazingly with Arabic coffee & tea",
-        "100% Raw & unfiltered date harvest"
+        "Authentic Saudi Safawi / Kalmi Dates",
+        "Dark colour loaded with minerals",
+        "chewy bite with long freshness",
+        "High fibre and essential nutrients",
+        "Clean hand-picked quality"
       ],
       "variants": [
-        { "weight": "250g", "price": 249, "originalPrice": 340 },
-        { "weight": "500g", "price": 460, "originalPrice": 620 },
-        { "weight": "1kg", "price": 850, "originalPrice": 1150 }
+        {
+          "weight": "250g",
+          "price": 259,
+          "originalPrice": 340
+        },
+        {
+          "weight": "500g",
+          "price": 499,
+          "originalPrice": 650
+        },
+        {
+          "weight": "1kg",
+          "price": 950,
+          "originalPrice": 1250
+        }
+      ],
+      "recommendedProducts": [
+        "prod-ajwa-dates",
+        "prod-mabrum-dates",
+        "prod-ambar-dates",
+        "prod-walnuts"
+      ],
+      "image": "/images/product-images/dates/Kalmi dates/Dates_spilling_from_wooden_scoop_20260927125958.jpg",
+      "gallery": [
+        "/images/product-images/dates/Kalmi dates/Dates_spilling_from_wooden_scoop_20260927125958.jpg",
+        "/images/product-images/dates/Kalmi dates/Kalmi_dates_in_glass_bowl_20260927130003.jpg",
+        "/images/product-images/dates/Kalmi dates/Kalmi_dates_in_white_bowl_20260927125950.jpg",
+        "/images/product-images/dates/Kalmi dates/Kalmi_dates_product_photograph_20260927130012.jpg"
       ]
     },
     {
-      "id": "prod-honey-pure",
-      "name": "Pure Honey",
-      "subtitle": "100% Raw Unpasteurized Natural Farm Honey",
-      "unitPrice": "Unit price: ₹650 / kg",
-      "price": 199,
-      "originalPrice": 270,
-      "category": "Honey",
-      "image": "/images/products/pine-nuts.jpeg",
-      "gallery": [
-        "/images/products/pine-nuts.jpeg",
-        "/images/products/heart-shap-dry-fruites.jpg"
+      "id": "prod-kimia-dates",
+      "name": "Kimia Dates",
+      "subtitle": "Original Fresh Soft Kimia Dates",
+      "unitPrice": "Unit price: ₹440 / kg",
+      "price": 129,
+      "originalPrice": 170,
+      "category": "Dates",
+      "subCategory": "Kimia Dates",
+      "alt": "Fresh Kimia Gold dates soft box",
+      "tags": [
+        "dates",
+        "khajoor",
+        "kimia dates",
+        "kimia gold",
+        "soft dates",
+        "fresh dates",
+        "melt in mouth",
+        "iron"
       ],
-      "alt": "Pure raw natural farm honey",
-      "description": "Pure, unheated, unfiltered bee honey harvested straight from natural apiaries. Contains natural pollen, enzymes, and antioxidants.",
+      "searchKeywords": [
+        "kimia",
+        "kimia dates",
+        "soft dates",
+        "khajoor",
+        "khajur",
+        "fresh dates"
+      ],
+      "description": "Ultra-soft, glossy black Kimia dates with rich syrup-like sweetness. Packaged carefully to maintain high moisture and tenderness.",
       "highlights": [
-        "100% Pure Raw Honey with active bee enzymes",
-        "Zero added sugar, corn syrup, or preservatives",
-        "NMR tested for 100% purity",
-        "Natural immunity and throat soother",
-        "Packed in premium glass jar"
+        "Original Premium Kimia Gold",
+        "Super soft melt-in-mouth texture",
+        "Rich in potassium and iron",
+        "No added sugar or syrup",
+        "Sealed box packaging"
       ],
       "variants": [
-        { "weight": "250g Jar", "price": 199, "originalPrice": 270 },
-        { "weight": "500g Jar", "price": 369, "originalPrice": 480 },
-        { "weight": "1kg Jar", "price": 650, "originalPrice": 850 }
+        {
+          "weight": "250g",
+          "price": 129,
+          "originalPrice": 170
+        },
+        {
+          "weight": "500g",
+          "price": 239,
+          "originalPrice": 320
+        },
+        {
+          "weight": "1kg",
+          "price": 440,
+          "originalPrice": 580
+        }
+      ],
+      "recommendedProducts": [
+        "prod-irani-dates",
+        "prod-sukhr-dates",
+        "prod-maryam-dates",
+        "prod-kaju"
+      ],
+      "image": "/images/product-images/dates/Kimia dates/Dates_in_ceramic_bowl_20260927130120.jpg",
+      "gallery": [
+        "/images/product-images/dates/Kimia dates/Dates_in_ceramic_bowl_20260927130120.jpg",
+        "/images/product-images/dates/Kimia dates/Dates_in_wooden_scoop_20260927130131.jpg",
+        "/images/product-images/dates/Kimia dates/Kimia_dates_in_glass_bowl_20260927130125.jpg",
+        "/images/product-images/dates/Kimia dates/Kimia_dates_product_photograph_20260927130138.jpg"
       ]
     },
     {
-      "id": "prod-honey-kashmiri",
-      "name": "Kashmiri Honey",
-      "subtitle": "Rare White Blossom Kashmiri Forest Honey",
-      "unitPrice": "Unit price: ₹890 / kg",
-      "price": 269,
-      "originalPrice": 360,
-      "category": "Honey",
-      "image": "/images/products/pine-nuts.jpeg",
-      "gallery": [
-        "/images/products/pine-nuts.jpeg",
-        "/images/products/heart-shap-dry-fruites.jpg"
+      "id": "prod-mabrum-dates",
+      "name": "Mabrum Dates",
+      "subtitle": "Slim & Long Saudi Mabroom Dates",
+      "unitPrice": "Unit price: ₹1,450 / kg",
+      "price": 389,
+      "originalPrice": 500,
+      "category": "Dates",
+      "subCategory": "Mabrum Dates",
+      "alt": "Mabroom long amber brown dates",
+      "tags": [
+        "dates",
+        "khajoor",
+        "mabrum dates",
+        "mabroom dates",
+        "long dates",
+        "saudi dates",
+        "toffee dates",
+        "chewy"
       ],
-      "alt": "Kashmiri acacia white blossom honey",
-      "description": "Harvested from pristine high-altitude valleys of Kashmir. Light amber in colour with a delicate floral aroma and smooth taste.",
+      "searchKeywords": [
+        "mabrum",
+        "mabroom",
+        "mabrum dates",
+        "khajoor",
+        "khajur",
+        "saudi dates"
+      ],
+      "description": "Slender, long light brown dates with a firm, delightfully chewy skin and toffee-like flavor. Not overly sweet, perfect for daily munching.",
       "highlights": [
-        "Single-origin Kashmiri Acacia Blossom Honey",
-        "Light golden hue with exquisite floral aroma",
-        "Slow-crystallizing pure nectar",
-        "Rich in flavonoids & micronutrients",
-        "Pure Himalayan valley harvest"
+        "Imported Saudi Mabroom Variety",
+        "Toffee caramel taste profile",
+        "Firm chewy texture that lasts",
+        "Packed with dietary fibre & copper",
+        "Premium grade uniform sizing"
       ],
       "variants": [
-        { "weight": "250g Jar", "price": 269, "originalPrice": 360 },
-        { "weight": "500g Jar", "price": 499, "originalPrice": 650 },
-        { "weight": "1kg Jar", "price": 890, "originalPrice": 1190 }
+        {
+          "weight": "250g",
+          "price": 389,
+          "originalPrice": 500
+        },
+        {
+          "weight": "500g",
+          "price": 749,
+          "originalPrice": 960
+        },
+        {
+          "weight": "1kg",
+          "price": 1450,
+          "originalPrice": 1850
+        }
+      ],
+      "recommendedProducts": [
+        "prod-ajwa-dates",
+        "prod-ambar-dates",
+        "prod-kalmi-dates",
+        "prod-regular-badam"
+      ],
+      "image": "/images/product-images/dates/Mabrum dates/Mabrum_dates_in_glass_bowl_20260927130040.jpg",
+      "gallery": [
+        "/images/product-images/dates/Mabrum dates/Mabrum_dates_in_glass_bowl_20260927130040.jpg",
+        "/images/product-images/dates/Mabrum dates/Mabrum_dates_in_white_bowl_20260927130018.jpg",
+        "/images/product-images/dates/Mabrum dates/Mabrum_dates_in_wooden_scoop_20260927130023.jpg",
+        "/images/product-images/dates/Mabrum dates/Product_photograph_of_Mabrum_dates_20260927130032.jpg"
       ]
     },
     {
-      "id": "prod-honey-multiflora",
-      "name": "Multi Flora Honey",
-      "subtitle": "Wildflower Forest Blossom Organic Honey",
-      "unitPrice": "Unit price: ₹690 / kg",
+      "id": "prod-maryam-dates",
+      "name": "Maryam Dates",
+      "subtitle": "Semi-Dry Sweet Maryam Dates",
+      "unitPrice": "Unit price: ₹780 / kg",
       "price": 219,
       "originalPrice": 290,
-      "category": "Honey",
-      "image": "/images/products/pine-nuts.jpeg",
-      "gallery": [
-        "/images/products/pine-nuts.jpeg",
-        "/images/products/heart-shap-dry-fruites.jpg"
+      "category": "Dates",
+      "subCategory": "Maryam Dates",
+      "alt": "Maryam semi dry dates",
+      "tags": [
+        "dates",
+        "khajoor",
+        "maryam dates",
+        "semi dry dates",
+        "golden dates",
+        "energy",
+        "natural sugar"
       ],
-      "alt": "Wildflower multi flora honey",
-      "description": "Collected by bees foraging from hundreds of wild forest medicinal flowers. Rich, robust flavour with complex therapeutic benefits.",
+      "searchKeywords": [
+        "maryam",
+        "maryam dates",
+        "semi dry dates",
+        "khajoor",
+        "khajur"
+      ],
+      "description": "Golden-brown semi-dry dates with wrinkled skin and rich honey notes. Easy to carry and store for a healthy energy punch anytime.",
       "highlights": [
-        "Harvested from diverse wild forest blossoms",
-        "Deep amber colour with full-bodied taste",
-        "Boosts digestion and overall vitality",
-        "100% Natural, chemical-free extraction",
-        "Sealed in heavy glass jar"
+        "Golden brown Maryam dates",
+        "Naturally dry outer skin with soft inside",
+        "Rich in natural fructose and glucose",
+        "Zero fat and cholesterol",
+        "Hygienically sorted"
       ],
       "variants": [
-        { "weight": "250g Jar", "price": 219, "originalPrice": 290 },
-        { "weight": "500g Jar", "price": 399, "originalPrice": 520 },
-        { "weight": "1kg Jar", "price": 690, "originalPrice": 890 }
+        {
+          "weight": "250g",
+          "price": 219,
+          "originalPrice": 290
+        },
+        {
+          "weight": "500g",
+          "price": 419,
+          "originalPrice": 550
+        },
+        {
+          "weight": "1kg",
+          "price": 780,
+          "originalPrice": 1000
+        }
+      ],
+      "recommendedProducts": [
+        "prod-sukhr-dates",
+        "prod-irani-dates",
+        "prod-kimia-dates",
+        "prod-kishmish"
+      ],
+      "image": "/images/product-images/dates/Maryam dates/Dates_arranged_on_white_background_20260927130241.jpg",
+      "gallery": [
+        "/images/product-images/dates/Maryam dates/Dates_arranged_on_white_background_20260927130241.jpg",
+        "/images/product-images/dates/Maryam dates/Dates_in_glass_bowl_20260927130228.jpg",
+        "/images/product-images/dates/Maryam dates/Dates_in_white_ceramic_bowl_20260927130224.jpg",
+        "/images/product-images/dates/Maryam dates/Dates_in_wooden_scoop_20260927130235.jpg"
       ]
     },
     {
-      "id": "prod-honey-dryfruit-mix",
-      "name": "Dry Fruit Honey Mix",
-      "subtitle": "Pure Honey with Almonds, Cashews, Pista & Walnuts",
-      "unitPrice": "Unit price: ₹950 / kg",
-      "price": 389,
-      "originalPrice": 499,
-      "category": "Honey",
-      "image": "/images/products/heart-shap-dry-fruites.jpg",
-      "gallery": [
-        "/images/products/heart-shap-dry-fruites.jpg",
-        "/images/products/almonds.jpeg",
-        "/images/products/Cashews.jpeg"
+      "id": "prod-sukhr-dates",
+      "name": "Sukhr Dates",
+      "subtitle": "Sweet Crunchy Sukkari Dates",
+      "unitPrice": "Unit price: ₹890 / kg",
+      "price": 249,
+      "originalPrice": 320,
+      "category": "Dates",
+      "subCategory": "Sukhr Dates",
+      "alt": "Golden Sukkari Sukhr dates",
+      "tags": [
+        "dates",
+        "khajoor",
+        "sukhr dates",
+        "sukkari dates",
+        "royal dates",
+        "golden dates",
+        "sweet dates",
+        "tea pairing"
       ],
-      "alt": "Royal dry fruit honey mix",
-      "description": "A royal Ayurvedic concoction of pure raw honey loaded with crunchy whole almonds, cashews, pistachios, and walnuts. Supercharge your mornings with instant stamina.",
+      "searchKeywords": [
+        "sukhr",
+        "sukkari",
+        "sukhr dates",
+        "sukkari dates",
+        "khajoor",
+        "khajur",
+        "golden dates"
+      ],
+      "description": "Known as the Royal Date for its golden color and melt-in-mouth crystalline natural sugar flavor. Soft, sweet, and soothingly satisfying.",
       "highlights": [
-        "Loaded with Almonds, Kaju, Pista & Akhrot",
-        "Infused in 100% Pure Raw Honey",
-        "Powerhouse of energy, protein and natural minerals",
-        "Delicious immunity booster for all age groups",
-        "Luxury glass jar presentation"
+        "Golden Sukkari / Sukhr dates",
+        "Crispy sugar crystal natural sweetness",
+        "Rich in calcium and energy nutrients",
+        "Favored in Arabia for tea pairing",
+        "Pure natural quality"
       ],
       "variants": [
-        { "weight": "350g Jar", "price": 389, "originalPrice": 499 },
-        { "weight": "500g Jar", "price": 549, "originalPrice": 699 },
-        { "weight": "1kg Jar", "price": 950, "originalPrice": 1250 }
+        {
+          "weight": "250g",
+          "price": 249,
+          "originalPrice": 320
+        },
+        {
+          "weight": "500g",
+          "price": 469,
+          "originalPrice": 600
+        },
+        {
+          "weight": "1kg",
+          "price": 890,
+          "originalPrice": 1150
+        }
+      ],
+      "recommendedProducts": [
+        "prod-maryam-dates",
+        "prod-irani-dates",
+        "prod-kimia-dates",
+        "prod-regular-badam"
+      ],
+      "image": "/images/product-images/dates/Sukhr dates/Dates_in_glass_bowl_20260927131306.jpg",
+      "gallery": [
+        "/images/product-images/dates/Sukhr dates/Dates_in_glass_bowl_20260927131306.jpg",
+        "/images/product-images/dates/Sukhr dates/Sukhr_dates_in_ceramic_bowl_20260927131255.jpg",
+        "/images/product-images/dates/Sukhr dates/Sukhr_dates_in_wooden_scoop_20260927131249.jpg",
+        "/images/product-images/dates/Sukhr dates/Sukhr_dates_on_white_background_20260927131300.jpg"
+      ]
+    },
+    {
+      "id": "prod-multi-flora-honey",
+      "name": "Multi Flora Honey",
+      "subtitle": "100% Raw Wild Forest Multi-Flora Honey",
+      "unitPrice": "Unit price: ₹450 / 500g",
+      "price": 249,
+      "originalPrice": 320,
+      "category": "Honey",
+      "subCategory": "Multi flora Honey",
+      "alt": "100% Raw Wild Forest Multi Flora Honey",
+      "tags": [
+        "honey",
+        "raw honey",
+        "wild honey",
+        "forest honey",
+        "multi flora honey",
+        "natural sweetener",
+        "immunity",
+        "throat soother",
+        "shahd",
+        "madh"
+      ],
+      "searchKeywords": [
+        "honey",
+        "shahd",
+        "sahat",
+        "madh",
+        "multi flora honey",
+        "wild honey",
+        "forest honey",
+        "raw honey"
+      ],
+      "description": "Pure, unprocessed honey collected by bees from diverse wild forest flowers. Unfiltered, unpasteurized, retaining natural pollen, propolis, and live digestive enzymes.",
+      "highlights": [
+        "100% Pure Raw Wildflower Nectar",
+        "Unheated & Unfiltered with Active Enzymes",
+        "Natural Immunity & Throat Soother",
+        "Rich dark amber golden hue",
+        "Zero sugar syrup adulteration guarantee"
+      ],
+      "variants": [
+        {
+          "weight": "250g",
+          "price": 139,
+          "originalPrice": 180
+        },
+        {
+          "weight": "500g",
+          "price": 249,
+          "originalPrice": 320
+        },
+        {
+          "weight": "1kg",
+          "price": 450,
+          "originalPrice": 600
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kashmiri-honey",
+        "prod-regular-badam",
+        "prod-walnuts",
+        "prod-chia-seeds"
+      ],
+      "image": "/images/product-images/Multi flora Honey &Kashmiri Honey/Multi flora Honey/Honey_inside_glass_bowl_20260928145025.jpg",
+      "gallery": [
+        "/images/product-images/Multi flora Honey &Kashmiri Honey/Multi flora Honey/Honey_inside_glass_bowl_20260928145025.jpg",
+        "/images/product-images/Multi flora Honey &Kashmiri Honey/Multi flora Honey/Honey_in_white_ceramic_bowl_20260928145021.jpg",
+        "/images/product-images/Multi flora Honey &Kashmiri Honey/Multi flora Honey/Honey_pool_and_drops_on_20260928145012.jpg",
+        "/images/product-images/Multi flora Honey &Kashmiri Honey/Multi flora Honey/Honey_spilling_from_wooden_scoop_20260928145016.jpg"
+      ]
+    },
+    {
+      "id": "prod-kashmiri-honey",
+      "name": "Kashmiri Honey",
+      "subtitle": "Organic Kashmiri Acacia & Sidr Blossom Honey",
+      "unitPrice": "Unit price: ₹590 / 500g",
+      "price": 329,
+      "originalPrice": 420,
+      "category": "Honey",
+      "subCategory": "Kashmiri Honey",
+      "alt": "Organic Kashmiri acacia flower honey glass jar",
+      "tags": [
+        "honey",
+        "kashmiri honey",
+        "acacia honey",
+        "pure honey",
+        "single origin",
+        "light honey",
+        "floral honey",
+        "organic honey",
+        "shahd"
+      ],
+      "searchKeywords": [
+        "honey",
+        "shahd",
+        "sahat",
+        "madh",
+        "kashmiri honey",
+        "acacia honey",
+        "pure honey"
+      ],
+      "description": "Exquisite single-origin honey harvested from pristine mountain valleys of Kashmir. Light golden color with a delicate floral aroma and smooth taste.",
+      "highlights": [
+        "Pure Single-Origin Kashmiri Valley Blossom Honey",
+        "Light Golden Color & Soft Floral Aroma",
+        "Naturally low glycemic sweetener",
+        "Rich in natural antioxidants & minerals",
+        "Glass jar packaging for pure taste"
+      ],
+      "variants": [
+        {
+          "weight": "250g",
+          "price": 179,
+          "originalPrice": 230
+        },
+        {
+          "weight": "500g",
+          "price": 329,
+          "originalPrice": 420
+        },
+        {
+          "weight": "1kg",
+          "price": 590,
+          "originalPrice": 780
+        }
+      ],
+      "recommendedProducts": [
+        "prod-multi-flora-honey",
+        "prod-regular-badam",
+        "prod-anjir",
+        "prod-walnuts"
+      ],
+      "image": "/images/product-images/Multi flora Honey &Kashmiri Honey/Kashmiri Honey/Honey_in_ceramic_bowl_20260928145449.jpg",
+      "gallery": [
+        "/images/product-images/Multi flora Honey &Kashmiri Honey/Kashmiri Honey/Honey_in_ceramic_bowl_20260928145449.jpg",
+        "/images/product-images/Multi flora Honey &Kashmiri Honey/Kashmiri Honey/Honey_pool_on_white_background_20260928145456.jpg",
+        "/images/product-images/Multi flora Honey &Kashmiri Honey/Kashmiri Honey/Honey_spilling_from_wooden_scoop_20260928145452.jpg",
+        "/images/product-images/Multi flora Honey &Kashmiri Honey/Kashmiri Honey/Kashmiri_honey_in_glass_bowl_20260928145445.jpg"
       ]
     },
     {
       "id": "prod-olives",
       "name": "Olives",
-      "subtitle": "Imported Spanish Pitted Green & Black Olives",
-      "unitPrice": "Unit price: ₹320 / jar",
-      "price": 199,
-      "originalPrice": 260,
+      "subtitle": "Whole Spanish Green & Black Pitted Olives",
+      "unitPrice": "Unit price: ₹380 / 350g",
+      "price": 229,
+      "originalPrice": 290,
       "category": "Olives & Olive Oil",
-      "image": "/images/products/pistachios.jpeg",
-      "gallery": [
-        "/images/products/pistachios.jpeg",
-        "/images/products/hazelnuts.jpeg"
+      "subCategory": "Olives",
+      "alt": "Spanish green and black pitted olives jar",
+      "tags": [
+        "olives",
+        "spanish olives",
+        "pitted olives",
+        "green olives",
+        "black olives",
+        "salads",
+        "tapas",
+        "mediterranean",
+        "healthy fats",
+        "jaithun"
       ],
-      "alt": "Spanish pitted green and black olives",
-      "description": "Succulent, plump Spanish pitted olives preserved in light brine. Ideal for Mediterranean salads, pastas, pizzas, and gourmet platters.",
+      "searchKeywords": [
+        "olives",
+        "olive",
+        "jaithun",
+        "jaitun",
+        "green olives",
+        "black olives",
+        "spanish olives"
+      ],
+      "description": "Plump, firm pitted Spanish olives preserved in natural brine. Delivers a rich tangy savory flavor perfect for salads, pizzas, pasta, and charcuterie boards.",
       "highlights": [
-        "Premium Spanish Pitted Olives",
-        "Plump, firm, and succulent texture",
-        "Rich in healthy monounsaturated fats & Vitamin E",
-        "Convenient seedless pitted cut",
-        "Sealed in freshness brine glass jar"
+        "Pitted Spanish Olives in Natural Brine",
+        "Rich in Healthy Monounsaturated Fats",
+        "Abundant in Vitamin E & Antioxidants",
+        "Great for salads, pasta & tapas",
+        "Glass jar vacuum pack"
       ],
       "variants": [
-        { "weight": "350g Jar", "price": 199, "originalPrice": 260 },
-        { "weight": "700g Jar", "price": 369, "originalPrice": 480 }
+        {
+          "weight": "200g",
+          "price": 149,
+          "originalPrice": 190
+        },
+        {
+          "weight": "350g",
+          "price": 229,
+          "originalPrice": 290
+        },
+        {
+          "weight": "700g",
+          "price": 429,
+          "originalPrice": 550
+        }
+      ],
+      "recommendedProducts": [
+        "prod-olive-oil",
+        "prod-regular-badam",
+        "prod-salted-kaju",
+        "prod-salted-pista"
+      ],
+      "image": "/images/product-images/Olives & Olive Oil/Olives/Green_olives_arranged_on_surface_20260927132939.jpg",
+      "gallery": [
+        "/images/product-images/Olives & Olive Oil/Olives/Green_olives_arranged_on_surface_20260927132939.jpg",
+        "/images/product-images/Olives & Olive Oil/Olives/Green_olives_in_wooden_scoop_20260927132924.jpg",
+        "/images/product-images/Olives & Olive Oil/Olives/Olives_in_glass_bowl_20260927132931.jpg",
+        "/images/product-images/Olives & Olive Oil/Olives/Olives_in_white_bowl_20260927132905.jpg"
       ]
     },
     {
       "id": "prod-olive-oil",
       "name": "Olive Oil",
-      "subtitle": "Extra Virgin First Cold Pressed Olive Oil",
-      "unitPrice": "Unit price: ₹890 / bottle",
-      "price": 529,
-      "originalPrice": 680,
+      "subtitle": "Extra Virgin Cold-Pressed Olive Oil",
+      "unitPrice": "Unit price: ₹890 / 1L",
+      "price": 499,
+      "originalPrice": 650,
       "category": "Olives & Olive Oil",
-      "image": "/images/products/hazelnuts.jpeg",
-      "gallery": [
-        "/images/products/hazelnuts.jpeg",
-        "/images/products/pistachios.jpeg"
+      "subCategory": "Olive Oil",
+      "alt": "Extra virgin cold pressed olive oil bottle",
+      "tags": [
+        "olive oil",
+        "extra virgin olive oil",
+        "cold pressed olive oil",
+        "evoo",
+        "cooking oil",
+        "salad dressing",
+        "heart health",
+        "jaithun ka tel"
       ],
-      "alt": "Extra virgin cold pressed olive oil",
-      "description": "100% Pure First Cold-Pressed Spanish Extra Virgin Olive Oil. Rich in polyphenols and oleic acid, featuring a fresh fruity aroma with a peppery finish.",
+      "searchKeywords": [
+        "olive oil",
+        "jaithun ka tel",
+        "jaitun oil",
+        "evoo",
+        "extra virgin olive oil"
+      ],
+      "description": "First cold-pressed extra virgin olive oil crafted from freshly harvested olives. Low acidity with a fruity aroma, ideal for salad dressing, dipping, and Mediterranean cooking.",
       "highlights": [
-        "First Cold-Pressed Extra Virgin Olive Oil",
-        "Low Acidity (<0.5%) for supreme health benefits",
-        "Ideal for salad dressings, sautéing & dipping",
-        "Zero cholesterol & trans fats",
-        "Dark UV-protected bottle packaging"
+        "100% Extra Virgin Cold Pressed",
+        "First mechanical extraction under 27°C",
+        "High Polyphenols & Oleic Acid",
+        "Heart health booster",
+        "Imported dark glass bottle"
       ],
       "variants": [
-        { "weight": "500ml Bottle", "price": 529, "originalPrice": 680 },
-        { "weight": "1 Litre Bottle", "price": 999, "originalPrice": 1290 },
-        { "weight": "2 Litre Can", "price": 1890, "originalPrice": 2400 }
+        {
+          "weight": "250ml",
+          "price": 279,
+          "originalPrice": 360
+        },
+        {
+          "weight": "500ml",
+          "price": 499,
+          "originalPrice": 650
+        },
+        {
+          "weight": "1L",
+          "price": 890,
+          "originalPrice": 1150
+        }
+      ],
+      "recommendedProducts": [
+        "prod-olives",
+        "prod-regular-badam",
+        "prod-walnuts",
+        "prod-alsi-flax-seeds"
+      ],
+      "image": "/images/product-images/Olives & Olive Oil/Olive Oil/Branded_olive_oil_tin_photography_20260928151604.jpg",
+      "gallery": [
+        "/images/product-images/Olives & Olive Oil/Olive Oil/Branded_olive_oil_tin_photography_20260928151604.jpg",
+        "/images/product-images/Olives & Olive Oil/Olive Oil/Figaro_Olive_Oil_tin_advertisement_20260928151614.jpg",
+        "/images/product-images/Olives & Olive Oil/Olive Oil/Figaro_Olive_Oil_tin_photograph_20260928151618.jpg",
+        "/images/product-images/Olives & Olive Oil/Olive Oil/Olive_oil_tin_and_bread_20260928151607.jpg"
       ]
     },
     {
-      "id": "prod-malas-strawberry",
-      "name": "Mala's Strawberry Crush",
-      "subtitle": "Mahabaleshwar Fresh Strawberry Fruit Pulp Crush",
-      "unitPrice": "Unit price: ₹240 / bottle",
-      "price": 219,
-      "originalPrice": 270,
+      "id": "prod-banana-crush",
+      "name": "Banana Crush",
+      "subtitle": "Mala's Banana Crush — Tropical Smoothie Syrup",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
       "category": "Mala's Crushes",
-      "image": "/images/products/dry-fruites.jpg",
-      "gallery": [
-        "/images/products/dry-fruites.jpg",
-        "/images/products/heart-shap-dry-fruites.jpg"
+      "subCategory": "Banana Crush",
+      "alt": "Mala's Banana Crush fruit syrup bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "banana crush",
+        "banana",
+        "kela",
+        "milkshake",
+        "smoothie",
+        "ice cream topping",
+        "beverage"
       ],
-      "alt": "Malas strawberry fruit crush",
-      "description": "Crafted with sun-ripened Mahabaleshwar strawberries. Bursting with real fruit pulp for milkshakes, mocktails, ice-cream toppings, and desserts.",
+      "searchKeywords": [
+        "banana crush",
+        "banana",
+        "kela",
+        "kela syrup",
+        "mala banana",
+        "smoothie syrup"
+      ],
+      "description": "Mala's Banana Crush offers rich, authentic ripe banana sweetness in every pour. Perfect for making instant milkshakes, banana smoothies, ice cream toppings, and dessert sauces.",
       "highlights": [
-        "Authentic Mala's Fruit Crush with real strawberry pulp",
-        "Rich fruit chunks and vibrant natural aroma",
-        "Makes refreshing milkshakes, mocktails & smoothies",
-        "Trusted brand quality",
-        "Easy-pour bottle"
+        "Real ripe banana pulp concentrate",
+        "Ideal for milkshakes & smoothies",
+        "Delicious dessert & ice cream topping",
+        "Gourmet bar syrup quality",
+        "Mala's trusted brand assurance"
       ],
       "variants": [
-        { "weight": "750ml Bottle", "price": 219, "originalPrice": 270 },
-        { "weight": "1 Litre Bottle", "price": 279, "originalPrice": 350 }
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-strawberry-crush",
+        "prod-mango-crush",
+        "prod-butterscotch-crush",
+        "prod-blueberry-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Banana Crush/Banana_beverage_and_fresh_slices_20260927163414.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Banana Crush/Banana_beverage_and_fresh_slices_20260927163414.jpg",
+        "/images/product-images/Mala's crushes/Banana Crush/Banana_beverage_and_fresh_slices_20260927163418.jpg",
+        "/images/product-images/Mala's crushes/Banana Crush/Malas_Banana_Crush_bottle_advert_20260927163348.jpg",
+        "/images/product-images/Mala's crushes/Banana Crush/Malas_Banana_Crush_bottle_photog_20260927163429.jpg"
       ]
     },
     {
-      "id": "prod-malas-mango",
-      "name": "Mala's Mango Crush",
-      "subtitle": "King Alphonso Mango Pulp Fruit Crush",
-      "unitPrice": "Unit price: ₹240 / bottle",
-      "price": 219,
-      "originalPrice": 270,
+      "id": "prod-black-currant-crush",
+      "name": "Black Currant Crush",
+      "subtitle": "Mala's Black Currant Crush — Deep Berry Indulgence",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
       "category": "Mala's Crushes",
-      "image": "/images/products/dry-fruites.jpg",
-      "gallery": [
-        "/images/products/dry-fruites.jpg",
-        "/images/products/heart-shap-dry-fruites.jpg"
+      "subCategory": "Black Currant Crush",
+      "alt": "Mala's Black Currant Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "black currant",
+        "blackcurrant crush",
+        "berry",
+        "jamun",
+        "mocktail",
+        "soda",
+        "cocktail"
       ],
-      "alt": "Malas mango alphonso fruit crush",
-      "description": "Rich, luscious Alphonso mango crush loaded with sweet golden pulp. Perfect for summer coolers, lassi, kulfi, and baking.",
+      "searchKeywords": [
+        "black currant crush",
+        "black currant",
+        "jamun",
+        "berry crush",
+        "falsa",
+        "blackcurrant"
+      ],
+      "description": "Bursting with the bold sweet-tangy notes of dark European black currants. Adds vibrant deep purple color and refreshing fruity zest to mocktails, sodas, and cakes.",
       "highlights": [
-        "Rich Alphonso Mango fruit puree blend",
-        "Thick luscious texture & tropical aroma",
-        "Perfect for mango shakes, puddings & cocktails",
-        "High fruit content",
-        "Hygienic sealed bottle"
+        "Rich black currant berry extract",
+        "Intense fruit flavour & deep purple hue",
+        "Great for sparkling sodas & cocktails",
+        "Enhances pastry & ice cream layers",
+        "Premium dessert enhancer"
       ],
       "variants": [
-        { "weight": "750ml Bottle", "price": 219, "originalPrice": 270 },
-        { "weight": "1 Litre Bottle", "price": 279, "originalPrice": 350 }
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-blueberry-crush",
+        "prod-strawberry-crush",
+        "prod-kiwi-crush",
+        "prod-green-apple-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Black Currant Crush/Black_currant_beverage_and_milks_20260927221419.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Black Currant Crush/Black_currant_beverage_and_milks_20260927221419.jpg",
+        "/images/product-images/Mala's crushes/Black Currant Crush/Malas_Black_Currant_Crush_bottle_20260927221415.jpg",
+        "/images/product-images/Mala's crushes/Black Currant Crush/Malas_Black_Currant_Crush_bottle_20260927221428.jpg",
+        "/images/product-images/Mala's crushes/Black Currant Crush/Malas_Black_Currant_Crush_bottle_20260927221431.jpg"
       ]
     },
     {
-      "id": "prod-malas-blueberry",
-      "name": "Mala's Blueberry Crush",
-      "subtitle": "Gourmet Wild Blueberry Pulp Fruit Crush",
-      "unitPrice": "Unit price: ₹280 / bottle",
-      "price": 259,
-      "originalPrice": 320,
+      "id": "prod-blueberry-crush",
+      "name": "Blueberry Crush",
+      "subtitle": "Mala's Blueberry Crush — Antioxidant-Rich Berry Delight",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
       "category": "Mala's Crushes",
-      "image": "/images/products/dry-fruites.jpg",
-      "gallery": [
-        "/images/products/dry-fruites.jpg",
-        "/images/products/heart-shap-dry-fruites.jpg"
+      "subCategory": "Blueberry Crush",
+      "alt": "Mala's Blueberry Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "blueberry crush",
+        "blueberry",
+        "berry",
+        "smoothie bowl",
+        "milkshake",
+        "antioxidant",
+        "dessert"
       ],
-      "alt": "Malas wild blueberry fruit crush",
-      "description": "Exotic gourmet blueberry crush filled with sweet-tangy wild berry pulp. Gives gorgeous purple hue and rich flavour to cheesecakes and sodas.",
+      "searchKeywords": [
+        "blueberry crush",
+        "blueberry",
+        "blue berry",
+        "berry crush",
+        "blue berry shake"
+      ],
+      "description": "Mala's Blueberry Crush is a luscious blueberry concentrate packed with the unmistakable sweet-tart flavour of fresh blueberries. A favourite for creating vibrant smoothie bowls, milkshakes, and premium dessert toppings.",
       "highlights": [
-        "Exotic Wild Blueberry fruit pulp",
-        "Delightful sweet-tangy berry flavour",
-        "Top choice for cheesecakes, mojitos & sundaes",
-        "Rich in natural berry antioxidants",
-        "Premium quality fruit crush"
+        "Sweet-tart fresh blueberry flavour",
+        "Vibrant deep blue colour",
+        "Ideal for smoothie bowls & milkshakes",
+        "Rich, premium blueberry concentrate",
+        "Mala's gourmet quality guaranteed"
       ],
       "variants": [
-        { "weight": "750ml Bottle", "price": 259, "originalPrice": 320 },
-        { "weight": "1 Litre Bottle", "price": 329, "originalPrice": 399 }
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-black-currant-crush",
+        "prod-strawberry-crush",
+        "prod-kiwi-crush",
+        "prod-mango-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Blueberry Crush/Blueberry_beverage_bottle_and_mi_20260927221450.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Blueberry Crush/Blueberry_beverage_bottle_and_mi_20260927221450.jpg",
+        "/images/product-images/Mala's crushes/Blueberry Crush/Malas_Blueberry_Crush_bottle_adv_20260927221454.jpg",
+        "/images/product-images/Mala's crushes/Blueberry Crush/Malas_Blueberry_Crush_bottle_pho_20260927221437.jpg",
+        "/images/product-images/Mala's crushes/Blueberry Crush/Malas_Blueberry_Crush_bottle_pho_20260927221446.jpg"
       ]
     },
     {
-      "id": "prod-malas-kiwi",
-      "name": "Mala's Kiwi Crush",
-      "subtitle": "Tangy & Refreshing Green Kiwi Pulp Crush",
-      "unitPrice": "Unit price: ₹250 / bottle",
+      "id": "prod-butterscotch-crush",
+      "name": "Butterscotch Crush",
+      "subtitle": "Mala's Butterscotch Crush — Caramel Toffee Dream",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Butterscotch Crush",
+      "alt": "Mala's Butterscotch Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "butterscotch crush",
+        "butterscotch",
+        "caramel",
+        "toffee",
+        "cold coffee",
+        "frappe",
+        "sundae"
+      ],
+      "searchKeywords": [
+        "butterscotch crush",
+        "butterscotch",
+        "caramel",
+        "butter scotch",
+        "frappe syrup"
+      ],
+      "description": "Rich buttery caramel and roasted nut flavor condensed into a thick golden syrup. Transforms ordinary milk into gourmet butterscotch milkshakes and cold coffee treats.",
+      "highlights": [
+        "Rich caramel toffee buttery taste",
+        "Perfect companion for cold coffee & frappes",
+        "Thick consistency for sundae drizzling",
+        "Loved by kids and dessert lovers",
+        "Ready-to-use bar quality"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kesar-badam-crush",
+        "prod-rasmalai-crush",
+        "prod-banana-crush",
+        "prod-mango-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Butterscotch Crush/Butterscotch_bottle_and_dessert__20260927163244.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Butterscotch Crush/Butterscotch_bottle_and_dessert__20260927163244.jpg",
+        "/images/product-images/Mala's crushes/Butterscotch Crush/Butterscotch_bottle_and_milkshak_20260927163232.jpg",
+        "/images/product-images/Mala's crushes/Butterscotch Crush/Malas_Butterscotch_Crush_bottle__20260927163221.jpg",
+        "/images/product-images/Mala's crushes/Butterscotch Crush/Malas_Butterscotch_Crush_bottle__20260927163304.jpg"
+      ]
+    },
+    {
+      "id": "prod-green-apple-crush",
+      "name": "Green Apple Crush",
+      "subtitle": "Mala's Green Apple Crush — Tangy Orchard Fresh",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Green Apple Crush",
+      "alt": "Mala's Green Apple Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "green apple crush",
+        "green apple",
+        "mojito",
+        "iced tea",
+        "mocktail",
+        "tangy",
+        "summer cooler"
+      ],
+      "searchKeywords": [
+        "green apple crush",
+        "green apple",
+        "hara seb",
+        "seb",
+        "mojito syrup",
+        "iced tea"
+      ],
+      "description": "Crisp, sour, and mouthwatering green apple concentrate. The ultimate choice for preparing sparkling green apple iced teas, energy coolers, and tangy mocktails.",
+      "highlights": [
+        "Crisp sour-sweet green apple profile",
+        "Vibrant emerald green cocktail colour",
+        "Best seller for iced teas & mojitos",
+        "Instant refreshing summer cooler",
+        "Easy mix formula"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kiwi-crush",
+        "prod-watermelon-crush",
+        "prod-orange-crush",
+        "prod-black-currant-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Green Apple Crush/Green_apple_beverage_photography_20260927221626.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Green Apple Crush/Green_apple_beverage_photography_20260927221626.jpg",
+        "/images/product-images/Mala's crushes/Green Apple Crush/Malas_Green_Apple_Crush_bottle_20260927221617.jpg",
+        "/images/product-images/Mala's crushes/Green Apple Crush/Malas_Green_Apple_Crush_bottle_20260927221621.jpg",
+        "/images/product-images/Mala's crushes/Green Apple Crush/Malas_Green_Apple_Crush_bottle_20260927221630.jpg"
+      ]
+    },
+    {
+      "id": "prod-guava-crush",
+      "name": "Guava Crush",
+      "subtitle": "Mala's Guava Crush — Tropical Amrood Paradise",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Guava Crush",
+      "alt": "Mala's Guava Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "guava crush",
+        "guava",
+        "amrood",
+        "amrud",
+        "pink guava",
+        "spicy guava",
+        "cooler"
+      ],
+      "searchKeywords": [
+        "guava crush",
+        "guava",
+        "amrood",
+        "amrud",
+        "pink guava",
+        "guava cooler"
+      ],
+      "description": "Captures the sweet, tropical aroma of pink guavas. Mix with sparkling water and a pinch of chilli salt for the famous Indian spicy guava cooler experience.",
+      "highlights": [
+        "Pink guava pulp essence",
+        "Authentic sweet tropical flavor",
+        "Pairs perfectly with chilli salt rimmed glasses",
+        "Refreshing beverage base",
+        "High fruit content concentrate"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-mango-crush",
+        "prod-litchi-crush",
+        "prod-watermelon-crush",
+        "prod-peach-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Guava Crush/Branded_bottle_and_dessert_20260927221601.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Guava Crush/Branded_bottle_and_dessert_20260927221601.jpg",
+        "/images/product-images/Mala's crushes/Guava Crush/Guava_beverage_bottle_and_smoothie_20260927221556.jpg",
+        "/images/product-images/Mala's crushes/Guava Crush/High-end_brand_advertising_photograph_of_20260927221609.jpg",
+        "/images/product-images/Mala's crushes/Guava Crush/Malas_Guava_Crush_bottle_standing_20260927221605.jpg"
+      ]
+    },
+    {
+      "id": "prod-kesar-badam-crush",
+      "name": "Kesar Badam Crush",
+      "subtitle": "Mala's Kesar Badam Crush — Royal Saffron Almond Elixir",
+      "unitPrice": "Unit price: ₹399 / 1.5L",
       "price": 229,
-      "originalPrice": 290,
+      "originalPrice": 299,
       "category": "Mala's Crushes",
-      "image": "/images/products/dry-fruites.jpg",
-      "gallery": [
-        "/images/products/dry-fruites.jpg",
-        "/images/products/heart-shap-dry-fruites.jpg"
+      "subCategory": "Kesar Badam Crush",
+      "alt": "Mala's Kesar Badam Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "kesar badam crush",
+        "kesar badam",
+        "kesar",
+        "badam milk",
+        "thandai",
+        "saffron",
+        "almond milk",
+        "festive"
       ],
-      "alt": "Malas green kiwi fruit crush",
-      "description": "Vibrant emerald green kiwi crush featuring real kiwi seeds and pulp. Tangy, zesty, and incredibly refreshing in ice-cold coolers and mocktails.",
+      "searchKeywords": [
+        "kesar badam crush",
+        "kesar badam",
+        "kesar",
+        "badam milk",
+        "thandai",
+        "saffron almond"
+      ],
+      "description": "An opulent blend of natural saffron strands, real almond bits, and cardamom. Elevates chilled milk into a royal festive thandai beverage instantly.",
       "highlights": [
-        "Real Green Kiwi fruit pulp with crunch seeds",
-        "Zesty sweet-tangy refreshing kick",
-        "Ideal for green kiwi sodas, slushes & cocktails",
-        "Vibrant colour presentation",
+        "Blended with real almond pieces & saffron",
+        "Aromatic cardamom & royal Indian spice notes",
+        "Instant Kesar Badam milk maker",
+        "Great for festival hosting & desserts",
+        "Rich golden texture"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 229,
+          "originalPrice": 299
+        },
+        {
+          "weight": "1.5L",
+          "price": 399,
+          "originalPrice": 499
+        }
+      ],
+      "recommendedProducts": [
+        "prod-rasmalai-crush",
+        "prod-pistha-crush",
+        "prod-butterscotch-crush",
+        "prod-rose-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Kesar Badam Crush/Malas_Kesar_Badam_Crush_bottle_20260927163046.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Kesar Badam Crush/Malas_Kesar_Badam_Crush_bottle_20260927163046.jpg",
+        "/images/product-images/Mala's crushes/Kesar Badam Crush/Malas_Kesar_Badam_Crush_bottle_20260927163059.jpg",
+        "/images/product-images/Mala's crushes/Kesar Badam Crush/Malas_Kesar_Badam_Crush_bottle_20260927163129.jpg",
+        "/images/product-images/Mala's crushes/Kesar Badam Crush/Malas_Kesar_Badam_Crush_bottle_20260927224812.jpg"
+      ]
+    },
+    {
+      "id": "prod-kiwi-crush",
+      "name": "Kiwi Crush",
+      "subtitle": "Mala's Kiwi Crush — Exotic Tangy Tropical Fusion",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Kiwi Crush",
+      "alt": "Mala's Kiwi Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "kiwi crush",
+        "kiwi",
+        "green kiwi",
+        "mocktail",
+        "slush",
+        "cooler",
+        "beverage"
+      ],
+      "searchKeywords": [
+        "kiwi crush",
+        "kiwi",
+        "green kiwi",
+        "kiwi drink",
+        "cooler"
+      ],
+      "description": "Infused with real kiwi seed specks and sweet-tangy green kiwi flavor. Adds exotic visual appeal and vibrant zing to coolers, slushes, and parfaits.",
+      "highlights": [
+        "Real kiwi pulp with seed highlights",
+        "Zesty sweet and tangy taste profile",
+        "Eye-catching bright green shade",
+        "Popular choice for mocktail bars",
+        "Non-alcoholic beverage syrup"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-green-apple-crush",
+        "prod-blueberry-crush",
+        "prod-pineapple-crush",
+        "prod-black-currant-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Kiwi Crush/Kiwi_bottle_with_dessert_20260927221525.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Kiwi Crush/Kiwi_bottle_with_dessert_20260927221525.jpg",
+        "/images/product-images/Mala's crushes/Kiwi Crush/Mala's_Kiwi_Crush_bottle_adverti_20260927221518.jpg",
+        "/images/product-images/Mala's crushes/Kiwi Crush/Malas_Kiwi_Crush_bottle_photography_20260927221530.jpg",
+        "/images/product-images/Mala's crushes/Kiwi Crush/Malas_Kiwi_Crush_bottle_standing_20260927221504.jpg"
+      ]
+    },
+    {
+      "id": "prod-litchi-crush",
+      "name": "Litchi Crush",
+      "subtitle": "Mala's Litchi Crush — Fragrant Lychee Nectar",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Litchi Crush",
+      "alt": "Mala's Litchi Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "litchi crush",
+        "litchi",
+        "lychee",
+        "soda",
+        "mocktail",
+        "sweet nectar"
+      ],
+      "searchKeywords": [
+        "litchi crush",
+        "litchi",
+        "lychee",
+        "leechi",
+        "litchi syrup"
+      ],
+      "description": "Delicate, highly aromatic litchi flavor syrup reminiscent of freshly peeled juicy lychees. Mix with iced sodas or milk for an elegant exotic treat.",
+      "highlights": [
+        "Fragrant juicy litchi taste",
+        "Delicate sweet floral notes",
+        "Versatile for sodas, mocktails & puddings",
+        "Smooth translucent consistency",
+        "Mala's premium fruit syrup"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-mango-crush",
+        "prod-peach-crush",
+        "prod-guava-crush",
+        "prod-rose-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Litchi Crush/Malas_Litchi_Crush_bottle_advert_20260927221552.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Litchi Crush/Malas_Litchi_Crush_bottle_advert_20260927221552.jpg",
+        "/images/product-images/Mala's crushes/Litchi Crush/Malas_Litchi_Crush_bottle_photog_20260927221534.jpg",
+        "/images/product-images/Mala's crushes/Litchi Crush/Malas_Litchi_Crush_bottle_photog_20260927221538.jpg",
+        "/images/product-images/Mala's crushes/Litchi Crush/Malas_Litchi_Crush_bottle_photog_20260927221542.jpg"
+      ]
+    },
+    {
+      "id": "prod-mango-crush",
+      "name": "Mango Crush",
+      "subtitle": "Mala's Mango Crush — King Alphonso Essence",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Mango Crush",
+      "alt": "Mala's Mango Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "mango crush",
+        "mango",
+        "aam",
+        "alphonso",
+        "mango mastani",
+        "mango lassi",
+        "smoothie"
+      ],
+      "searchKeywords": [
+        "mango crush",
+        "mango",
+        "aam",
+        "am",
+        "alphonso",
+        "mango mastani",
+        "mango lassi"
+      ],
+      "description": "Thick, sweet, golden mango concentrate made from ripe mangoes. Perfect for year-round mango mastani, mango lassi, smoothies, and ice creams.",
+      "highlights": [
+        "Rich golden mango pulp concentrate",
+        "Year-round Alphonso mango flavour",
+        "Essential for Mango Lassi & Mastani",
+        "Thick pouring texture",
+        "All-time favourite bestseller"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-mixed-fruit-crush",
+        "prod-pineapple-crush",
+        "prod-strawberry-crush",
+        "prod-guava-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Mango Crush/Bottle_and_mango_smoothie_photog_20260927221312.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Mango Crush/Bottle_and_mango_smoothie_photog_20260927221312.jpg",
+        "/images/product-images/Mala's crushes/Mango Crush/Malas_Mango_Crush_bottle_adverti_20260927221323.jpg",
+        "/images/product-images/Mala's crushes/Mango Crush/Malas_Mango_Crush_bottle_photogr_20260927221251.jpg",
+        "/images/product-images/Mala's crushes/Mango Crush/Mango_crush_bottle_and_dessert_20260927221317.jpg"
+      ]
+    },
+    {
+      "id": "prod-mixed-fruit-crush",
+      "name": "Mixed Fruit Crush",
+      "subtitle": "Mala's Mixed Fruit Crush — Multi-Fruit Symphony",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Mixed Fruit Crush",
+      "alt": "Mala's Mixed Fruit Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "mixed fruit crush",
+        "mixed fruit",
+        "multi fruit",
+        "fruit punch",
+        "party drink",
+        "beverage"
+      ],
+      "searchKeywords": [
+        "mixed fruit crush",
+        "mixed fruit",
+        "mix fruit",
+        "fruit punch",
+        "multi fruit"
+      ],
+      "description": "A punchy multi-fruit syrup combining mango, orange, pineapple, and berry notes. Great for punch bowls, fruit cocktails, and dessert drizzles.",
+      "highlights": [
+        "Harmonious multi-fruit blend",
+        "Vibrant color & balanced sweet profile",
+        "Great base for party fruit punches",
+        "Kids favorite breakfast drink enhancer",
+        "Easy shelf storage"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-mango-crush",
+        "prod-orange-crush",
+        "prod-pineapple-crush",
+        "prod-strawberry-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Mixed Fruit Crush/Fruit_crush_bottle_with_dessert_20260927162731.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Mixed Fruit Crush/Fruit_crush_bottle_with_dessert_20260927162731.jpg",
+        "/images/product-images/Mala's crushes/Mixed Fruit Crush/Malas_bottle_fruit_crush_adverti_20260927162803.jpg",
+        "/images/product-images/Mala's crushes/Mixed Fruit Crush/Malas_Mixed_Fruit_Crush_bottle_20260927162739.jpg",
+        "/images/product-images/Mala's crushes/Mixed Fruit Crush/Malas_Mixed_Fruit_Crush_bottle_20260927162821.jpg"
+      ]
+    },
+    {
+      "id": "prod-muskmelon-crush",
+      "name": "Muskmelon Crush",
+      "subtitle": "Mala's Muskmelon Crush — Sweet Kharbooza Refreshment",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Muskmelon Crush",
+      "alt": "Mala's Muskmelon Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "muskmelon crush",
+        "muskmelon",
+        "kharbooza",
+        "melon",
+        "slushie",
+        "cooling drink"
+      ],
+      "searchKeywords": [
+        "muskmelon crush",
+        "muskmelon",
+        "kharbooza",
+        "kharbuj",
+        "melon crush"
+      ],
+      "description": "Cooling, aromatic sweet muskmelon juice concentrate. Blends seamlessly with milk or crushed ice for a soothing summer drink.",
+      "highlights": [
+        "Aromatic sweet muskmelon flavour",
+        "Cooling summer beverage syrup",
+        "Delicate orange-amber hue",
+        "Great for slushies & chilled milk",
         "Hygienically bottled"
       ],
       "variants": [
-        { "weight": "750ml Bottle", "price": 229, "originalPrice": 290 },
-        { "weight": "1 Litre Bottle", "price": 289, "originalPrice": 360 }
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-watermelon-crush",
+        "prod-guava-crush",
+        "prod-peach-crush",
+        "prod-mango-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Muskmelon Crush/Malas_Muskmelon_Crush_bottle_adv_20260927163547.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Muskmelon Crush/Malas_Muskmelon_Crush_bottle_adv_20260927163547.jpg",
+        "/images/product-images/Mala's crushes/Muskmelon Crush/Malas_Muskmelon_Crush_bottle_pho_20260927163632.jpg",
+        "/images/product-images/Mala's crushes/Muskmelon Crush/Malas_Muskmelon_Crush_bottle_pho_20260927163646.jpg",
+        "/images/product-images/Mala's crushes/Muskmelon Crush/Muskmelon_crush_bottle_on_surface_20260927163653.jpg"
+      ]
+    },
+    {
+      "id": "prod-orange-crush",
+      "name": "Orange Crush",
+      "subtitle": "Mala's Orange Crush — Citrus Burst Sunshine",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Orange Crush",
+      "alt": "Mala's Orange Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "orange crush",
+        "orange",
+        "santra",
+        "citrus",
+        "orange soda",
+        "cocktail",
+        "cooler"
+      ],
+      "searchKeywords": [
+        "orange crush",
+        "orange",
+        "santra",
+        "narangi",
+        "orange soda"
+      ],
+      "description": "Zesty orange syrup rich in juicy citrus punch. Mix with club soda for an instant sparkling orange fizz or drizzle on vanilla gelato.",
+      "highlights": [
+        "Zesty citrus orange taste",
+        "Vibrant sunshine orange colour",
+        "Instant orange soda & cocktail mixer",
+        "Tangy-sweet fruit notes",
+        "Mala's bar quality"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-pineapple-crush",
+        "prod-green-apple-crush",
+        "prod-mixed-fruit-crush",
+        "prod-kiwi-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Orange Crush/Branded_bottle_and_orange_slices_20260927221413.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Orange Crush/Branded_bottle_and_orange_slices_20260927221413.jpg",
+        "/images/product-images/Mala's crushes/Orange Crush/Malas_Orange_Crush_bottle_on_20260927221403.jpg",
+        "/images/product-images/Mala's crushes/Orange Crush/Orange_Crush_bottle_with_dessert_20260927221409.jpg",
+        "/images/product-images/Mala's crushes/Orange Crush/Orange_juice_bottle_and_slices_20260927221406.jpg"
+      ]
+    },
+    {
+      "id": "prod-peach-crush",
+      "name": "Peach Crush",
+      "subtitle": "Mala's Peach Crush — Sweet Sun-Ripened Peach",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Peach Crush",
+      "alt": "Mala's Peach Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "peach crush",
+        "peach",
+        "peach iced tea",
+        "iced tea",
+        "mocktail",
+        "dessert glaze"
+      ],
+      "searchKeywords": [
+        "peach crush",
+        "peach",
+        "aadoo",
+        "adu",
+        "peach iced tea"
+      ],
+      "description": "Smooth and juicy sun-ripened peach concentrate. Famous for making iced peach teas, peach bellini mocktails, and cake glazes.",
+      "highlights": [
+        "Velvety smooth peach flavour",
+        "Essential syrup for Peach Iced Tea",
+        "Delicate golden amber shade",
+        "Versatile dessert glaze",
+        "Premium cafe quality syrup"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-litchi-crush",
+        "prod-guava-crush",
+        "prod-mango-crush",
+        "prod-strawberry-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Peach Crush/Branded_bottle_with_peaches_20260927224848.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Peach Crush/Branded_bottle_with_peaches_20260927224848.jpg",
+        "/images/product-images/Mala's crushes/Peach Crush/Peach_bottle_and_dessert_photogr_20260927162834.jpg",
+        "/images/product-images/Mala's crushes/Peach Crush/Peach_bottle_on_studio_surface_20260927162904.jpg",
+        "/images/product-images/Mala's crushes/Peach Crush/Peach_bottle_with_juice_and_20260927162844.jpg"
+      ]
+    },
+    {
+      "id": "prod-pineapple-crush",
+      "name": "Pineapple Crush",
+      "subtitle": "Mala's Pineapple Crush — Tangy Tropical Ananas",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Pineapple Crush",
+      "alt": "Mala's Pineapple Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "pineapple crush",
+        "pineapple",
+        "ananas",
+        "pina colada",
+        "mocktail",
+        "tart"
+      ],
+      "searchKeywords": [
+        "pineapple crush",
+        "pineapple",
+        "ananas",
+        "pina colada"
+      ],
+      "description": "Tangy and sweet pineapple fruit syrup packed with tropical flair. Excellent for Piña Colada mocktails, fruit salads, and pastry fillings.",
+      "highlights": [
+        "Tangy real pineapple pulp",
+        "Key ingredient for Piña Colada mocktails",
+        "Bright golden tropical color",
+        "Great for cakes & fruit tarts",
+        "Mala's gourmet standard"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-mango-crush",
+        "prod-orange-crush",
+        "prod-mixed-fruit-crush",
+        "prod-kiwi-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Pineapple Crush/Malas_Pineapple_Crush_bottle_adv_20260927221355.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Pineapple Crush/Malas_Pineapple_Crush_bottle_adv_20260927221355.jpg",
+        "/images/product-images/Mala's crushes/Pineapple Crush/Malas_Pineapple_Crush_bottle_pho_20260927221359.jpg",
+        "/images/product-images/Mala's crushes/Pineapple Crush/Malas_Pineapple_Crush_bottle_upr_20260927221348.jpg",
+        "/images/product-images/Mala's crushes/Pineapple Crush/Pineapple_bottle_with_dessert_20260927221352.jpg"
+      ]
+    },
+    {
+      "id": "prod-pistha-crush",
+      "name": "Pistha Crush",
+      "subtitle": "Mala's Pistha Crush — Rich Nutty Pistachio Syrup",
+      "unitPrice": "Unit price: ₹399 / 1.5L",
+      "price": 229,
+      "originalPrice": 299,
+      "category": "Mala's Crushes",
+      "subCategory": "Pistha Crush",
+      "alt": "Mala's Pistha Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "pistha crush",
+        "pista crush",
+        "pista",
+        "pistachio",
+        "pista milk",
+        "kulfi",
+        "dessert"
+      ],
+      "searchKeywords": [
+        "pistha crush",
+        "pista crush",
+        "pistha",
+        "pistachio syrup",
+        "pista milk"
+      ],
+      "description": "Distinctive nutty pistachio syrup infused with light green color and velvety aroma. Perfect for pistachio milkshakes, kulfi layering, and Indian sweets.",
+      "highlights": [
+        "Nutty pistachio flavour profile",
+        "Soft green shade for milkshakes & kulfi",
+        "Indulgent dessert drizzle",
+        "Pairs brilliantly with warm or cold milk",
+        "Rich thick syrup consistency"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 229,
+          "originalPrice": 299
+        },
+        {
+          "weight": "1.5L",
+          "price": 399,
+          "originalPrice": 499
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kesar-badam-crush",
+        "prod-rasmalai-crush",
+        "prod-butterscotch-crush",
+        "prod-rose-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Pistha Crush/Malas_Pistha_Crush_bottle_advert_20260927162931.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Pistha Crush/Malas_Pistha_Crush_bottle_advert_20260927162931.jpg",
+        "/images/product-images/Mala's crushes/Pistha Crush/Malas_Pistha_Crush_bottle_advert_20260927163016.jpg",
+        "/images/product-images/Mala's crushes/Pistha Crush/Malas_Pistha_Crush_bottle_upright_20260927163029.jpg",
+        "/images/product-images/Mala's crushes/Pistha Crush/Pistachio_bottle_and_milkshake_s_20260927162924.jpg"
+      ]
+    },
+    {
+      "id": "prod-rasmalai-crush",
+      "name": "Rasmalai Crush",
+      "subtitle": "Mala's Rasmalai Crush — Traditional Indian Dessert Elixir",
+      "unitPrice": "Unit price: ₹399 / 1.5L",
+      "price": 229,
+      "originalPrice": 299,
+      "category": "Mala's Crushes",
+      "subCategory": "Rasmalai Crush",
+      "alt": "Mala's Rasmalai Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "rasmalai crush",
+        "rasmalai",
+        "ras malai",
+        "rabri",
+        "cardamom",
+        "festive drink",
+        "indian dessert"
+      ],
+      "searchKeywords": [
+        "rasmalai crush",
+        "rasmalai",
+        "ras malai",
+        "rabri",
+        "dessert syrup"
+      ],
+      "description": "Captures the heavenly essence of traditional Rasmalai — cardamoms, rich condensed milk flavor, and saffron touch in a smooth syrup.",
+      "highlights": [
+        "Authentic Rasmalai dessert flavor",
+        "Rich cardamom & rabri notes",
+        "Transforms plain milk into festive drink",
+        "Great for cake fusion desserts",
+        "Unique gourmet specialty syrup"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 229,
+          "originalPrice": 299
+        },
+        {
+          "weight": "1.5L",
+          "price": 399,
+          "originalPrice": 499
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kesar-badam-crush",
+        "prod-pistha-crush",
+        "prod-rose-crush",
+        "prod-butterscotch-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Rasmalai Crush/Malas_Rasmalai_Crush_bottle_adve_20260927224506.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Rasmalai Crush/Malas_Rasmalai_Crush_bottle_adve_20260927224506.jpg",
+        "/images/product-images/Mala's crushes/Rasmalai Crush/Malas_Rasmalai_Crush_bottle_phot_20260927224451.jpg",
+        "/images/product-images/Mala's crushes/Rasmalai Crush/Malas_Rasmalai_Crush_bottle_phot_20260927224501.jpg",
+        "/images/product-images/Mala's crushes/Rasmalai Crush/Malas_Rasmalai_Crush_bottle_phot_20260927224514.jpg"
+      ]
+    },
+    {
+      "id": "prod-rose-crush",
+      "name": "Rose Crush",
+      "subtitle": "Mala's Rose Crush — Fragrant Gulab Syrup",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Rose Crush",
+      "alt": "Mala's Rose Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "rose crush",
+        "rose",
+        "gulab",
+        "rooh afza",
+        "rose milk",
+        "falooda",
+        "sharbat",
+        "summer drink"
+      ],
+      "searchKeywords": [
+        "rose crush",
+        "rose",
+        "gulab",
+        "rooh afza",
+        "rose milk",
+        "falooda",
+        "gulab syrup"
+      ],
+      "description": "Classic aromatic rose syrup made from fragrant rose petals extract. Essential for making cooling Rose Milk, Falooda, and refreshing summer Sharbat.",
+      "highlights": [
+        "Aromatic pink rose petal extract",
+        "Key ingredient for Rose Milk & Falooda",
+        "Cooling summer herbal drink base",
+        "Deep ruby rose color",
+        "Traditional favorite"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-kesar-badam-crush",
+        "prod-rasmalai-crush",
+        "prod-litchi-crush",
+        "prod-strawberry-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Rose Crush/Malas_Rose_Crush_bottle_advertis_20260927224713.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Rose Crush/Malas_Rose_Crush_bottle_advertis_20260927224713.jpg",
+        "/images/product-images/Mala's crushes/Rose Crush/Malas_Rose_Crush_bottle_photography_20260927224705.jpg",
+        "/images/product-images/Mala's crushes/Rose Crush/Rose_beverage_bottle_and_drink_20260927163158.jpg",
+        "/images/product-images/Mala's crushes/Rose Crush/Rose_Crush_bottle_on_studio_20260927163150.jpg"
+      ]
+    },
+    {
+      "id": "prod-strawberry-crush",
+      "name": "Strawberry Crush",
+      "subtitle": "Mala's Strawberry Crush — Mahabaleshwar Fresh Berry",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Strawberry Crush",
+      "alt": "Mala's Strawberry Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "strawberry crush",
+        "strawberry",
+        "mahabaleshwar",
+        "milkshake",
+        "waffle topping",
+        "bestseller"
+      ],
+      "searchKeywords": [
+        "strawberry crush",
+        "strawberry",
+        "straw berry",
+        "mahabaleshwar strawberry"
+      ],
+      "description": "Mala's signature flagship syrup loaded with Mahabaleshwar strawberry pulp. Delivers intense natural berry sweetness for milkshakes, ice cream, and waffles.",
+      "highlights": [
+        "Mahabaleshwar ripe strawberry pulp",
+        "Mala's iconic bestselling crush",
+        "Perfect for thick strawberry shakes",
+        "Rich red colour with real fruit specks",
+        "Gourmet standard syrup"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-blueberry-crush",
+        "prod-black-currant-crush",
+        "prod-mango-crush",
+        "prod-banana-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Strawberry Crush/Branded_strawberry_crush_bottle__20260927221243.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Strawberry Crush/Branded_strawberry_crush_bottle__20260927221243.jpg",
+        "/images/product-images/Mala's crushes/Strawberry Crush/Malas_Strawberry_Crush_bottle_ad_20260927221240.jpg",
+        "/images/product-images/Mala's crushes/Strawberry Crush/Strawberry_beverage_photography_20260927221235.jpg",
+        "/images/product-images/Mala's crushes/Strawberry Crush/Strawberry_crush_bottle_on_surface_20260927221231.jpg"
+      ]
+    },
+    {
+      "id": "prod-watermelon-crush",
+      "name": "Watermelon Crush",
+      "subtitle": "Mala's Watermelon Crush — Juicy Summer Cooler",
+      "unitPrice": "Unit price: ₹349 / 1.5L",
+      "price": 199,
+      "originalPrice": 259,
+      "category": "Mala's Crushes",
+      "subCategory": "Watermelon Crush",
+      "alt": "Mala's Watermelon Crush bottle",
+      "tags": [
+        "crush",
+        "syrup",
+        "mala crush",
+        "watermelon crush",
+        "watermelon",
+        "tarbooj",
+        "slushie",
+        "iced tea",
+        "summer cooler"
+      ],
+      "searchKeywords": [
+        "watermelon crush",
+        "watermelon",
+        "tarbooj",
+        "tarbuj",
+        "watermelon cooler"
+      ],
+      "description": "Hydrating, sweet red watermelon syrup that brings immediate tropical coolness. Ideal for slushies, iced teas, watermelon fizzes, and popsicles.",
+      "highlights": [
+        "Sweet juicy watermelon flavour",
+        "Bright ruby red cooler shade",
+        "Perfect for mocktail slushies & iced drinks",
+        "Refreshing summer hydration",
+        "Easy mix syrup"
+      ],
+      "variants": [
+        {
+          "weight": "750ml",
+          "price": 199,
+          "originalPrice": 259
+        },
+        {
+          "weight": "1.5L",
+          "price": 349,
+          "originalPrice": 450
+        }
+      ],
+      "recommendedProducts": [
+        "prod-muskmelon-crush",
+        "prod-guava-crush",
+        "prod-green-apple-crush",
+        "prod-kiwi-crush"
+      ],
+      "image": "/images/product-images/Mala's crushes/Watermelon Crush/Branded_watermelon_bottle_near_d_20260927163714.jpg",
+      "gallery": [
+        "/images/product-images/Mala's crushes/Watermelon Crush/Branded_watermelon_bottle_near_d_20260927163714.jpg",
+        "/images/product-images/Mala's crushes/Watermelon Crush/Malas_Watermelon_Crush_bottle_ad_20260927163727.jpg",
+        "/images/product-images/Mala's crushes/Watermelon Crush/Malas_Watermelon_Crush_bottle_ph_20260927163807.jpg",
+        "/images/product-images/Mala's crushes/Watermelon Crush/Watermelon_bottle_and_drink_serving_20260927163744.jpg"
       ]
     }
   ]
