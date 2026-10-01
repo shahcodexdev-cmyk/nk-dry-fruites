@@ -213,6 +213,37 @@ Please confirm my order and share delivery schedule. Thank you!`;
     // Open WhatsApp in new tab/app
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 
+    // Send data to Google Apps Script for Email Notification
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw3F2CQYF0qvzFWpptZpHCtqzdeAC1BfPmh1LLRXEguaT5pU2R4uDloYPAWfivEI1HT4w/exec';
+    if (GOOGLE_SCRIPT_URL) {
+      try {
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'text/plain', // Use text/plain to avoid CORS preflight issues
+          },
+          body: JSON.stringify({
+            orderId: orderId,
+            date: orderDate,
+            customerName: formData.fullName.trim(),
+            phone: formData.phone.trim(),
+            email: formData.email.trim(),
+            address: `${formData.address.trim()}${formData.apartment.trim() ? `, ${formData.apartment.trim()}` : ''}, ${formData.city.trim()}, ${formData.state} - ${formData.pincode.trim()}`,
+            items: itemsText,
+            subtotal: subtotal,
+            deliveryFee: deliveryFee,
+            grandTotal: grandTotal,
+            paymentMethod: formData.paymentMethod === 'cod' ? 'Cash on Delivery (COD)' : 'UPI / Online Payment',
+            orderNotes: formData.orderNotes.trim(),
+            whatsappMessage: whatsappMessage
+          })
+        });
+      } catch (error) {
+        console.error('Error sending email notification:', error);
+      }
+    }
+
     // Save completed order details for confirmation screen
     setOrderCompleted({
       orderId,
