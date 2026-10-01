@@ -535,15 +535,15 @@ function App() {
             <div className="footer-contact-details">
               <div className="contact-item">
                 <Phone size={16} className="contact-icon" />
-                <span>+91 800 327 6539 (Toll Free)</span>
+                <span>+91 99306 05893</span>
               </div>
               <div className="contact-item">
                 <Mail size={16} className="contact-icon" />
-                <span>support@nkdryfruits.com</span>
+                <span>contact.nkdryfruits@gmail.com</span>
               </div>
               <div className="contact-item">
                 <MapPin size={16} className="contact-icon" />
-                <span>Bangalore & Delhi, India</span>
+                <span>Thane West, Maharashtra 400601</span>
               </div>
             </div>
           </div>

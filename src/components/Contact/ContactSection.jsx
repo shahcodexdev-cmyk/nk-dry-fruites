@@ -85,23 +85,23 @@ const ContactSection = ({ onShowToast }) => {
           <div className="contact-info-panel">
             {/* Quick Contacts Box (Short & Sleek) */}
             <div className="compact-contact-box">
-              <a href="tel:+918003276539" className="compact-contact-row">
+              <a href="tel:+919930605893" className="compact-contact-row">
                 <div className="compact-icon-wrap">
                   <Phone size={17} />
                 </div>
                 <div className="compact-contact-text">
-                  <span className="compact-label">Call Us (Toll Free)</span>
-                  <span className="compact-value">+91 800 327 6539</span>
+                  <span className="compact-label">Call Us</span>
+                  <span className="compact-value">+91 99306 05893</span>
                 </div>
               </a>
 
-              <a href="mailto:support@nkdryfruits.com" className="compact-contact-row">
+              <a href="mailto:contact.nkdryfruits@gmail.com" className="compact-contact-row">
                 <div className="compact-icon-wrap">
                   <Mail size={17} />
                 </div>
                 <div className="compact-contact-text">
                   <span className="compact-label">Email Support</span>
-                  <span className="compact-value">support@nkdryfruits.com</span>
+                  <span className="compact-value">contact.nkdryfruits@gmail.com</span>
                 </div>
               </a>
 
@@ -130,7 +130,7 @@ const ContactSection = ({ onShowToast }) => {
               <div className="compact-loc-body">
                 <MapPin size={16} className="compact-map-pin" />
                 <p className="compact-address-text">
-                  NK Dry Fruits, Sector 18, Udyog Vihar, Gurugram, Delhi NCR – 122008, India
+                  NK Dry Fruits, Shop No. 09, Ground Floor, Ibrahim Mansion, Near 1st Rabodi Naka, Rabodi, Thane West, Maharashtra 400601
                 </p>
               </div>
             </div>
