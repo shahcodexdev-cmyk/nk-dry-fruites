@@ -46,26 +46,44 @@ const ContactSection = ({ onShowToast }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      if (onShowToast) onShowToast("Please fill in name, email, and message.");
+    if (!formData.name.trim() || !formData.message.trim()) {
+      if (onShowToast) onShowToast("Please enter your name and message.");
       return;
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      if (onShowToast) {
-        onShowToast("Thank you! Your message has been sent successfully. 🌿");
-      }
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-      setTimeout(() => setSubmitted(false), 4000);
-    }, 700);
+
+    const rawPhone = navigationData.contactInfo?.whatsapp 
+      ? navigationData.contactInfo.whatsapp.replace(/[^0-9]/g, '') 
+      : '919930605893';
+
+    const text = 
+      `*🌿 New Inquiry - NK Dry Fruits Website*\n\n` +
+      `*👤 Name:* ${formData.name.trim()}\n` +
+      (formData.email.trim() ? `*📧 Email:* ${formData.email.trim()}\n` : '') +
+      (formData.phone.trim() ? `*📞 Phone:* ${formData.phone.trim()}\n` : '') +
+      `*💬 Message:*\n${formData.message.trim()}\n\n` +
+      `_Sent directly via nkdryfruits.in contact form_`;
+
+    const whatsappUrl = `https://wa.me/${rawPhone}?text=${encodeURIComponent(text)}`;
+
+    // Open WhatsApp directly
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+    setSubmitted(true);
+    if (onShowToast) {
+      onShowToast("Opening WhatsApp to send your message directly! 💬");
+    }
+
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
+
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitted(false), 5000);
   };
 
   return (
@@ -197,13 +215,13 @@ const ContactSection = ({ onShowToast }) => {
           <div className="contact-form-panel">
             <div className="compact-form-card">
               <div className="compact-form-header">
-                <h3 className="compact-form-title">Send a Quick Message</h3>
+                <h3 className="compact-form-title">Send Message via WhatsApp</h3>
               </div>
 
               {submitted && (
                 <div className="compact-success-msg" role="alert">
                   <CheckCircle2 size={18} />
-                  <span>Message sent successfully! We'll reply soon.</span>
+                  <span>Opening WhatsApp chat with your inquiry! 💬</span>
                 </div>
               )}
 
@@ -224,7 +242,7 @@ const ContactSection = ({ onShowToast }) => {
                   </div>
 
                   <div className="form-group-compact">
-                    <label htmlFor="contact-email" className="compact-field-label">Email *</label>
+                    <label htmlFor="contact-email" className="compact-field-label">Email (Optional)</label>
                     <input 
                       type="email" 
                       id="contact-email"
@@ -232,7 +250,6 @@ const ContactSection = ({ onShowToast }) => {
                       placeholder="Your email"
                       value={formData.email} 
                       onChange={handleChange} 
-                      required 
                       className="compact-input"
                     />
                   </div>
@@ -267,15 +284,15 @@ const ContactSection = ({ onShowToast }) => {
 
                 <button 
                   type="submit" 
-                  className="compact-submit-btn" 
+                  className="compact-submit-btn contact-whatsapp-btn" 
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
-                    <span>Sending...</span>
+                    <span>Opening WhatsApp...</span>
                   ) : (
                     <>
-                      <span>Send Message</span>
-                      <Send size={15} />
+                      <MessageSquare size={16} />
+                      <span>Send on WhatsApp</span>
                     </>
                   )}
                 </button>

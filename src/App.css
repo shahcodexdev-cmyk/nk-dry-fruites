@@ -527,8 +527,8 @@ main {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-  gap: 3rem;
+  grid-template-columns: 1.8fr 1fr 1.2fr;
+  gap: 3.5rem;
   padding-bottom: 3.5rem;
 }
 
@@ -596,52 +596,7 @@ main {
   padding-left: 4px;
 }
 
-.footer-newsletter-col {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
 
-.newsletter-desc {
-  font-size: 0.85rem;
-  color: var(--color-text-body);
-  line-height: 1.5;
-}
-
-.newsletter-form {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.35rem;
-}
-
-.newsletter-form input {
-  flex: 1;
-  background: #ffffff;
-  border: 1.5px solid var(--color-border-medium);
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius-md);
-  color: var(--color-text-title);
-  font-size: 0.88rem;
-  outline: none;
-}
-
-.newsletter-form input:focus {
-  border-color: var(--farmley-green-primary);
-}
-
-.newsletter-form button {
-  background: var(--farmley-green-primary);
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.88rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
-}
-
-.newsletter-form button:hover {
-  background: var(--farmley-green-leaf);
-}
 
 .footer-bottom {
   border-top: 1px solid var(--color-border-subtle);
@@ -761,9 +716,7 @@ main {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
-  .newsletter-form {
-    flex-direction: column;
-  }
+
   .bestseller-pagination {
     gap: 0.35rem;
     margin-top: 1.75rem;
@@ -791,88 +744,7 @@ main {
   }
 }
 
-/* SEO Authority Header & Location Banner */
-.seo-authority-banner {
-  background: linear-gradient(180deg, #fbf9f4 0%, #ffffff 100%);
-  border-bottom: 1px solid rgba(229, 223, 211, 0.7);
-  padding: clamp(1.75rem, 3.5vw, 2.75rem) 0;
-  text-align: center;
-}
 
-.seo-authority-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.seo-authority-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: var(--theme-gold-pale);
-  color: var(--theme-gold-dark);
-  font-size: clamp(0.72rem, 1vw, 0.8rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-  padding: 0.35rem 0.95rem;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(197, 155, 72, 0.32);
-  margin-bottom: 0.85rem;
-}
-
-.seo-badge-icon {
-  color: var(--theme-gold-dark);
-}
-
-.seo-main-heading {
-  font-family: 'Cinzel', 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
-  font-weight: 700;
-  color: var(--theme-green-deep);
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.3px;
-}
-
-.seo-authority-summary {
-  font-size: clamp(0.9rem, 1.2vw, 1.02rem);
-  color: #4b5563;
-  line-height: 1.6;
-  max-width: 820px;
-  margin-bottom: 1.35rem;
-}
-
-.seo-trust-tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem;
-}
-
-.seo-trust-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: #ffffff;
-  color: var(--color-text-body);
-  border: 1px solid rgba(229, 223, 211, 0.95);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-full);
-  font-size: 0.82rem;
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-  transition: all var(--transition-fast);
-}
-
-.seo-trust-tag:hover {
-  border-color: var(--theme-gold-primary);
-  background: var(--theme-gold-subtle);
-  color: var(--theme-gold-dark);
-}
 
 /* Footer SEO Keywords Ribbon */
 .footer-seo-keywords {

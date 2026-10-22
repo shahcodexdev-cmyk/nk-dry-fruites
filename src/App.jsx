@@ -305,30 +305,8 @@ function App() {
         {/* Pure Image Hero Slider Banner */}
         <HeroSlider slides={sliderData} autoPlay={true} />
 
-        {/* SEO Authority Header & Local Brand Overview (Primary H1) */}
-        <header className="seo-authority-banner" aria-label="NK Dry Fruits Store Overview">
-          <div className="container">
-            <div className="seo-authority-inner">
-              <div className="seo-authority-badge">
-                <Sparkles size={14} className="seo-badge-icon" />
-                <span>Thane's Trusted Store for 100% Organic Dry Fruits & Superfoods</span>
-              </div>
-              <h1 className="seo-main-heading">
-                NK Dry Fruits – Buy Premium Dry Fruits, Nuts & Khajoor in Thane & Mumbai
-              </h1>
-              <p className="seo-authority-summary">
-                Direct-from-orchard California Almonds, King Jumbo Cashews, Kashmiri Walnuts, Royal Medina Ajwa Dates & Nutritional Superfood Seeds. 
-                Freshly nitrogen aroma-lock packed at our retail store in <strong>Rabodi, Thane West (400601)</strong> with same-day local home delivery across Thane & Mumbai MMR, and speedy express shipping pan-India.
-              </p>
-              <div className="seo-trust-tags">
-                <span className="seo-trust-tag"><MapPin size={13} /> Shop 09, Ibrahim Mansion, Rabodi, Thane West</span>
-                <span className="seo-trust-tag"><ShieldCheck size={13} /> 100% Direct Orchard Harvest</span>
-                <span className="seo-trust-tag"><Truck size={13} /> Free Express Shipping Above ₹499</span>
-                <span className="seo-trust-tag"><Phone size={13} /> WhatsApp Hotline: +91 99306 05893</span>
-              </div>
-            </div>
-          </div>
-        </header>
+        {/* Primary Page H1 for Googlebot (Hidden visually to preserve clean UI) */}
+        <h1 className="sr-only">NK Dry Fruits – Buy Premium Dry Fruits, Nuts & Khajoor in Thane & Mumbai</h1>
 
         {/* Quick Features */}
         <QuickFeatures />
@@ -598,14 +576,6 @@ function App() {
             </ul>
           </div>
 
-          <div className="footer-newsletter-col">
-            <h4 className="footer-heading">Stay In The Harvest Loop</h4>
-            <p className="newsletter-desc">Subscribe for organic harvest updates and healthy recipe guides.</p>
-            <div className="newsletter-form">
-              <input type="email" placeholder="Enter your email" />
-              <button type="button">Subscribe</button>
-            </div>
-          </div>
         </div>
 
         {/* Footer SEO Keywords & Local Navigation Ribbon */}

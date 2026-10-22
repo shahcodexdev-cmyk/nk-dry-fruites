@@ -8,14 +8,14 @@
   "theme_color": "#1d442b",
   "icons": [
     {
-      "src": "/nuts-pattern.svg",
+      "src": "/favicon-192x192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/png"
     },
     {
-      "src": "/nuts-pattern.svg",
+      "src": "/favicon-512x512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml"
+      "type": "image/png"
     }
   ]
 }

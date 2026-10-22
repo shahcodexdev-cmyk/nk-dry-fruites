@@ -422,6 +422,19 @@
   cursor: wait;
 }
 
+.contact-whatsapp-btn {
+  background: #16a34a;
+  border-color: #16a34a;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.28);
+}
+
+.contact-whatsapp-btn:hover:not(:disabled) {
+  background: #15803d;
+  border-color: #15803d;
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.38);
+  transform: translateY(-2px);
+}
+
 /* RESPONSIVE */
 @media (max-width: 860px) {
   .contact-layout-grid {
