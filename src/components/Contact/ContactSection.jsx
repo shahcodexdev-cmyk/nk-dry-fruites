@@ -121,18 +121,48 @@ const ContactSection = ({ onShowToast }) => {
               </a>
             </div>
 
-            {/* Single Official Store Location */}
-            <div className="compact-location-card">
+            {/* Single Official Store Location with Local SEO Microdata */}
+            <div className="compact-location-card" itemScope itemType="https://schema.org/Store">
+              <meta itemProp="name" content="NK Dry Fruits" />
+              <meta itemProp="telephone" content="+919930605893" />
+              <meta itemProp="email" content="contact.nkdryfruits@gmail.com" />
+              
               <div className="compact-loc-header">
                 <Store size={18} className="loc-title-icon" />
-                <h3 className="compact-loc-heading">Our Store & Packaging Hub</h3>
+                <h3 className="compact-loc-heading">Our Store & Packaging Hub (Thane West)</h3>
               </div>
-              <div className="compact-loc-body">
+
+              <address className="compact-loc-body" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <MapPin size={16} className="compact-map-pin" />
-                <p className="compact-address-text">
-                  NK Dry Fruits, Shop No. 09, Ground Floor, Ibrahim Mansion, Near 1st Rabodi Naka, Rabodi, Thane West, Maharashtra 400601
-                </p>
+                <div className="compact-address-text">
+                  <span itemProp="streetAddress">Shop No. 09, Ground Floor, Ibrahim Mansion, Near 1st Rabodi Naka, Rabodi</span>,{' '}
+                  <span itemProp="addressLocality">Thane West</span>,{' '}
+                  <span itemProp="addressRegion">Maharashtra</span>{' '}
+                  <span itemProp="postalCode">400601</span>,{' '}
+                  <span itemProp="addressCountry">India</span>
+                </div>
+              </address>
+
+              <div className="compact-loc-meta">
+                <div className="loc-meta-item">
+                  <span className="loc-meta-dot"></span>
+                  <span>Open Daily: 9:00 AM – 10:00 PM</span>
+                </div>
+                <div className="loc-delivery-pill">
+                  <span>Local Delivery: Thane, Mulund & Mumbai MMR</span>
+                </div>
               </div>
+
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Shop+No+09+Ground+Floor+Ibrahim+Mansion+Near+1st+Rabodi+Naka+Rabodi+Thane+West+Maharashtra+400601" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="compact-maps-btn"
+                aria-label="Get directions to NK Dry Fruits on Google Maps"
+              >
+                <span>Get Directions on Google Maps</span>
+                <span className="maps-arrow">↗</span>
+              </a>
             </div>
 
             {/* Socials: Instagram & Facebook Only */}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://nkdryfruits.com/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nkdryfruits.com/images/logo.jpeg</image:loc>
+      <image:title>NK Dry Fruits - Premium Dry Fruits in Thane</image:title>
+      <image:caption>Handpicked organic California almonds, Kashmiri walnuts, jumbo cashews, and Ajwa dates in Thane West.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Products Showcase -->
+  <url>
+    <loc>https://nkdryfruits.com/#products</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Category: Dry Fruits & Nuts -->
+  <url>
+    <loc>https://nkdryfruits.com/?category=Dry+Fruits+%26+Nuts</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Category: Dates (Khajoor) -->
+  <url>
+    <loc>https://nkdryfruits.com/?category=Dates</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Category: Seeds -->
+  <url>
+    <loc>https://nkdryfruits.com/?category=Seeds</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Category: Pure Honey -->
+  <url>
+    <loc>https://nkdryfruits.com/?category=Honey</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Category: Olives & Olive Oil -->
+  <url>
+    <loc>https://nkdryfruits.com/?category=Olives+%26+Olive+Oil</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Category: Mala's Fruit Crushes -->
+  <url>
+    <loc>https://nkdryfruits.com/?category=Mala%27s+Crushes</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About Us Section -->
+  <url>
+    <loc>https://nkdryfruits.com/#about</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact & Thane Store Location -->
+  <url>
+    <loc>https://nkdryfruits.com/#contact</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- FAQs Section -->
+  <url>
+    <loc>https://nkdryfruits.com/#faq</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>

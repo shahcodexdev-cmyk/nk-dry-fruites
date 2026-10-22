@@ -29,6 +29,7 @@
       ]
     },
     { "id": "nav-about", "label": "About Us", "href": "#about" },
+    { "id": "nav-faq", "label": "FAQs", "href": "#faq" },
     { "id": "nav-contact", "label": "Contact", "href": "#contact" }
   ],
   "categories": [

@@ -493,7 +493,7 @@ const ProductModal = ({
                   aria-selected={selectedImageIndex === idx}
                   aria-label={`View image ${idx + 1}`}
                 >
-                  <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} />
+                  <img src={imgUrl} alt={`${product.name} thumbnail ${idx + 1}`} />
                 </button>
               ))}
             </div>
@@ -504,7 +504,7 @@ const ProductModal = ({
             {/* Header / Title Row */}
             <div className="pdp-header-row">
               <div className="pdp-title-area">
-                <h1 className="pdp-product-title">{product.name}</h1>
+                <h2 className="pdp-product-title">{product.name}</h2>
                 <div className="pdp-meta-row">
                   <span className="pdp-product-subtitle">{product.subtitle || product.category}</span>
                 </div>

@@ -5,11 +5,12 @@ import QuickFeatures from './components/QuickFeatures/QuickFeatures';
 import ProductModal from './components/Product/ProductModal';
 import CheckoutModal from './components/Checkout/CheckoutModal';
 import ContactSection from './components/Contact/ContactSection';
+import FAQSection from './components/FAQ/FAQSection';
 import sliderData from './json-data/sliderData.json';
 import navigationData from './json-data/navigationData.json';
 import productsData from './json-data/productsData.json';
 import { matchesSmartSearch } from './utils/searchUtils';
-import { ShoppingCart, ShoppingBag, Sparkles, Heart, ArrowRight, Phone, Mail, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ShoppingCart, ShoppingBag, Sparkles, Heart, ArrowRight, Phone, Mail, MapPin, ChevronLeft, ChevronRight, Truck, ShieldCheck } from 'lucide-react';
 import './App.css';
 
 function App() {
@@ -304,6 +305,31 @@ function App() {
         {/* Pure Image Hero Slider Banner */}
         <HeroSlider slides={sliderData} autoPlay={true} />
 
+        {/* SEO Authority Header & Local Brand Overview (Primary H1) */}
+        <header className="seo-authority-banner" aria-label="NK Dry Fruits Store Overview">
+          <div className="container">
+            <div className="seo-authority-inner">
+              <div className="seo-authority-badge">
+                <Sparkles size={14} className="seo-badge-icon" />
+                <span>Thane's Trusted Store for 100% Organic Dry Fruits & Superfoods</span>
+              </div>
+              <h1 className="seo-main-heading">
+                NK Dry Fruits – Buy Premium Dry Fruits, Nuts & Khajoor in Thane & Mumbai
+              </h1>
+              <p className="seo-authority-summary">
+                Direct-from-orchard California Almonds, King Jumbo Cashews, Kashmiri Walnuts, Royal Medina Ajwa Dates & Nutritional Superfood Seeds. 
+                Freshly nitrogen aroma-lock packed at our retail store in <strong>Rabodi, Thane West (400601)</strong> with same-day local home delivery across Thane & Mumbai MMR, and speedy express shipping pan-India.
+              </p>
+              <div className="seo-trust-tags">
+                <span className="seo-trust-tag"><MapPin size={13} /> Shop 09, Ibrahim Mansion, Rabodi, Thane West</span>
+                <span className="seo-trust-tag"><ShieldCheck size={13} /> 100% Direct Orchard Harvest</span>
+                <span className="seo-trust-tag"><Truck size={13} /> Free Express Shipping Above ₹499</span>
+                <span className="seo-trust-tag"><Phone size={13} /> WhatsApp Hotline: +91 99306 05893</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
         {/* Quick Features */}
         <QuickFeatures />
 
@@ -368,7 +394,7 @@ function App() {
                       )}
                       <img 
                         src={prod.image} 
-                        alt={prod.alt || prod.name} 
+                        alt={prod.alt ? `${prod.alt} - NK Dry Fruits Thane` : `${prod.name} - Premium Organic Dry Fruits NK Dry Fruits Thane`} 
                         className="card-nut-img" 
                         loading="lazy" 
                         onError={(e) => {
@@ -469,7 +495,7 @@ function App() {
               <span className="section-kicker">About NK Dry Fruits</span>
               <h2 className="story-title">Purity From Earth, Directly to Your Table</h2>
               <p className="story-desc">
-                At <strong>NK Dry Fruits</strong>, we partner directly with independent organic farms in California, Kashmir, and the Mediterranean. Every batch is selected by master harvesters, sun-dried naturally, and nitrogen-sealed in aroma-lock packs to preserve crunch and essential nutrients.
+                At <strong>NK Dry Fruits</strong>, we partner directly with certified organic growers in California, Kashmir, and the Mediterranean. Operating from our specialized store and packaging hub in <strong>Rabodi, Thane West (Maharashtra 400601)</strong>, every batch is selected by master harvesters, sun-dried naturally, and nitrogen-sealed in aroma-lock packs to preserve supreme crunch, natural oils, and essential nutrients for our customers across Thane, Mumbai MMR, and India.
               </p>
               <div className="story-stats">
                 <div className="stat-card">
@@ -495,6 +521,9 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* Frequently Asked Questions Section (Schema FAQPage Compliant) */}
+        <FAQSection />
 
         {/* Contact Us, Locations & Socials Section */}
         <ContactSection onShowToast={showToast} />
@@ -554,6 +583,7 @@ function App() {
               <li><a href="#home">Home</a></li>
               <li><a href="#products">Shop All Products</a></li>
               <li><a href="#about">About Us</a></li>
+              <li><a href="#faq">Frequently Asked Questions</a></li>
               <li><a href="#contact">Contact & WhatsApp</a></li>
             </ul>
           </div>
@@ -578,9 +608,37 @@ function App() {
           </div>
         </div>
 
+        {/* Footer SEO Keywords & Local Navigation Ribbon */}
+        <div className="footer-seo-keywords">
+          <div className="container">
+            <h5 className="footer-seo-title">Popular Searches & Dry Fruits in Thane</h5>
+            <div className="footer-seo-tags-list">
+              <a href="#products" className="footer-seo-link" onClick={() => setSelectedCategory('Dry Fruits & Nuts')}>Dry Fruits Shop in Thane West</a>
+              <span>•</span>
+              <a href="#products" className="footer-seo-link" onClick={() => setSelectedCategory('Dry Fruits & Nuts')}>California Badam Price Thane</a>
+              <span>•</span>
+              <a href="#products" className="footer-seo-link" onClick={() => setSelectedCategory('Dry Fruits & Nuts')}>King Jumbo Kaju W240 Wholesale</a>
+              <span>•</span>
+              <a href="#products" className="footer-seo-link" onClick={() => setSelectedCategory('Dry Fruits & Nuts')}>Kashmiri Walnuts Akhrot Giri</a>
+              <span>•</span>
+              <a href="#products" className="footer-seo-link" onClick={() => setSelectedCategory('Dates')}>Royal Medina Ajwa Dates Mumbai</a>
+              <span>•</span>
+              <a href="#products" className="footer-seo-link" onClick={() => setSelectedCategory('Seeds')}>Healthy Chia & Flax Seeds Thane</a>
+              <span>•</span>
+              <a href="#products" className="footer-seo-link" onClick={() => setSelectedCategory('Honey')}>Pure Farm Honey Thane</a>
+              <span>•</span>
+              <a href="#products" className="footer-seo-link" onClick={() => setSelectedCategory('Olives & Olive Oil')}>Extra Virgin Olive Oil Online</a>
+              <span>•</span>
+              <a href="#contact" className="footer-seo-link">Dry Fruits Home Delivery Rabodi Naupada Ghodbunder</a>
+              <span>•</span>
+              <a href="#contact" className="footer-seo-link">Dry Fruit Gift Hampers for Weddings & Diwali</a>
+            </div>
+          </div>
+        </div>
+
         <div className="footer-bottom">
           <div className="container footer-bottom-inner">
-            <p>© {new Date().getFullYear()} NK Dry Fruits. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} NK Dry Fruits. All rights reserved. • Store: Rabodi, Thane West, Maharashtra 400601</p>
             <div className="footer-bottom-links">
               <a href="#home">Privacy Policy</a>
               <span>•</span>

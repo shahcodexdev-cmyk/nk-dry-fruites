@@ -10,7 +10,7 @@ const BrandLogo = ({ className = '', onClick }) => {
     >
       <img 
         src="/images/logo.jpeg" 
-        alt="NK Dry Fruits" 
+        alt="NK Dry Fruits - Premium Organic Dry Fruits & Nuts Store Thane" 
         className="brand-logo-img" 
       />
     </div>

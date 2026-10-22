@@ -1,0 +1,10 @@
+# robots.txt for NK Dry Fruits (https://nkdryfruits.com)
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Crawl-delay for optimal server performance
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://nkdryfruits.com/sitemap.xml
